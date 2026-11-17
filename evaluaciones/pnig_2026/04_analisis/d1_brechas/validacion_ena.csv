@@ -1,0 +1,9 @@
+indicador,anio,sexo,referencia,origen,calculado,diferencia,dentro_ic95
+productora_mujer,2024,Total,31.5,"INEI, Brechas de Género 2025, p. 117",31.46,-0.04,True
+credito_solicito,2024,Mujer,6.1,"INEI, Brechas de Género 2025, p. 119",6.14,0.04,True
+credito_solicito,2024,Hombre,10.5,"INEI, Brechas de Género 2025, p. 119",10.53,0.03,True
+credito_solicito,2024,Total,9.1,"INEI, Brechas de Género 2025, p. 119",9.15,0.05,True
+propietario,2024,Total,70.8,"INEI, Brechas de Género 2025, p. 118",70.79,-0.01,True
+propietario,2024,Mujeres entre propietarios,33.7,"INEI, Brechas de Género 2025, p. 118",33.75,0.05,True
+titulo,2024,Total,26.0,"INEI, Brechas de Género 2025, p. 118",26.04,0.04,True
+titulo,2024,Mujeres entre titulares,33.0,"INEI, Brechas de Género 2025, p. 118",32.97,-0.03,True

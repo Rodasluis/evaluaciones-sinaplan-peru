@@ -1,0 +1,43 @@
+# Configuración de la evaluación ${id} (src/nucleo/config.py). Creada con src/nucleo/nueva_evaluacion.py desde la
+# tipología «${tipologia}» (tipologias/${tipologia}/estructura.yaml; ${estado_tipologia}).
+# Lo que es propio de la evaluación va aquí o en 02_insumos/, no en el código. Complete lo marcado [POR COMPLETAR].
+id: ${id}
+tipologia: ${tipologia}
+titulo: ${titulo}
+politica:
+  nombre: ${politica}
+  sigla: ${sigla}
+  norma: "[POR COMPLETAR] dispositivo de aprobación"
+  aprobacion: ""                # AAAA-MM-DD
+  documento: ""                 # ruta del documento de la política en docs/fuentes/
+  plan_implementacion: ""
+periodo:
+  inicio: ${inicio}
+  fin: ${fin}
+entidad:
+  nombre: "[POR COMPLETAR] entidad rectora"
+  sigla: ""
+  pliego: ""
+  conduccion: []                # órganos que conducen la política
+  seguimiento: ""               # órgano de seguimiento y evaluación
+  planeamiento: ""              # oficina de planeamiento
+  elabora: "[POR COMPLETAR] órgano que elabora el informe"
+# instrumentos sugeridos por la tipología (ADR-009): quite los que no use y agregue los propios con el mismo formato
+instrumentos:
+${instrumentos}
+# preguntas tipo de la tipología: un punto de partida. Ajústelas a la política; cada una conserva su criterio y sus
+# instrumentos, que vinculan la pregunta con sus fuentes (CLAUDE.md, estilo de los documentos).
+preguntas:
+${preguntas}
+# escalas: las de la tipología; los años de cierre son los dos últimos del periodo y el semáforo de avance es el del
+# piloto PNIG, que se confirma con el reporte de cumplimiento de esta política.
+escalas:
+${escalas}
+# estructura del informe de la tipología (Guía de seguimiento y evaluación del CEPLAN, Tabla 3, pp. 54–55).
+# preguntas: prefijo de las preguntas cuya respuesta va en esa sección (src/analisis_${id}/informe.py).
+informe:
+${informe}
+productos:
+  informe: ${informe_docx}
+  portada: ${raiz}/portada.yaml
+  anexo: ${anexo}

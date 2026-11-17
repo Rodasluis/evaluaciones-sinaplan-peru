@@ -1,0 +1,17 @@
+# Rutas de las herramientas externas y de los datos fuera del repositorio (src/nucleo/entorno.py).
+# Una variable de entorno con el mismo nombre en mayúsculas (CHROME, SOFFICE, MICRODATOS_INEI, …) tiene prioridad.
+# Las rutas propias de cada equipo (con el nombre de usuario) van en config/entorno.local.yaml, que no se versiona y
+# tiene la misma estructura. Word se usa por COM (src/nucleo/actualizar_campos_word.ps1) y no necesita ruta.
+herramientas:
+  chrome: 'C:\Program Files\Google\Chrome\Application\chrome.exe'   # figuras HTML -> PNG, sin ventana
+  soffice: 'C:\Program Files\LibreOffice\program\soffice.exe'       # conversiones a PDF
+rutas:
+  microdatos_inei: ''         # bases del INEI por encuesta (…/ENAHO); d1_brechas_enaho.py
+  repo_endes: ''              # repositorio «Indicadores ENDES» (data/raw y src); d1_brechas_endes.py
+  carpeta_administrativa: ''  # carpeta fuera del repositorio con datos personales y originales (CLAUDE.md, regla 6)
+# especialista de contacto de los oficios, memorándums y guías (nucleo.entorno.contacto): datos personales, se
+# completan solo en config/entorno.local.yaml
+contacto:
+  nombre: ''
+  correo: ''
+  celular: ''

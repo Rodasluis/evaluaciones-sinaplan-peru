@@ -1,0 +1,19 @@
+name: Pruebas
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  pruebas:
+    runs-on: windows-latest
+    env:
+      PYTHONUTF8: "1"
+      PYTHONIOENCODING: utf-8
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v6
+      - name: Dependencias con las versiones fijas de uv.lock
+        run: uv sync --locked
+      - name: Núcleo, generador de evaluaciones y referencia del piloto
+        run: uv run pytest

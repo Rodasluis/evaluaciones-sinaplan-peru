@@ -1,0 +1,19 @@
+# Hallazgos de la evaluación ${id}. Los escribe el equipo evaluador; los verifica src/analisis_${id}/sintesis.py con
+# nucleo.hallazgos.verificar() y los publica src/analisis_${id}/informe.py.
+#
+# preguntas: valoración (Satisfactorio, Parcial o Insuficiente) y respuesta breve de cada pregunta, para las
+#   conclusiones. Vacías mientras el análisis siga pendiente.
+# hallazgos: uno o más por pregunta.
+#   id: <pregunta>-H<n>; aspecto: tema breve; enunciado: el hallazgo en una o dos oraciones;
+#   confianza: Sólido (dos o más fuentes independientes coinciden), Con respaldo parcial (coinciden con discrepancias
+#   explicadas), Indicio (una fuente) o No determinado (análisis pendiente, sin evidencias);
+#   estado: Preliminar, Validado o Análisis pendiente; detalle: de una a tres oraciones; salvedad y nota: opcionales;
+#   evidencias: lista de {plano, instrumento, texto, fuente, base, n_fuentes}.
+#     plano: Documental, Cuantitativa, Entidades, Nivel conductor o Literatura;
+#     instrumento: código de config.yaml; texto: qué muestra; fuente: documento citado en la nota al pie;
+#     base: documento o base de la que sale (dos evidencias con la misma base cuentan como una fuente);
+#     n_fuentes: mayor que 1 si la evidencia agrega varias fuentes primarias independientes.
+# recomendaciones: matriz de la Tabla 4 de la guía (p. 56): {aspecto, recomendacion, responsable, plazo, hallazgos}.
+#   aspecto: Implementación, Diseño o Seguimiento y evaluación (Tabla 5, p. 57); plazo: hasta 24 meses para
+#   políticas nacionales (p. 57).
+# No se usan guiones para explicar ni preguntas retóricas; los vacíos de información se consignan como hallazgo.

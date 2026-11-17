@@ -1,0 +1,29 @@
+# Nombre completo de cada indicador mapeado (informe_cierre.py, ronda 35), tomado de las definiciones de los scripts d1_brechas_*.py.
+tasa_actividad: Tasa de actividad de la población de 14 años a más
+tasa_desempleo: Tasa de desempleo de la población económicamente activa de 14 años a más
+sin_ingresos: Población de 14 años a más sin ingresos propios que no estudia
+informal: Tasa de empleo informal de la población ocupada
+tfnr: Proporción de trabajadores familiares no remunerados en la población ocupada
+trabajo_hogar: Proporción de trabajadores del hogar remunerados en la población ocupada
+afiliado_pension: Proporción de la población ocupada afiliada a un sistema de pensiones
+ingreso_laboral: Ingreso laboral mensual promedio de la población ocupada con ingreso
+ingreso_publico: Ingreso laboral mensual promedio de los asalariados del sector público
+analfabetismo: Tasa de analfabetismo de la población de 15 años a más
+internet: Proporción de la población de 6 años a más que usó internet en el mes anterior
+nini_15_29: Proporción de jóvenes de 15 a 29 años que no estudian ni están ocupados
+informal_epen: Tasa de empleo informal de la población ocupada de 14 años a más (EPEN)
+tasa_actividad_epen: Tasa de actividad de la población de 14 años a más (EPEN)
+ingreso_laboral_epen: Ingreso laboral mensual promedio de la población ocupada (EPEN)
+afiliado_pension_epen: Proporción de la población ocupada afiliada a un sistema de pensiones (EPEN)
+productora_mujer: Proporción de mujeres entre las personas naturales que conducen una unidad agropecuaria
+credito_solicito: Proporción de productores agropecuarios que solicitaron algún crédito en los últimos 12 meses
+propietario: Proporción de productores agropecuarios propietarios de al menos una parcela
+titulo: Proporción de propietarios con título de propiedad de al menos una parcela
+uso_anticonceptivo: Mujeres actualmente unidas que usan algún método anticonceptivo
+uso_moderno: Mujeres actualmente unidas que usan un método anticonceptivo moderno
+demanda_insatisfecha: Mujeres actualmente unidas con demanda insatisfecha de planificación familiar
+embarazo_adolescente: Adolescentes de 15 a 19 años alguna vez embarazadas
+esposo_decide_salud: Mujeres unidas cuya salud decide solo el esposo o compañero
+violencia_fisica_o_sexual_12m: Mujeres alguna vez unidas que sufrieron violencia física o sexual del esposo o compañero
+  en los últimos 12 meses
+tolerancia_10: Tolerancia social a la violencia contra las mujeres (10 afirmaciones comunes a 2019 y 2024)

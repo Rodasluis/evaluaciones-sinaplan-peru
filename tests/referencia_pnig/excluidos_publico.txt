@@ -1,0 +1,10 @@
+# Archivos de la referencia del piloto que la versión pública no lleva (version_publica.py)
+assets/logos/logo_gobierno.png
+assets/logos/logo_institucion.png
+evaluaciones/pnig_2026/00_encargo/nota_metodologica/Nota Metodologica Evaluación PNIG - evaluación de cierre.docx
+evaluaciones/pnig_2026/00_encargo/nota_metodologica/Nota Metodologica Evaluación PNIG - presentación resumida.pptx
+evaluaciones/pnig_2026/00_encargo/nota_metodologica/Nota Metodologica Evaluación PNIG - presentación.pptx
+evaluaciones/pnig_2026/05_entrevistas/ENTREV_aplicacion.csv
+evaluaciones/pnig_2026/05_entrevistas/ENTREV_codificacion.csv
+evaluaciones/pnig_2026/05_entrevistas/ENTREV_deducciones.csv
+evaluaciones/pnig_2026/05_entrevistas/ENTREV_registro_codificacion.xlsx

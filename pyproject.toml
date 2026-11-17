@@ -1,0 +1,43 @@
+[project]
+name = "evaluaciones-sinaplan"
+version = "0.2.0"
+description = "Evaluación de políticas nacionales y planes del Sinaplan: núcleo reutilizable y evaluaciones (piloto: PNIG 2019–2025)"
+readme = "README.md"
+requires-python = ">=3.12"
+# versiones con las que se generó el piloto de la PNIG (Fase 2, 2026-11-12)
+dependencies = [
+    "pandas==3.1.1",
+    "numpy==2.5.4",
+    "openpyxl==3.1.5",
+    "python-docx==1.2.0",
+    "python-pptx==1.0.2",
+    "pillow==13.0.0",
+    "pyyaml==6.0.3",
+    "pymupdf==2.1",
+    "lxml==6.1.3",
+    "defusedxml==0.7.1",
+    "pdfplumber==0.11.10",
+    "python-calamine==0.9.1",
+    "requests==2.34.2",
+    "pyreadstat==1.3.7",
+    "xlrd==2.0.2",
+    "shapely==2.2.0",
+    "pyarrow==26.0.1",
+    "matplotlib==3.11.2",
+    "geopandas==1.2.0",
+    "pypdf==7.0.1",
+]
+
+[dependency-groups]
+dev = ["pytest==9.2.0"]
+
+[tool.uv]
+package = false
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src", "src/analisis_pnig"]
+addopts = "-q"
+markers = [
+    "regeneracion: vuelve a generar productos del piloto (lento; requiere los datos de 03_datos)",
+]

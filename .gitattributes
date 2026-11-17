@@ -1,0 +1,3 @@
+# Datos: sin conversión de finales de línea (los saltos dentro de celdas entre comillas son contenido)
+*.csv -text
+*.tsv -text

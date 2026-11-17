@@ -1,0 +1,23 @@
+# Contraste de la clasificación de los servicios de D7 (REV_ALI.5) con la matriz técnica de incompatibilidades de la
+# DPIGND (anexa al Informe N.° D000041-2026-MIMP-DGIGND, 09-11-2026). Lo usa src/analisis_pnig/rev_doc_matriz_incompatibilidades.py.
+# Decisión del usuario del 2026-11-17 (ADR-016): contraste con regla fija y kappa.
+
+matriz: docs/fuentes/pnig/07_transicion_ley_32535/2026_mimp-dpignd_matriz-incompatibilidades-ley-32535.xlsx
+hoja_pnig: "1 DS 008-2019-MIMP PNIG"
+hoja_resumen: "Resumen"
+# filas de la hoja de la PNIG que tratan los servicios: entre estas dos disposiciones del Anexo
+desde: "Anexo – 3."
+hasta: "Anexo – 4.1"
+
+# Regla de clasificación de cada grupo de servicios de la matriz, por el texto de su columna «Observación», en este
+# orden (la primera que coincide). Las categorías son las de REV_ALI.5 para los servicios.
+regla:
+  - efecto: Se rediseña
+    criterio: "La matriz declara incompatible la referencia a la educación sexual integral (Sexta DCF de la Ley N.° 32535)."
+    patron: "educación sexual integral|\\bESI\\b"
+  - efecto: Se ajusta
+    criterio: "El contenido sigue con sustento en la Ley N.° 32535, pero sin elementos del enfoque de género o con contenidos que deben adecuarse."
+    patron: "sin elementos del enfoque de género|adec[uú]a|adecuando|contenidos adecuados"
+  - efecto: Se mantiene
+    criterio: "El contenido sigue con sustento directo en la Ley N.° 32535 o en el TUO de la Ley N.° 30364, sin condiciones."
+    patron: ".*"

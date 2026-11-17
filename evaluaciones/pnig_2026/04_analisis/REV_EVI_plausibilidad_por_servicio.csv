@@ -1,0 +1,53 @@
+Código,Tipo,Tipo de intervención,Solidez,Dirección,Plausibilidad,Solidez con el criterio anterior
+1.1.1,T01,Atención integral a víctimas de violencia,Moderada,mixta,"Moderada, mixta",Moderada
+1.1.2,T02,Salud mental para víctimas de violencia,Sólida,mixta,"Sólida, mixta",Sólida
+1.1.3,T01,Atención integral a víctimas de violencia,Moderada,mixta,"Moderada, mixta",Moderada
+1.1.4,T03,Respuesta policial y judicial especializada y medidas de protección,Moderada,mixta,"Moderada, mixta",Moderada
+1.1.5,T03,Respuesta policial y judicial especializada y medidas de protección,Moderada,mixta,"Moderada, mixta",Moderada
+1.1.6,T03,Respuesta policial y judicial especializada y medidas de protección,Moderada,mixta,"Moderada, mixta",Moderada
+1.1.7,T03,Respuesta policial y judicial especializada y medidas de protección,Moderada,mixta,"Moderada, mixta",Moderada
+1.1.8,T04,Atención y prevención del hostigamiento sexual laboral,Limitada,mixta,"Limitada, mixta",Limitada
+1.1.9,T05,Capacitación de operadores de justicia en violencia contra las mujeres,Moderada,mixta,"Moderada, mixta",Moderada
+1.2.1,T06,Prevención comunitaria de la violencia y cambio de normas,Sólida,mixta,"Sólida, mixta",Sólida
+1.2.2,T07,Trabajo con hombres y masculinidades,Sólida,mixta,"Sólida, mixta",Sólida
+1.2.3,T08,Información y comunicación para la denuncia y la igualdad,Moderada,mixta,"Moderada, mixta",Moderada
+1.2.4,T09,Prevención de la violencia en la escuela,Sólida,mixta,"Sólida, mixta",Sólida
+1.2.5,T08,Información y comunicación para la denuncia y la igualdad,Moderada,mixta,"Moderada, mixta",Moderada
+1.2.6,T10,Tratamiento de agresores sexuales,Limitada,mixta,"Limitada, mixta",Limitada
+2.1.1,T11,Servicios e información en salud sexual y reproductiva,Sólida,mixta,"Sólida, mixta",Sólida
+2.1.2,T11,Servicios e información en salud sexual y reproductiva,Sólida,mixta,"Sólida, mixta",Sólida
+2.1.3,T11,Servicios e información en salud sexual y reproductiva,Sólida,mixta,"Sólida, mixta",Sólida
+2.1.4,T11,Servicios e información en salud sexual y reproductiva,Sólida,mixta,"Sólida, mixta",Sólida
+2.2.1,T12,Educación sexual integral,Sólida,mixta,"Sólida, mixta",Sólida
+2.2.2,T12,Educación sexual integral,Sólida,mixta,"Sólida, mixta",Sólida
+2.3.1,T11,Servicios e información en salud sexual y reproductiva,Sólida,mixta,"Sólida, mixta",Sólida
+3.1.1,T13,Participación política de las mujeres,Moderada,mixta,"Moderada, mixta (evidencia parcial)",Moderada
+3.1.2,T13,Participación política de las mujeres,Moderada,mixta,"Moderada, mixta (evidencia parcial)",Moderada
+4.1.1,T14,Servicios de cuidado,Sólida,mixta,"Sólida, mixta (evidencia parcial)",Sólida
+4.2.1,T15,Formalización de la propiedad y de derechos sobre recursos,Moderada,mixta,"Moderada, mixta (evidencia parcial)",Moderada
+4.2.2,T15,Formalización de la propiedad y de derechos sobre recursos,Moderada,mixta,"Moderada, mixta (evidencia parcial)",Moderada
+4.2.3,T15,Formalización de la propiedad y de derechos sobre recursos,Moderada,mixta,"Moderada, mixta (evidencia parcial)",Moderada
+4.2.4,T16,Participación de las mujeres en la gestión de recursos naturales,Moderada,mixta,"Moderada, mixta",Moderada
+4.3.1,T17,"Formación laboral, certificación y carreras no tradicionales",Sólida,mixta,"Sólida, mixta",Sólida
+4.3.2,T17,"Formación laboral, certificación y carreras no tradicionales",Sólida,mixta,"Sólida, mixta",Sólida
+4.3.3,T17,"Formación laboral, certificación y carreras no tradicionales",Sólida,mixta,"Sólida, mixta",Sólida
+4.3.4,T17,"Formación laboral, certificación y carreras no tradicionales",Sólida,mixta,"Sólida, mixta",Sólida
+4.3.5,T18,Desarrollo empresarial y financiamiento para mujeres,Sólida,mixta,"Sólida, mixta",Sólida
+4.3.6,T18,Desarrollo empresarial y financiamiento para mujeres,Sólida,mixta,"Sólida, mixta",Sólida
+4.3.7,T19,Lactarios institucionales,Sólida,favorable,"Sólida, favorable (evidencia parcial)",Sólida
+4.4.1,T20,Transferencias condicionadas y culminación de la secundaria,Sólida,mixta,"Sólida, mixta",Sólida
+5.1.1,T21,Transversalización del enfoque de género en la gestión pública,Sólida,favorable,"Sólida, favorable",Sólida
+5.2.1,T21,Transversalización del enfoque de género en la gestión pública,Sólida,favorable,"Sólida, favorable",Sólida
+5.3.1,T21,Transversalización del enfoque de género en la gestión pública,Sólida,favorable,"Sólida, favorable",Sólida
+5.4.1,T21,Transversalización del enfoque de género en la gestión pública,Sólida,favorable,"Sólida, favorable",Sólida
+5.5.1,T04,Atención y prevención del hostigamiento sexual laboral,Limitada,mixta,"Limitada, mixta",Limitada
+6.1.1,T23,Educación para la igualdad en la escuela,Moderada,mixta,"Moderada, mixta",Moderada
+6.1.2,T23,Educación para la igualdad en la escuela,Moderada,mixta,"Moderada, mixta",Moderada
+6.1.3,T23,Educación para la igualdad en la escuela,Moderada,mixta,"Moderada, mixta",Moderada
+6.2.1,T08,Información y comunicación para la denuncia y la igualdad,Moderada,mixta,"Moderada, mixta",Moderada
+6.3.1,T22,Estadísticas y estudios de género,Limitada,favorable,"Limitada, favorable",Limitada
+6.3.2,T22,Estadísticas y estudios de género,Limitada,favorable,"Limitada, favorable",Limitada
+6.3.3,T22,Estadísticas y estudios de género,Limitada,favorable,"Limitada, favorable",Limitada
+6.3.4,T22,Estadísticas y estudios de género,Limitada,favorable,"Limitada, favorable",Limitada
+6.3.5,T21,Transversalización del enfoque de género en la gestión pública,Sólida,favorable,"Sólida, favorable",Sólida
+6.4.1,T24,Corresponsabilidad familiar en el cuidado,Sólida,favorable,"Sólida, favorable",Moderada

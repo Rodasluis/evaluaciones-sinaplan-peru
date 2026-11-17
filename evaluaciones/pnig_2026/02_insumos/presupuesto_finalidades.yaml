@@ -1,0 +1,26 @@
+# Finalidades de la actividad 5001072 y órgano que las ejecuta (rev_ind_3_presupuesto_dgignd.py), fila de la hoja «Conducción por órgano»
+# del MEF y órganos de la conducción.
+organo_por_finalidad:
+  0080287: DGCVG
+  0080288: DGIGND
+  0082100: DGTEG o DTEG
+  0375558: DGTEG o DTEG
+  0375559: DGTEG o DTEG
+  '0363736': DPIGND
+  0424939: DPIGND
+  0363739: DPPDM
+  0424938: DPPDM
+  '0446345': DPPDM
+  '0363740': DGPDAEM
+  0425810: DGTEG o DTEG
+fila_mef:
+  DGCVG: DGCVG
+  DGIGND: DGIGND
+  DGTEG o DTEG: DGTEG (2019–2023) / DTEG (desde el ROF 2023)
+  DPIGND: DPIGND
+  DPPDM: DPPDM
+  DGPDAEM: DPDAEM (2021–2023) / DGPDAEM (desde el ROF 2023)
+conduccion:
+- DGIGND
+- DPIGND
+- DPPDM

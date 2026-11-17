@@ -1,0 +1,904 @@
+{
+ "csv": {
+  "evaluaciones/pnig_2026/04_analisis/REP_ENT_adjudicacion.csv": "576d4e5683eb18ce8f9eb3b39a66f6fe32f04428973d667365d41e867126bf98",
+  "evaluaciones/pnig_2026/04_analisis/REP_ENT_codificacion.csv": "6b1886024bc6970f6571063979b7d26516d25a6d7f01fde7e97ef873d7339f29",
+  "evaluaciones/pnig_2026/04_analisis/REP_ENT_doble_codificacion_resultado.csv": "a96798eac8a22375b42c566cff8ac6f1e30e50a3a5300206569fd32eb0d1f7e5",
+  "evaluaciones/pnig_2026/04_analisis/REP_ENT_segunda_codificacion.csv": "9e3242b7f12ef9addf89e072006ee56a46dcc7f3446d60600bb9887c3681c1df",
+  "evaluaciones/pnig_2026/04_analisis/REV_EVI_plausibilidad_por_servicio.csv": "dba1a44370002753ed7a7fae36070b35cc9bfe12120701839526e638c1f0bd81",
+  "evaluaciones/pnig_2026/04_analisis/d1_brechas/autoridades_2026_onpe.csv": "e70b2ff7755cc9af2762f2f9bfe829e1ca52418eeba06b51631576c118db9e92",
+  "evaluaciones/pnig_2026/04_analisis/d1_brechas/brechas_ena.csv": "932cef09cc400debdb9acbe5c3f7e2a1eeb453767dc062df42bc79cd1df6d9ed",
+  "evaluaciones/pnig_2026/04_analisis/d1_brechas/brechas_ena_departamental.csv": "a2f2d7fab68a44c8ec7e24380f7eaeacb46646cac8b74e6c56ac3749806a045c",
+  "evaluaciones/pnig_2026/04_analisis/d1_brechas/brechas_enaho.csv": "b9fa3a31e0d69489016858e561e1b9a1b8c7ef6bbb041027bdfefe6c2ee970e2",
+  "evaluaciones/pnig_2026/04_analisis/d1_brechas/brechas_enaho_departamental.csv": "17845cf85f477b85026fd21e8abca205af7b44fde8d78c7bb665dbf2fcad8cb1",
+  "evaluaciones/pnig_2026/04_analisis/d1_brechas/brechas_epen.csv": "4273b0295e37df83bef8d3b6091045b434747ae9a894ac599238c5e6924fdd92",
+  "evaluaciones/pnig_2026/04_analisis/d1_brechas/brechas_epen_departamental.csv": "4f19b25616d897fdd9a182c94b17d8dd082561214d1232b07d32912784512bf6",
+  "evaluaciones/pnig_2026/04_analisis/d1_brechas/figuras/indice_figuras.csv": "a2c20e91a751d81f2c9ac483e628d6962b03f1405308273df008df85ec8e9c96",
+  "evaluaciones/pnig_2026/04_analisis/d1_brechas/inventario_encuestas_brechas.csv": "f45a5d54435b72a9dd88549d70ce5560edda586d2400fc3cb00394b8e768c90c",
+  "evaluaciones/pnig_2026/04_analisis/d1_brechas/manifestaciones_endes.csv": "e7cbf53592332eb432012d3296bc833addc20c385ef16f23af80bca6bb9ca94c",
+  "evaluaciones/pnig_2026/04_analisis/d1_brechas/manifestaciones_endes_departamental.csv": "14061910b283ee48ddc7ce534e819b02d73f676924c96c24a5c9f8d449c359ac",
+  "evaluaciones/pnig_2026/04_analisis/d1_brechas/participacion_politica_departamental.csv": "d269aec6a5d3dd777b6f055b53fde0b3dedb1970f36c0a6d1b098e5279f54148",
+  "evaluaciones/pnig_2026/04_analisis/d1_brechas/participacion_politica_jne.csv": "26c6138ff21150238c7a8fbe7d08f99710c6d7672cb7cbeae8832e881ff155c0",
+  "evaluaciones/pnig_2026/04_analisis/d1_brechas/referencias_oficiales.csv": "ca2d5240f1d073214f7bff5d91fb3e7a4b0e008f588a190ca625907fa2441473",
+  "evaluaciones/pnig_2026/04_analisis/d1_brechas/situacion_futura_deseada.csv": "b93a68b84d199a7b8cd08536cba807df44aa3ed469f06fe7e8bfa720413a37cb",
+  "evaluaciones/pnig_2026/04_analisis/d1_brechas/tolerancia_enares.csv": "92a7da521cec59138b04a05e4864c44fb907967302b1dac4335f78bfea55814e",
+  "evaluaciones/pnig_2026/04_analisis/d1_brechas/tolerancia_enares_departamental.csv": "69daf55b780febc142b29a963c4602b318e45b68e3425ca6611de25aec365f8f",
+  "evaluaciones/pnig_2026/04_analisis/d1_brechas/uso_tiempo_enut.csv": "88bfe40beff661a853f53346013bde6939d44bf62e2a81e7704645760daedf87",
+  "evaluaciones/pnig_2026/04_analisis/d1_brechas/validacion_ena.csv": "512493143d4438aced3dc9f3a0b1707a21d05b5a0573e3134ef2d4f668b967ca",
+  "evaluaciones/pnig_2026/04_analisis/d1_brechas/validacion_enaho_diagnostico.csv": "ce21e6ede2a8a92884839680614f46c8600d85c55ab5271fcc6d9fe16b4a6abb",
+  "evaluaciones/pnig_2026/04_analisis/d1_brechas/validacion_epen.csv": "3cb7b87ae063f4195b8580353c1e729409d855468f1bcdf1b51540dffb785be1",
+  "evaluaciones/pnig_2026/04_analisis/d1_brechas/validacion_informal_enaho.csv": "0222d15eb2cffa32e77cf9c14e2029dc365bad9633517269e70703b06e22fa71",
+  "evaluaciones/pnig_2026/04_analisis/d6_enfoques/evidencia_enfoques.csv": "56dfcff63ea80bbd62bd153c6713ab8640ddefced7dd56fb9d0e7d0624720aa2",
+  "evaluaciones/pnig_2026/04_analisis/d6_enfoques/valoracion_enfoques.csv": "c887d22287769cf5cca9f42f6bc9875daa61b1ab5b0610f2f8a80f3afd5398d7",
+  "evaluaciones/pnig_2026/04_analisis/libro_codigos_pnig.csv": "b9e3bce89cf75d835845ab8b1748e408153adef66143495310f6cdf4a5249506",
+  "evaluaciones/pnig_2026/04_analisis/pemig_indicadores/tipo_indicadores_pemig.csv": "f1511bcfaae2d7feac42e597be81e705a2cb9283c5cbd0229de7a80383fdcf57",
+  "evaluaciones/pnig_2026/04_analisis/rev_ali_insumos/conceptual.csv": "f2ef4937ff0478c7243fa32d83245cd63259df6440dcbbe4573ecb4d47612fd2",
+  "evaluaciones/pnig_2026/04_analisis/rev_ali_insumos/horizontal.csv": "4d5451a15a3e1bb38e63bc9f7a83a4ad9fa214a15e92cc0943cfd5ffff02503d",
+  "evaluaciones/pnig_2026/04_analisis/rev_ali_insumos/horizontal_universo.csv": "7018a6a2be4b0d43afebed11584565f10fb6cb9a11029ea3adb5999914d17c66",
+  "evaluaciones/pnig_2026/04_analisis/rev_ali_insumos/normativa_internacional.csv": "a3c18959104e6077d5dab6752e31215a80025a6a958f613bbe4e2a77145cf9e6",
+  "evaluaciones/pnig_2026/04_analisis/rev_ali_insumos/vertical.csv": "07e71b49ef1e0849d5a815b5a5dd90d5501658549927db058d2f9f0148efa699",
+  "evaluaciones/pnig_2026/04_analisis/rev_ali_insumos/vertical_declarado.csv": "bce8db82e52b231d4eddb4a3f18df209fd6584c78c353fdf4be35d2652b9c67c",
+  "evaluaciones/pnig_2026/04_analisis/rev_ali_insumos/vertical_indicadores_pedn.csv": "17571748c496b0abd2c9b7128fad492d0e2c9c8d4ce8d80c6f3d5a4d31612423",
+  "evaluaciones/pnig_2026/04_analisis/rev_evi_insumos/autores_completados.csv": "61c3fd07d24512b3ffb44f4598caf2e1207e420106a571ae1bad9ab12cf73218",
+  "evaluaciones/pnig_2026/04_analisis/rev_evi_insumos/busqueda_manual/estrategias_manuales.csv": "7919572bbfae61e3691bcf0a66c5834366596b9d080170b7bc23f22b456f25a3",
+  "evaluaciones/pnig_2026/04_analisis/rev_evi_insumos/busqueda_manual/resultados_dep.csv": "e9e03fbfd1c922058df5a9982adaf00c63138de1907fbdaf36155f4b3697e75b",
+  "evaluaciones/pnig_2026/04_analisis/rev_evi_insumos/busqueda_manual/resultados_manual.csv": "1809d7bc9169770e5739b91972fa3e92634fb74ed9d3121f0ded37263ddc101d",
+  "evaluaciones/pnig_2026/04_analisis/rev_evi_insumos/busquedas.csv": "2ccf27001d87bf441e4d2148db700176b27ceada8f3b210d3718521f86c8337f",
+  "evaluaciones/pnig_2026/04_analisis/rev_evi_insumos/cribado.csv": "3040393d3300b1e330bf407bd2093ea5c33007392bd013902c2be84c82438bd8",
+  "evaluaciones/pnig_2026/04_analisis/rev_evi_insumos/descriptores.csv": "d0afb86c42e0fde48a6c0549910102913b3c05bc7450b2ce38cedd0688c4f172",
+  "evaluaciones/pnig_2026/04_analisis/rev_evi_insumos/estrategias_academicas.csv": "57381029b3ab145cf2d5ec619fba8d53b075c76a0f91fe84ba60bb18cd3a10b4",
+  "evaluaciones/pnig_2026/04_analisis/rev_evi_insumos/evidencia.csv": "ab054dcd6cef540acf9679aef92b33046427e90a4ddc2be9ce2d6534d890d59a",
+  "evaluaciones/pnig_2026/04_analisis/rev_evi_insumos/resultados_academicos.csv": "3a0083f66c692a8da8fe897cc5aafc909e61877ef7e88dfe1291d958f2a01822",
+  "evaluaciones/pnig_2026/04_analisis/rev_evi_insumos/seleccion_academica.csv": "fc382e6d7c1d8f032e54445e0ac6fa5feb06bcbc925c886551dac3f54ce241df",
+  "evaluaciones/pnig_2026/04_analisis/rev_evi_insumos/tipologia.csv": "d062659d37a7ed19b95d835bc5b56d37edf0c4236e195dd49bee8e8e77a8cadc",
+  "evaluaciones/pnig_2026/04_analisis/seguimiento_recomendaciones/recomendaciones_previas.csv": "59cfdcb020c2c89d242ff96c27bccbdb8bf6f229670a6c9e3a9fab5570e772e6",
+  "evaluaciones/pnig_2026/04_analisis/seguimiento_recomendaciones/valoracion_recomendaciones.csv": "ff078c5bd64954545f0bf3e58c32ce37866ca8fcb207afe07e1f4241e85feb75",
+  "evaluaciones/pnig_2026/05_entrevistas/ENTREV_aplicacion.csv": "352a4c86183c8d56518c788f47e2ccde138213eb8159254642a481ef4b3feb76",
+  "evaluaciones/pnig_2026/05_entrevistas/ENTREV_codificacion.csv": "162d1d0db1db0490a67bec6e59527d3256c91b99f7cdd82a5c4acfc4fbb8cd8e",
+  "evaluaciones/pnig_2026/05_entrevistas/ENTREV_deducciones.csv": "5185f09fb1fb4635b837bd794335e27fc71d422ba781e5e2a593fdb8345d3ad1",
+  "evaluaciones/pnig_2026/05_entrevistas/ENTREV_preguntas.csv": "b2dfc34760917615c83ac6ab404ac9c838061cb317c70452251bf8012dd70ad2",
+  "evaluaciones/pnig_2026/06_informe/correspondencia_libros.csv": "79c42d1e679454d8d7491a33dbb79b1e4aba2fbb4fdbb64841b8b4b48add06d8",
+  "evaluaciones/pnig_2026/06_informe/indice_figuras.csv": "8f0c52c98af6fa1d8eecc40e2d30c8c22b9acbefa09a74d0584a5ae32cdf1012",
+  "evaluaciones/pnig_2026/06_informe/rastro_hallazgos.csv": "3770e27cf4aa4848af927b342b94e2bc2c50bbf86e04e5617ac1b743c8b750f8",
+  "evaluaciones/pnig_2026/06_informe/rastro_tablas_figuras.csv": "31b9bbee8183e8051b281af132366e0d8a6df33a460d6c0bcf4995348b5a4fd7"
+ },
+ "figuras": {
+  "actores.html": "4428023667523b7a74d18efb94678416d49367654e8d87049c7ea0b799788c68",
+  "alin_horizontal.html": "58767066ee06cb45b78e8c459c0f2bfdc0c0f1b2945fa7ff1eb204baba9ab4aa",
+  "alin_internacional.html": "291c9693bfdbf98694aef0713515a0ed0cff2dee570af7caa77d26a57d624fb8",
+  "alin_vertical.html": "504868dc9864052ccb3e2f8a424859f9eb0db25f15553bccf4312113145bea5f",
+  "cadena_valor.html": "db5073eeab933fd066b8d342817c82ceb1886a0a87017490a8f4bf13be9404f1",
+  "conaig_sesiones.html": "3c0991da5c3f339e858034e36948dce1f0ae9c3170f08321a785bf2ff97136c7",
+  "conceptual_conceptos.html": "d3a0ad077a1ec4edc09d4a9de18e613802faedd6ce9a95b9af84093cbaf3864d",
+  "conceptual_planos.html": "818d136f25fb01d3e51ca48f299cc5469cfdb7a265a3c6ff627cbfc5e403fddc",
+  "enfoques.html": "cca3f89798c79ffab9e29af653a961ad3c02d681da2f74689f9bfa25abe761ee",
+  "escala_avance.html": "5c2a199c716d721ee4fc05d39de6083ab3b628bb021a9bf6bc41b549236ce798",
+  "escala_implementacion.html": "228e4b84218656bc6b95272c84ee15ad4a41dbf73d40f692b9d132d69705c6e3",
+  "fichas.html": "4945f14a0c9f4d64d0cec113ce6872f3522514cf5227ced302050a4b13992c5a",
+  "flujo_evidencia.html": "e419f379a42ff1f1a5338d889aedd49eef51e048c9d25bc75f38e991ad656396",
+  "indicadores.html": "b6dea747e1da84b73f2dce04a44e7ca69cf07648681e4be6c3085d4a05c87cd8",
+  "indicadores_2025.html": "57c6358a46af6551f46b44c9bb022b0a5aa618fa06e8031cd49ed43f6314693c",
+  "linea_tiempo.html": "1396f2bc1422cb7bbca1f4b2663a5a9f709b9dac75dae37de62cd3704d613344",
+  "mapa_servicios_op1.html": "00082d5f49eaf5cfb842690f9eed17a131d2b1af439fc35aa85a56d29a07e62b",
+  "mapa_servicios_op2.html": "80291baa020aad255abd277cca3fedd01c68fadbd4a1c72f792f662ffd6e4737",
+  "mapa_servicios_op3.html": "9f6d72a8fce8215822d783a1b9d8b15bc27eb499378140c647da7155cab0e623",
+  "mapa_servicios_op4.html": "7ca1fcec2ad06d4784132bb26084a85a43b7e2d36297284e70e4d75436acb7e1",
+  "mapa_servicios_op5.html": "658218539d2b7df688d6d522c4c7d9d1641827aa67f575de899ef7712d54202a",
+  "mapa_servicios_op6.html": "dc6e6d5bf5da5e2dd3a16c4ea77291ceb695061fcf98b57549ea0c7dd470e7d0",
+  "matriz_evaluacion.html": "8e63cc3ad3240de1f2af0ad3396420b100946cac7a6fee46c05fc9fdea4ef9b9",
+  "problema_publico.html": "b163404549cdb22c360c3f0ea49ae532e9abc65569cef320d4bbc7d37d2a0e2d",
+  "recomendaciones.html": "8a5550c6d71cc2727ef4330e80b246def7a02259d76c9014dce7dee9ac626ad1",
+  "recursos.html": "ce3b8fa702bc3cc173354a5e33e7a73edd1617b53bc80a6f9917513e5dae0076",
+  "solidez.html": "f7b8deb6c72efa14d9089772397f83263fd548092d2c0f6766e6a6199c78c17c",
+  "valoracion.html": "cb1436d3ae83506778af898ee9d661f780fc38a7417d4b96ad5db8cb9d1696a1"
+ },
+ "fijos": {
+  "assets/logos/logo_gobierno.png": "5d218b3551b03b71380bb65084afe566843a081468081daf0df43d57277778f0",
+  "assets/logos/logo_institucion.png": "db007c484ec5b9ef7b97164544aa2260512b08386f3ef3b2621a6f7bf106bbe2",
+  "evaluaciones/pnig_2026/00_encargo/nota_metodologica/Nota Metodologica Evaluación PNIG - evaluación de cierre.docx": "b5113b92e14bcb95b12204ae028da57247d85e5e800ee6d4e43eabd7bc88135d",
+  "evaluaciones/pnig_2026/00_encargo/nota_metodologica/Nota Metodologica Evaluación PNIG - presentación resumida.pptx": "919cdb04fe49979c656a684445f07c0510bc457856dae0f2825dc792b60d10b7",
+  "evaluaciones/pnig_2026/00_encargo/nota_metodologica/Nota Metodologica Evaluación PNIG - presentación.pptx": "2c126783108d17737e2606c7e5f25762495186728a93033417824b8e4f12b495"
+ },
+ "libros": {
+  "evaluaciones/pnig_2026/04_analisis/D1_D2_brechas_departamentales.xlsx": {
+   "Brechas por ámbito": [
+    4802,
+    19,
+    "ff8aca70cac1d014c6d2c71284ead72e07c8cfd210375b728c3dbd9d98dd6745"
+   ],
+   "Cambio por ámbito": [
+    669,
+    14,
+    "2b1ba56fde215fcffc6a8bd3bb22cf8c561611b0b8016f00d3b1acded7b3213a"
+   ],
+   "Criterios": [
+    12,
+    3,
+    "cc139d30d627cb244629df6de88a56be1ee28489748df3e3b3605f5bc737e468"
+   ],
+   "Diseño muestral": [
+    8,
+    5,
+    "44a4f1d6465007dbc58fc8c44391ad8cb5b506c0baf0156dd6ad99b15a62df66"
+   ],
+   "Participación política": [
+    130,
+    18,
+    "c60226e9f56c4057e0b1755e4b7c525d445a7cf29ae8ad8cf9c1f2f0a89dd046"
+   ],
+   "Resumen por indicador": [
+    28,
+    22,
+    "7a5daaa231e2ee8234ccae6fb81f323ca47d6b8ea9a021a15bf944dc75f868bf"
+   ],
+   "Validación con el INEI": [
+    279,
+    12,
+    "04eea11ddd2fd57e5e8abd2d666e0452134f00a8045c7db05df1a09acf102c07"
+   ],
+   "Validación informalidad": [
+    11,
+    8,
+    "4a21aca2a991f4765ec5d01ffec07baffb300174b43c951b1ccdde1f1243a7ab"
+   ]
+  },
+  "evaluaciones/pnig_2026/04_analisis/D1_D2_brechas_situacion_futura.xlsx": {
+   "Brechas por año": [
+    161,
+    13,
+    "827f774b725e53a290897b3d15c716efa986841526271659e503c09cc22b44da"
+   ],
+   "Criterios": [
+    14,
+    3,
+    "90e0e32dc3b75fa5b9c12d5e702a5521ec70496a1b8f0f5d1418d1ba810e0b98"
+   ],
+   "ENAHO y EPEN": [
+    13,
+    9,
+    "f00f4445c20c06f8be6f85f2cb6543754a10e8b672051d4a05fa88a52306635c"
+   ],
+   "Evolución de las brechas": [
+    16,
+    20,
+    "2c12d04f8b6fd07e45e82bd63cb2bee29926dac8a6685f8108a1d67742b7194f"
+   ],
+   "Manifestaciones ENDES": [
+    43,
+    12,
+    "e84a27438c92037131376697843384c3ba5a3dc259f1036af40698e21160b9b3"
+   ],
+   "Microdatos": [
+    76,
+    6,
+    "c5d72aa3e68aa7e773a4dcb6d4f283375cdea1454b11f3a51ccb68e46447464e"
+   ],
+   "Otras encuestas": [
+    15,
+    7,
+    "cf992a384e56d7f797bf4b7c69eff678a436888ac2b1941250a52ddaec913e79"
+   ],
+   "Participación política": [
+    50,
+    12,
+    "893501153548ef6efafc9fddc43544975c293143d844a147d2227b3c1803e7cd"
+   ],
+   "Situación futura deseada": [
+    9,
+    18,
+    "e8ff90f4f945727ce5ff8255f63b6514464d8f6e5dce538055a955b457d54a99"
+   ],
+   "Validación": [
+    71,
+    9,
+    "664513ba3f5759e4be9fdeaa474466567070a46ffd5ac6c4c739a18737480e8a"
+   ]
+  },
+  "evaluaciones/pnig_2026/04_analisis/D6_enfoques_transversales.xlsx": {
+   "Criterios": [
+    5,
+    3,
+    "2fab950d47b45b026e6134690cca2008ed2847c2c5f24d641346fade4caa43f0"
+   ],
+   "Evidencia": [
+    330,
+    6,
+    "355d8400db261baed9fb38302001c43f713a925398d685adc11fc6b4f16e9cc4"
+   ],
+   "Lista de verificación": [
+    8,
+    9,
+    "9e21274275a013284f1b0464629aabc6f08fbe2b81d8a7d9a2dae2862ba821e1"
+   ],
+   "Resumen de la evidencia": [
+    8,
+    9,
+    "739ae867bc2830e037d5ec6e913c0e84a9ec36b6ed49d72512c4ffac945fe526"
+   ]
+  },
+  "evaluaciones/pnig_2026/04_analisis/REP_ENT_doble_codificacion.xlsx": {
+   "Acta": [
+    12,
+    3,
+    "673074b56677d4bd8ee97a5865eb1f79387f106b1b2b8415b4d125615541ce78"
+   ],
+   "Concordancia por código": [
+    33,
+    6,
+    "5b7090c36c77be2a1ff265f51534dabec3cd288e686a8a59354db98fa3307ed2"
+   ],
+   "Discrepancias": [
+    59,
+    34,
+    "67409c768e10c8d8fb20c872031bfa2cc8fe0f1c57fa1171ecfbbd55e93f4f4f"
+   ],
+   "Listas": [
+    62,
+    5,
+    "94c1829a8b3faa6a886af3dbb81b9ff6c303128f4b6e3fb175a517d68bfe9882"
+   ],
+   "Muestra de coincidencias": [
+    16,
+    25,
+    "4e71a01aebd57f2e3262031422aa6ac481fc9d3194b20ac8fd2395355678c6a7"
+   ],
+   "Resumen": [
+    12,
+    2,
+    "7385e265066f733021ab6c8935ff17bebf1bda84a9bd852b3121c64d56397aa0"
+   ],
+   "Todas": [
+    82,
+    23,
+    "3a2143a4b21180f5cc2b7335aeca3a7d2436fd77110f36839af1cb2d9897f8b5"
+   ]
+  },
+  "evaluaciones/pnig_2026/04_analisis/REP_ENT_informacion_entidades.xlsx": {
+   "Avance de la codificación": [
+    15,
+    2,
+    "b2f5eaf8e58eca6f191ea9c480ff6db67d34dba7753050f4cab9dbcaec0a5731"
+   ],
+   "Codificación": [
+    1660,
+    20,
+    "ccbfa872ba32f654c501005a728c17220c99e5960ecd5b5df710b008d7a6a294"
+   ],
+   "Criterios": [
+    10,
+    3,
+    "acc668510f8b3124d455c2031b13c49628bba8370b71f8d5c599e502885a26f7"
+   ],
+   "Códigos por pregunta": [
+    33,
+    6,
+    "950f54f469bf2312bb798b17483746a116e56086ddc548248b55fda98f3c2bb4"
+   ],
+   "Códigos por servicio": [
+    33,
+    76,
+    "5d44f7eef06b7239f4347554b35f30180ad92f361f911e91b77884a841fd014d"
+   ],
+   "Discrepancias del panel": [
+    17,
+    22,
+    "6b960ef470ef9a4c73433b14345bbb7d912b763b0e0df8d6d278a3508510b869"
+   ],
+   "Hallazgos críticos": [
+    56,
+    10,
+    "b34931749e1c1b6587ac0b698963ed5f9008e0b480560e3883596bf659db9fe1"
+   ],
+   "Libro de códigos": [
+    34,
+    9,
+    "f613d87e2c9dd8fd5aee03f1638607d55d4e716c0f723b853f7f8a9514af179b"
+   ],
+   "Matriz por servicio": [
+    365,
+    17,
+    "a1b0a1e0466c49d1e21242e86129ea29deb98d7630f0f7d7c8fe4255b0e499c1"
+   ],
+   "Panel por indicador": [
+    160,
+    22,
+    "0f2951c2febba8cca650d21df62f6340c77180655b0023fcf668cce521f25d5d"
+   ]
+  },
+  "evaluaciones/pnig_2026/04_analisis/REV_ALI_coherencia_alineamiento.xlsx": {
+   "Criterios": [
+    23,
+    4,
+    "018ada1358f5f5e64ddbcda6b3ba4a75c644591084fbc14e06b145fddd337d14"
+   ],
+   "Para la entrevista DGIGND": [
+    12,
+    5,
+    "43a2ce0515c1ff66ddbbb9797bfe1d6aeef714f71050fc3da6f2142c32e59272"
+   ],
+   "REV_ALI.1 Modelo causal": [
+    8,
+    5,
+    "0220bae8abe1ab40d10405f687df3dc45b28d0e8765d1875e8af24df2930e451"
+   ],
+   "REV_ALI.1 Por lineamiento": [
+    21,
+    8,
+    "1caec08cb2b2978eb42c130cd9393dadcc4301b7d412eb52fa936aad324630b5"
+   ],
+   "REV_ALI.1 Por objetivo": [
+    7,
+    10,
+    "b687e567c45a514768a191ebc6371e6fc658f3485dfeddda54470a7bc5f4458f"
+   ],
+   "REV_ALI.1 Por servicio": [
+    53,
+    21,
+    "7b84d2695cc4fec3c7f0c39c6db5503b5fc4156fc4a4d2c286850dcb463a74ef"
+   ],
+   "REV_ALI.2 Declarado 2019": [
+    18,
+    6,
+    "c6a5a7c420b4932f09b42c9d270ff630e604753e9df1a4501374dd5efa59ca64"
+   ],
+   "REV_ALI.2 Indicadores PEDN": [
+    14,
+    7,
+    "9bad32bed31fcf1b126af7b86270b908adfb6758c8523cf99975a6764e6d55a3"
+   ],
+   "REV_ALI.2 Por objetivo": [
+    7,
+    16,
+    "99d2766676b1a92228fabca0d55a3f51fdbe83dd02ec116b22a3174586a5a362"
+   ],
+   "REV_ALI.2 Registro": [
+    73,
+    9,
+    "d4fce467967b7efc572eda40a87051cc185ed343ffcc660e4f0f5444127804e4"
+   ],
+   "REV_ALI.3 Horizontal": [
+    53,
+    12,
+    "a166200dbca2a489f58821f425948b6419e694f5c3e4a47f4a2ddad07c684a90"
+   ],
+   "REV_ALI.3 Por servicio PNIG": [
+    37,
+    5,
+    "d4babb7ee8d94314d6cecd04ead6811f77f777fa9a205e8c638f1023c0acceaa"
+   ],
+   "REV_ALI.3 Universo": [
+    25,
+    5,
+    "452ad30ed70faa4cfd0bc52b7ffe9a313bdb7a5e460ffafb78df008f0dedb802"
+   ],
+   "REV_ALI.4 Por objetivo": [
+    7,
+    10,
+    "42209378b712a5a3f9172aaa44437457e94d06e067a13a43ec9c309a5c958a51"
+   ],
+   "REV_ALI.4 Registro": [
+    43,
+    8,
+    "1638c8f75c030bc17e9da436b0e1db472d24ab4aa96243ce5285a6de31ae1c5f"
+   ],
+   "REV_ALI.5 Conceptual": [
+    112,
+    12,
+    "150078734bd6955f72df8af1bd648f80cf2aecdb2ae1ec70c13ffa4e36b11bde"
+   ],
+   "Resumen REV_ALI.5": [
+    5,
+    7,
+    "65e8747802234eb44f5b32a7b039ac59351f6ccbc886b8b56db3355d6062692a"
+   ]
+  },
+  "evaluaciones/pnig_2026/04_analisis/REV_DOC_estado_implementacion_servicios.xlsx": {
+   "Criterios": [
+    10,
+    2,
+    "0a1075415b5c6a30f4d0fabf478e62348f5b8b9eb06cc87b8edc0def532e799a"
+   ],
+   "Estado por servicio": [
+    53,
+    35,
+    "731b131406b7cf7738905d20dc527c58c3510ff891ed038a6ba0a2f471283beb"
+   ],
+   "Factores REP_ENT": [
+    880,
+    6,
+    "b861c6f4e6a07449c625e6f9cd2a81c41947f2e7597d0ab24d6882271c26f705"
+   ],
+   "Sensibilidad": [
+    3,
+    5,
+    "4eb122cb470cf1925bc560564fb8dbcfda0afb81280809044942bf7fa085d54c"
+   ]
+  },
+  "evaluaciones/pnig_2026/04_analisis/REV_DOC_matriz_incompatibilidades.xlsx": {
+   "Concordancia": [
+    7,
+    2,
+    "15fd9af22f405f2124b3732a99bbf3a0d3934f3e4bc3a59d39f8f826243ac577"
+   ],
+   "Criterios": [
+    8,
+    2,
+    "1b89d2da69041694c23cea5e9fdf8657e886a131439dfcfc5e902af530577b7a"
+   ],
+   "Discrepancias": [
+    11,
+    9,
+    "99c7c86c243c7f13f3e0fd585700018fefc24e8f97302460cd8f3d948d5e63ce"
+   ],
+   "Resumen por norma": [
+    4,
+    4,
+    "73e596f47ddcc6b1856454f2d963dff2c06215eae8d569d1710f433e198dd7f8"
+   ],
+   "Servicios": [
+    53,
+    9,
+    "8bd5c51d378062e9b0995e6ad0de6c8c147b5c9f7d937ee6fc8ff6985063f0b7"
+   ],
+   "Tabla cruzada": [
+    5,
+    5,
+    "09448801d4aa8a998a52970af3a3da9afb9ccca27eb9ac6970c11cae196a1dd1"
+   ]
+  },
+  "evaluaciones/pnig_2026/04_analisis/REV_EVI_matriz_evidencia.xlsx": {
+   "Búsquedas web y portales": [
+    74,
+    6,
+    "4f00d2ff9e293187499f650c836f95fb8e6b01d97f34fd76a36abd35385b76eb"
+   ],
+   "Cribado web y portales": [
+    23,
+    5,
+    "970b9ba2293a12c4b4572ad1a619cbab53a8e8f5bc0d63a6f08dd281caa72495"
+   ],
+   "Criterios": [
+    16,
+    3,
+    "d6a567b702c007ca3cc872ceb4444b4ddcad1000dc76a7efa981707a9c04407e"
+   ],
+   "Descriptores": [
+    122,
+    6,
+    "9f1122ef234cedf9e215eb25388bdcaad0da37c99cdefaf44c2772f036f54a83"
+   ],
+   "Estrategias académicas": [
+    153,
+    13,
+    "dc46e55a00d32f36f899a501d491374930def1d74a3b5dd95e06e9e7f26b3d70"
+   ],
+   "Estrategias manuales": [
+    35,
+    13,
+    "de8e2b17ce4d7a30a63b96a032f9a426be3b027200340131e07c0942f263a51c"
+   ],
+   "Flujo 3ie DEP": [
+    10,
+    14,
+    "d3f7c1c448f3312ca9f0a8514832bc60175dfe3061d48de85ee15beec05ce361"
+   ],
+   "Flujo manual": [
+    28,
+    14,
+    "0c26bfdf69557e4de80bbf4d6780a820fd7d09510b7194ed280958eb8b705ca9"
+   ],
+   "Flujo por tipo": [
+    26,
+    13,
+    "3c0feb0cf38fa5b3da2891a9b539f4dad83aed0a3cbe532bf4c95b1103e7940b"
+   ],
+   "Matriz de evidencia": [
+    186,
+    11,
+    "6e7424f92db17d38f56f60ade521c2facd9b80e518412c2633ec17f38a023caa"
+   ],
+   "Matriz por tipo": [
+    25,
+    16,
+    "19efd3dacd4062fd99a9d0a32be1c0c16e0a29120ee5e84d4a39be8690d973cf"
+   ],
+   "Plausibilidad por servicio": [
+    53,
+    8,
+    "6e9f6d0922b19972cda30a1baf882c7b7fc57c80fbfffa848dcd2e545b7940a0"
+   ],
+   "Referencias": [
+    173,
+    10,
+    "a63766be178a6012823d5373c4124731b51b914a16b1289212db4831f41c5354"
+   ],
+   "Resultados 3ie DEP": [
+    196,
+    18,
+    "0cb9bb9386f01c1d4c123e27ad6d51ccac021a823da712ddc27a42e1650eef15"
+   ],
+   "Resultados académicos": [
+    2220,
+    12,
+    "1bfc62a94f7ae0126b8d4dc6ad5d36e174bc4b4de8f1c5d7a8e8f0c0501c3add"
+   ],
+   "Resultados manuales": [
+    621,
+    16,
+    "3e92307b2a1ecb37b775ff89793f2e671a7c9f244c046ced4c5103149d84809c"
+   ],
+   "Selección académica": [
+    559,
+    11,
+    "5da20dbe5a36c1ef49569d65608f9506c88122a1627651e9b95989888272cefb"
+   ],
+   "Tipología": [
+    25,
+    10,
+    "db09c61411b343d8408a79e5d9581b8d4e25fca67dbbd8e0ba0a918e1e16b844"
+   ]
+  },
+  "evaluaciones/pnig_2026/04_analisis/REV_IND_2_calidad_fichas.xlsx": {
+   "Conjunto": [
+    15,
+    5,
+    "78eeea0623cbeda711aee9c7d87b48317668d6acae5bb4f7139f6ace1572af80"
+   ],
+   "Criterios": [
+    9,
+    3,
+    "664dc287eeaa180d6fac9a3ad70dfffe785dc60c483e898bbae88a311f807d35"
+   ],
+   "Dictamen": [
+    63,
+    8,
+    "98f75e95892b785434502d4b5bb45e5de9a41291db5b73c44f3c5cbb3d068743"
+   ],
+   "Matriz de atributos": [
+    63,
+    16,
+    "816ed23146e192ca1060c00fc9e86ed3d0994a28349c383500364ac83a5845b2"
+   ],
+   "Observaciones": [
+    132,
+    10,
+    "5fa7f05173fb2858d467f5a39f2f92081eb87424531e7dc1bb0bd5ad69bd15d6"
+   ],
+   "Resumen": [
+    13,
+    6,
+    "298d35a47aad97402c0823f83f81fa870a2c6689d85665cc991c6d7238586c70"
+   ],
+   "Tipo PEMIG": [
+    86,
+    7,
+    "ea11d6c48f5e4d9bbe802f805126ef881dda0d9085706435cf2440fcd72eab9f"
+   ],
+   "Tipo PEMIG resumen": [
+    17,
+    4,
+    "aa816d4ee934f78d2df8535aab5e02c791c10a45383030bd89e7dd50329831f9"
+   ]
+  },
+  "evaluaciones/pnig_2026/04_analisis/REV_IND_3_presupuesto_dgignd.xlsx": {
+   "Composición (%)": [
+    5,
+    9,
+    "67f52a1467b509a4b47ed8673f47acae3522893939ac90f3d5d5b3660fd1536e"
+   ],
+   "Composición conducción": [
+    5,
+    9,
+    "0a8e390a2db8680d61fb997ede8982e44c342349eb60710f225689a6c070e148"
+   ],
+   "Conciliación MEF": [
+    31,
+    6,
+    "ca52749c14ffcad27fb2289a42c136233ea3c9c96071c95623c3af2338d7e388"
+   ],
+   "Criterios": [
+    6,
+    2,
+    "b7ccd140cdbf66ae71276db937b70261f6f06a4ba66c33ee5981c52bf322fcd8"
+   ],
+   "Por finalidad": [
+    20,
+    19,
+    "73a26e55b761d239638f2f0aadbf2e3764473eace387b19368003b08fb6628e8"
+   ],
+   "Por órgano": [
+    8,
+    17,
+    "1f29a9dee77a2b449ed7915cd2f502f924ff026cd0700b0ed216d352c1a3aef3"
+   ]
+  },
+  "evaluaciones/pnig_2026/04_analisis/REV_IND_3_recursos_conduccion.xlsx": {
+   "Actividades UE 001": [
+    293,
+    13,
+    "447c6ff2dd722e1ff0df6580f7e9cee83818698645c1b9f1dea67daa296cad17"
+   ],
+   "Conducción 5001072": [
+    42,
+    13,
+    "4c7db06cd3c2599e086c7842218f5dc90ba4ddf35c1842584c6d461d6601d002"
+   ],
+   "Correspondencia 1002 y 0080": [
+    680,
+    15,
+    "ccef254f270a180645a142bac28d04491ec87ba48afec6e1d03e19d4a9fc8960"
+   ],
+   "Criterios": [
+    6,
+    3,
+    "55787fde71ce977f8f20c6bbf921fd797b6d5936d84697da0928c40f808122af"
+   ],
+   "Cuadre POI": [
+    6,
+    3,
+    "bdbc72f732466ac8856e520f62c7c55eb86ad7f90f481e2e756703a7e3972d5c"
+   ],
+   "POI": [
+    8,
+    4,
+    "67f5a4c8890c24f43adebef2093bfad95216888184a59f59261b62053f78fec4"
+   ],
+   "Pliego por UE": [
+    29,
+    9,
+    "76007e05e5f3d8b21a711c7f1e101fc0919cca0a20df1f55bb70308cf43c7c93"
+   ],
+   "Resumen por vinculación": [
+    29,
+    10,
+    "0be0912462d3d26579393c32a32a98410fd4b79bb3fa3ca32beaa8f46f75e208"
+   ],
+   "Servicios OP1": [
+    75,
+    9,
+    "ab378b96f0f75c3ca04c868014751d192f2e528f5018610721b03736dab0db96"
+   ],
+   "Servicios OP1 por año": [
+    14,
+    8,
+    "b9d5ca858a7aaae330ad6dbf4cdc253a145aa59b4e7e975a59d1badebd3382d3"
+   ],
+   "UE 001 por categoría": [
+    43,
+    9,
+    "f5cf105197c9db3bb79cc7832c1bce4a7c134ed3f15299cf5ade3cfbf606f448"
+   ],
+   "Vinculada directa": [
+    8,
+    5,
+    "e536fb1cfc72a23cff71ccd54a270969e6333d8d12ec9b47923a4ba1114f92f5"
+   ]
+  },
+  "evaluaciones/pnig_2026/04_analisis/REV_IND_3_verificacion_presupuestal.xlsx": {
+   "Cifras verificadas": [
+    601,
+    20,
+    "adc54d824a086b36ff24225a79d0a2e56951b319f5791c489d445623289bea93"
+   ],
+   "Conciliaciones": [
+    18,
+    14,
+    "5e592054bf5691b2fb88e239772ac8d5ac9d4767736c7d8515a2e0d54a905a62"
+   ],
+   "Conducción por meta": [
+    67,
+    12,
+    "cd5b00a84ff8ad3d01a952c7ab8bfa063bd80c8f40b9643ef27de00571f5d929"
+   ],
+   "Conducción por órgano": [
+    7,
+    16,
+    "157e2709eba593d5ee18dcd2b179baea4b25f31c3353345804a78c6bf7952723"
+   ],
+   "Criterios": [
+    20,
+    3,
+    "39a4524878fe7a62a9f4be3e3c2a941440f5e1a21361fe16d64dc4b31d69d627"
+   ],
+   "Estructura orgánica": [
+    4,
+    5,
+    "32b8a7e89d8278532a7d85033563c01e70391dfb7c7ede428ebd3baa67b2bbd9"
+   ],
+   "Modificaciones por UE": [
+    22,
+    8,
+    "108f91b14188b7b28f3c249e68a21d27809a7a08d2c489a77a068da006eef3fe"
+   ],
+   "Modificaciones por meta": [
+    296,
+    13,
+    "520ce50cc2fe2fb24079f1a3a050893c683b08b24512bb1aaa5f7b704f353e52"
+   ],
+   "POI apertura por AO": [
+    31,
+    8,
+    "1822f31ebaf78661ceb6288b7c22ae25731658f3a8a5a519c8d260eed308b577"
+   ],
+   "POI apertura vs MEF": [
+    17,
+    9,
+    "93af8526d53a054bada88e097545414f896b6a2b76944aa654d5c603ebc8d695"
+   ],
+   "Programas presupuestales": [
+    17,
+    10,
+    "f70d2dcdb7f4caacc4b7d1e139b90294fbebecce0a56e0683bcaca4bd32b5713"
+   ],
+   "Resumen": [
+    9,
+    6,
+    "c383c5d444795c722fb5905c8456305b0145ef19a488b0b1ec45e9e192f3d61c"
+   ],
+   "Sin coincidencia por motivo": [
+    6,
+    9,
+    "90a4c6e6793c2535b130670c09079515db5c2d9ff4578391b001cb1537b34fc3"
+   ]
+  },
+  "evaluaciones/pnig_2026/04_analisis/REV_IND_4_recalculo_OP3.xlsx": {
+   "Criterios": [
+    9,
+    4,
+    "428ff2a2274f930548fe7ab1a9ae344c7a025d81b84e1d3e5183c1d33f1cd735"
+   ],
+   "IOP.03.01 componentes": [
+    8,
+    24,
+    "858cd9950e79fecfd73b59663c6e3570527b0b1fd70bba7ffbfeb5860d575f2e"
+   ],
+   "IOP.03.02 serie": [
+    11,
+    12,
+    "2212cb71333be35ef7f49066e1148f5cda7f70f97fe93848b12b5ae6ddcce759"
+   ],
+   "Resultado 2025": [
+    3,
+    9,
+    "b9a2b2cf3a6cb6d0683998a23192b47a4b9f6100149dfe004cb7d7156adf9703"
+   ]
+  },
+  "evaluaciones/pnig_2026/04_analisis/REV_IND_base_indicadores.xlsx": {
+   "Base REV_IND.1": [
+    63,
+    41,
+    "c46cf2eae2c834e7d0cd732b48db38a2f2f96140270692cc158a5c0d873bbacf"
+   ],
+   "Contraste de fuentes": [
+    21,
+    17,
+    "04c706cb6eb110b335debceee044d5c099334d62adad03bf4a27e9c343acf5b3"
+   ],
+   "Contraste metas RS": [
+    281,
+    10,
+    "2bce15c157f2e4d6b1e4e9a24aa162c8413b19fcabb7d84ee3f62a62e186fe9e"
+   ],
+   "Correcciones": [
+    59,
+    5,
+    "65e2e448999876ef1868b54f7f5706b3e546f0e7f63880417e9b889a9dcf4e82"
+   ],
+   "Criterios": [
+    9,
+    4,
+    "c258a6db9faeffdc5a177b9618a063e87dfbb1cd871dd485b966cf22c7ba1566"
+   ],
+   "Resumen PNIG": [
+    20,
+    9,
+    "5b41b435461513e932a2c7a21da54a0a17955f840ada3b0706992d1e9cdf0bf8"
+   ],
+   "Sentido": [
+    63,
+    10,
+    "1625617e6d60021b1bc13d03e6825a6b958c4ebeca9f2664ee2ee970cf6fbb78"
+   ],
+   "Serie anual": [
+    435,
+    30,
+    "f9ecbd482ec95fcd4e2256dc70fd8f856cecaaa7e934533bb8fc9e77687998db"
+   ]
+  },
+  "evaluaciones/pnig_2026/04_analisis/matriz_triangulacion_preguntas.xlsx": {
+   "Cifras": [
+    158,
+    3,
+    "07fefb29a352243acf50d663c4fa92f9f6d050e7990efdffa37336bfc7037230"
+   ],
+   "Cobertura": [
+    13,
+    5,
+    "51d6621aedbf0f04257aa7084fc67fb4313d5a6e54c5793847c3b4b6f98c9e9d"
+   ],
+   "Criterios": [
+    9,
+    3,
+    "dafc2a105e1ab592c16aab6b2b078969663e800e59632f41413fe27fae3f34e9"
+   ],
+   "Evidencias": [
+    157,
+    8,
+    "1746e337820073230916f9ae88c38fcfa5c41559b0e8a977bf1c3cc2e9634650"
+   ],
+   "Matriz de triangulación": [
+    44,
+    17,
+    "be32e5dda7b7de760d6605ebf682d8c98484cac73d717d75e9cf473f90f9df27"
+   ],
+   "Pendientes": [
+    1,
+    5,
+    "2e1388480925ad2383bf3021949117a893d908c67f666b4b9f35318fef4334b0"
+   ],
+   "Valoración por pregunta": [
+    13,
+    11,
+    "047c320d1ae986c70b230d7240ea476d1a3b3b10ef67abc82e2586466f300130"
+   ]
+  },
+  "evaluaciones/pnig_2026/04_analisis/seguimiento_recomendaciones_previas.xlsx": {
+   "Criterios": [
+    8,
+    4,
+    "4519a66db5a38401fa44d9bbee1fed9ff1d76e9541d1335d32e0b8a269103b09"
+   ],
+   "Matriz": [
+    94,
+    16,
+    "de6fc44a90dc992753c97b7944a0b7046e4b14ce380aeadd42b65cf27c2c1910"
+   ],
+   "Resumen por evaluación": [
+    6,
+    7,
+    "d96aa3d2d5c1945a0da06664a3d33bcbb82bf9590240ac5b16a39af5a97b5c22"
+   ]
+  },
+  "evaluaciones/pnig_2026/05_entrevistas/ENTREV_registro_codificacion.xlsx": {
+   "Aplicación": [
+    41,
+    13,
+    "24b44ea2623da7610ae79cc4c235c72165140439a807c8db5f4a01b6582db460"
+   ],
+   "Consentimiento": [
+    4,
+    8,
+    "463a1b446da1a3ea4e39eb0c227f70defae3b07c6a29569ee68a6ae59396ccf5"
+   ],
+   "Criterios": [
+    14,
+    3,
+    "eb5358804a514657b7989a0de9c2f82e4a3dd24001e68e1bcc3cf4ef150a9ce4"
+   ],
+   "Deducciones": [
+    3,
+    6,
+    "f25a519613f609553d0df3024b582d5115d2ab5b96004bae6d0a0670f7c7d7c1"
+   ],
+   "Libro de códigos": [
+    34,
+    9,
+    "f613d87e2c9dd8fd5aee03f1638607d55d4e716c0f723b853f7f8a9514af179b"
+   ],
+   "Preguntas": [
+    31,
+    13,
+    "1a6e018c35bc6200b9e06415efb20bf8f9048a4d54636014624bfc5b41264624"
+   ],
+   "Registro": [
+    110,
+    19,
+    "7b8f61f3d24709234414a9086130963332f808e24b56b8e3b8b9355cf387a914"
+   ],
+   "Vacíos": [
+    17,
+    5,
+    "7b9f5513f77d6906a66fcb548b315ebc6916bda4721c32b8be3e69cbc4d8fe12"
+   ]
+  }
+ }
+}

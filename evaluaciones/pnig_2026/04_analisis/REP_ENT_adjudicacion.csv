@@ -1,0 +1,74 @@
+id,Tipo,Códigos: decisión,Códigos resultantes,Sentido final,Crítico final,Atribución final,Nota de la sesión,Completado por regla,Revisión,Conforme
+LIO-2021-3.1.2-31,Sustantiva,Los de la 2.ª,I1.COB; I1.CONT; I1.MED,Mixto,Sí,4.2.2,,Sentido final,Discrepancia,
+CONAIG-2023-022,Sustantiva,Los de la 2.ª,I1.COB; I4.CONAIG,Dificultad,Sí,Sin reatribuir,,,Discrepancia,
+CONAIG-2023-040,Sustantiva,Los de la 2.ª,I4.CONAIG,Dificultad,No,Sin reatribuir,,Crítico final,Discrepancia,
+CONAIG-2024-040,Sustantiva,Los de la 2.ª,I4.CONAIG; I5.CAPI,Dificultad,No,Sin reatribuir,,Crítico final,Discrepancia,
+CONAIG-2024-042,Sustantiva,Los de la 2.ª,I1.COB; I4.CONAIG,Dificultad,Sí,4.2.2,,,Discrepancia,
+CONAIG-2025-006,Sustantiva,Los de la 2.ª,I1.BP; I1.DEM; I4.CONAIG,Mixto,No,Sin reatribuir,,Sentido final; Crítico final,Discrepancia,
+FORM-2025-ISS.03.01.01.02-falla_arriba,Sustantiva,Los de la 2.ª,D5.FUENTE; D5.REPORTE; I1.CONT; I1.PRES,Mixto,Sí,Sin reatribuir,,Sentido final,Discrepancia,
+CONAIG-2023-052,Sustantiva,Los de la 2.ª,I1.DEM; I4.CONAIG,Dificultad,No,Sin reatribuir,,Crítico final,Discrepancia,
+LIO-2021-5.2.1-03,Sustantiva,Los de la 2.ª,I1.CONT; I1.PRIO; I1.RRHH; I4.DIFC; I4.RECT; I4.SUBN,Dificultad,No,Sin reatribuir,,Crítico final; Atribución final,Discrepancia,
+FORM-2024-ISS.01.01.02.01-falla_abajo,Sustantiva,Los de la 2.ª,D5.REPORTE,Propuesta,Sí,Sin reatribuir,,Sentido final,Discrepancia,
+LIO-2021-4.3.7-09,Sustantiva,Los de la 2.ª,I1.INFO; I1.MED; I1.NORM; I4.DIFC,Mixto,No,Sin reatribuir,,Crítico final,Discrepancia,
+LIO-2022-6.4.1-04,Sustantiva,Los de la 2.ª,I1.CAP; I1.CONT; I1.NORM; I1.PRES; I1.PRIO,Dificultad,No,Sin reatribuir,,Crítico final; Atribución final,Discrepancia,
+LIO-2025-5.1.1-01,Sustantiva,Los de la 2.ª,I1.COB; I1.PRIO; I1.RRHH,Mixto,Sí,Sin reatribuir,,Sentido final,Discrepancia,
+CONAIG-2022-032,Sustantiva,Los de la 2.ª,I1.COB; I1.PRIO; I1.RRHH; I4.CONAIG; I5.SOST,Propuesta,No,Sin reatribuir,,Crítico final,Discrepancia,
+CONAIG-2025-032,Sustantiva,Los de la 2.ª,I1.COB; I1.DEM; I4.CONAIG,Mixto,Sí,4.3.5,,Sentido final,Discrepancia,
+FORM-2025-IOP.05.01-contexto,Sustantiva,Los de la 2.ª,I1.CONT; I1.PRES; I1.PRIO; I1.RRHH,Dificultad,No,Sin reatribuir,,Crítico final,Discrepancia,
+LIO-2025-4.3.7-01,Sustantiva,Los de la 2.ª,I1.CAP; I1.COB; I1.MED; I1.PRES; I1.RRHH,Mixto,Sí,Sin reatribuir,,Sentido final,Discrepancia,
+LIO-2020-4.3.3-01,Sustantiva,Los de la 2.ª,I1.COB; I1.CONT; I5.AJSERV,Mixto,No,Sin reatribuir,,Crítico final,Discrepancia,
+LIO-2020-6.4.1-02,Sustantiva,Los de la 2.ª,D5.DEMANDA; I1.CONT; I1.MED,Mixto,No,OP1,,Crítico final,Discrepancia,
+LIO-2022-1.1.4-01,Sustantiva,Los de la 2.ª,I1.INFO; I4.COORD,Favorable,No,Sin reatribuir,,Sentido final; Crítico final,Discrepancia,
+LIO-2025-6.3.3-21,Sustantiva,Los de la 2.ª,I4.COORD; I4.DIFC; I4.SUBN,Dificultad,Sí,OP1,,Atribución final,Discrepancia,
+CONAIG-2022-029,Sustantiva,Los de la 2.ª,I1.DEM; I1.PRIO; I4.CONAIG,Dificultad,No,Sin reatribuir,,Crítico final,Discrepancia,
+CONAIG-2025-030,Sustantiva,Los de la 2.ª,I1.COB; I1.DEM; I4.CONAIG,Dificultad,Sí,4.3.5,,Atribución final,Discrepancia,
+FORM-2023-IOP.05.01-contexto,Sustantiva,Los de la 2.ª,I1.CONT; I1.PRIO; I1.RRHH; I4.SUBN,Dificultad,No,Sin reatribuir,,Crítico final,Discrepancia,
+FORM-2023-ISS.05.01.01.01-contexto,Sustantiva,Los de la 2.ª,I1.CONT; I1.PRIO; I1.RRHH; I4.SUBN,Dificultad,No,Sin reatribuir,,Crítico final,Discrepancia,
+FORM-2025-ISS.05.03.01.01-contexto,Sustantiva,Los de la 2.ª,I1.CONT; I1.PRIO; I1.RRHH,Dificultad,No,Sin reatribuir,,Crítico final,Discrepancia,
+LIO-2020-2.1.2-01,Sustantiva,Los de la 2.ª,I1.CAP; I1.CONT; I1.INFRA; I1.RRHH,Mixto,No,Sin reatribuir,,Sentido final; Crítico final,Discrepancia,
+LIO-2021-1.1.9-01,Sustantiva,Los de la 2.ª,I1.MED; I1.PRES; I1.PRIO; I1.RRHH,Mixto,No,Sin reatribuir,,Sentido final; Crítico final,Discrepancia,
+LIO-2021-5.5.1-03,Sustantiva,Los de la 2.ª,I1.CAP; I1.RRHH; I4.SUBN; I5.CAPI,Dificultad,Sí,Sin reatribuir,,Atribución final,Discrepancia,
+LIO-2025-1.2.6-13,Sustantiva,Los de la 2.ª,I1.COB; I1.INFRA; I1.PRES; I1.RRHH,Mixto,No,Sin reatribuir,,Sentido final; Crítico final; Atribución final,Discrepancia,
+LIO-2025-2.3.1-04,Sustantiva,Los de la 2.ª,I1.COB; I1.INFO; I1.INFRA; I1.NORM,Mixto,Sí,OP2,,Sentido final,Discrepancia,
+LIO-2019-3.1.2-14,Sustantiva,Los de la 2.ª,I1.CAP; I1.PRES; I1.PRIO; I4.DIFC; I4.SUBN,Dificultad,No,Sin reatribuir,,Crítico final,Discrepancia,
+LIO-2025-5.1.1-03,Sustantiva,Los de la 2.ª,I1.CAP; I1.MED; I1.PRES; I1.PRIO; I1.RRHH; I5.RIESGO,Mixto,Sí,Sin reatribuir,,Sentido final,Discrepancia,
+FORM-2023-ISS.05.01.01.02-medidas,Sustantiva,Los de la 2.ª,I1.CAP; I1.MED; I1.PRIO; I4.COORD,Propuesta,No,Sin reatribuir,,Crítico final,Discrepancia,
+FORM-2024-ISS.01.01.08.01-falla_arriba,Sustantiva,Los de la 2.ª,D5.FICHA; I5.AJIND,Propuesta,Sí,Sin reatribuir,,Sentido final,Discrepancia,
+FORM-2024-ISS.01.01.08.01-medidas,Sustantiva,Los de la 2.ª,D5.AJENO,Propuesta,No,Sin reatribuir,,Sentido final; Crítico final,Discrepancia,
+LIO-2021-4.3.1-02,Sustantiva,Los de la 2.ª,D5.FUENTE; I1.CONT,Dificultad,Sí,Varios OP (notas de la tabla de indicadores de la PNIG),,Atribución final,Discrepancia,
+LIO-2022-2.3.1-12,Sustantiva,Los de la 2.ª,C.EJEC,Neutro,No,OP3,,Sentido final; Crítico final,Discrepancia,
+LIO-2023-6.4.1-08,Sustantiva,Los de la 2.ª,I1.NORM; I1.PRES,Mixto,Sí,2.1.4,,Sentido final,Discrepancia,
+LIO-2024-1.1.3-02,Sustantiva,Los de la 2.ª,I1.INFRA; I1.MED; I1.RRHH,Mixto,No,Sin reatribuir,,Sentido final; Crítico final,Discrepancia,
+LIO-2024-5.1.1-02,Sustantiva,Los de la 2.ª,I1.PRIO; I1.RRHH,Dificultad,No,Sin reatribuir,,Crítico final,Discrepancia,
+LIO-2025-1.1.4-01,Sustantiva,Los de la 2.ª,I1.COB; I1.INFO; I4.COORD,Mixto,Sí,Sin reatribuir,,Sentido final,Discrepancia,
+LIO-2025-6.3.3-11,Sustantiva,Los de la 2.ª,I4.CONAIG,Neutro,No,CONAIG,,Sentido final; Crítico final,Discrepancia,
+CONAIG-2024-035,Parcial,Los de la 2.ª,D5.FUENTE; I1.DEM; I1.PRES; I4.DIFC,Dificultad,Sí,4.3.7,,,Discrepancia,
+FORM-2025-IOP.06.01-contexto,Parcial,Los de la 2.ª,D5.FUENTE; I3.REC,Dificultad,Sí,Sin reatribuir,,,Discrepancia,
+LIO-2019-4.4.1-03,Parcial,Los de la 2.ª,EMER; I5.AJSERV,Dificultad,Sí,Sin reatribuir,,,Discrepancia,
+FORM-2024-ISS.05.04.01.02-falla_abajo,Parcial,Los de la 2.ª,D5.FICHA; I1.COB; I1.PRIO; I4.SUBN,Dificultad,Sí,Sin reatribuir,,,Discrepancia,
+FORM-2025-ISS.01.01.07.01-contexto,Parcial,Los de la 2.ª,I1.DEM; I1.INFO; I1.MED; I1.NORM; I4.DIFC; I5.AJSERV,Dificultad,Sí,Sin reatribuir,,,Discrepancia,
+FORM-2025-ISS.01.02.03.01-falla_arriba,Parcial,Los de la 2.ª,D5.FICHA; D5.META; I5.AJIND,Dificultad,Sí,Sin reatribuir,,,Discrepancia,
+LIO-2025-1.1.1-01,Parcial,Los de la 2.ª,I1.COB; I1.INFRA; I1.NORM; I1.PRES; I1.RRHH,Dificultad,Sí,Sin reatribuir,,,Discrepancia,
+LIO-2025-5.3.1-04,Parcial,Los de la 2.ª,I1.COB; I1.RRHH; I5.CAPI,Dificultad,Sí,Sin reatribuir,,,Discrepancia,
+FORM-2025-ISS.04.02.02.01-falla_abajo,Parcial,Los de la 2.ª,D5.FICHA; I1.COB; I5.AJSERV,Propuesta,Sí,Sin reatribuir,,,Discrepancia,
+FORM-2025-ISS.04.03.05.01-efectos_no_previstos,Parcial,Los de la 2.ª,I1.COB; I1.DEM; I5.EFNP,Dificultad,Sí,Sin reatribuir,,,Discrepancia,
+LIO-2021-1.1.5-04,Parcial,Los de la 2.ª,I1.MED; I1.PRES,Dificultad,Sí,Sin reatribuir,,,Discrepancia,
+LIO-2023-5.3.1-03,Parcial,Los de la 2.ª,I1.RRHH; I5.CAPI,Dificultad,Sí,Sin reatribuir,,,Discrepancia,
+CONAIG-2023-049,Parcial,Los de la 2.ª,I1.CAP; I4.CONAIG; I5.CAPI,Dificultad,Sí,Sin reatribuir,,,Discrepancia,
+FORM-2025-ISS.01.01.03.01-contexto,Parcial,Los de la 2.ª,I1.COB; I1.CONT; I1.DEM; I1.PRES,Mixto,Sí,Sin reatribuir,,,Discrepancia,
+CONAIG-2025-024,Parcial,Los de la 2.ª,I1.PRES; I1.RRHH; I4.CONAIG; I5.CAPI,Dificultad,Sí,Sin reatribuir,,,Discrepancia,
+FORM-2024-ISS.04.02.03.01-falla_arriba,Coincidencia,,,,,,,,Muestra,Sí
+LIO-2024-2.3.1-07,Coincidencia,,,,,,,,Muestra,Sí
+LIO-2024-6.2.1-01,Coincidencia,,,,,,,,Muestra,Sí
+LIO-2024-3.1.2-02,Coincidencia,,,,,,,,Muestra,Sí
+LIO-2024-1.2.6-15,Coincidencia,,,,,,,,Muestra,Sí
+LIO-2025-6.3.3-02,Coincidencia,,,,,,,,Muestra,Sí
+FORM-2024-ISS.04.03.07.01-motivo_no_reporte,Coincidencia,,,,,,,,Muestra,Sí
+FORM-2025-ISS.04.03.05.03-contexto,Coincidencia,,,,,,,,Muestra,Sí
+LIO-2022-6.4.1-01,Coincidencia,,,,,,,,Muestra,Sí
+LIO-2024-4.2.2-01,Coincidencia,,,,,,,,Muestra,Sí
+FORM-2025-IOP.05.02-falla_abajo,Coincidencia,,,,,,,,Muestra,Sí
+FORM-2025-ISS.05.01.01.01-falla_abajo,Coincidencia,,,,,,,,Muestra,Sí
+FORM-2023-ISS.01.01.03.01-medidas,Coincidencia,,,,,,,,Muestra,Sí
+LIO-2023-3.1.2-04,Coincidencia,,,,,,,,Muestra,Sí
+LIO-2024-6.4.1-03,Coincidencia,,,,,,,,Muestra,Sí

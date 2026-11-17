@@ -1,0 +1,43 @@
+# Evaluación de diseño. Estructura sin probar en un caso real.
+tipologia: diseno
+nombre: Evaluación de diseño
+estado: estructura sin probar
+fuente: Guía para el seguimiento y evaluación de políticas nacionales y planes del Sinaplan (CEPLAN, 2024), pp. 20–21
+definicion: >-
+  Examina la pertinencia y la coherencia de las políticas y planes, valorando, entre otros, los aspectos desarrollados
+  en las tres primeras fases del ciclo de planeamiento estratégico (Guía, p. 20). Durante la implementación, el
+  análisis de diseño se focaliza en la pertinencia de la estrategia, la lógica causal y los elementos esenciales para el
+  seguimiento y la evaluación (Guía, p. 21; RQ28).
+elementos_que_valora:   # Guía, p. 20
+  - Calidad del diagnóstico de la situación actual.
+  - Calidad del análisis prospectivo.
+  - Pertinencia de la estrategia para alcanzar la situación futura deseada.
+  - Lógica causal entre las acciones y los objetivos propuestos.
+  - Elementos esenciales para el seguimiento y la evaluación (indicadores, metas consistentes con el futuro deseado,
+    líneas de base y responsables).
+criterios: [Pertinencia, Coherencia interna, Coherencia externa, Calidad técnica]
+preguntas_tipo:
+  D1: {criterio: Pertinencia, instrumentos: [REV_DOC, REV_EVI], texto: "¿En qué medida el diagnóstico identifica correctamente el problema público, sus causas y la población afectada, con evidencia vigente?"}
+  D2: {criterio: Pertinencia, instrumentos: [REV_DOC, REV_IND], texto: "¿En qué medida la situación futura deseada y la estrategia responden al problema público y son alcanzables en el horizonte de la política?"}
+  D3: {criterio: Coherencia interna, instrumentos: [REV_ALI, REV_EVI], texto: "¿En qué medida la lógica causal entre causas, objetivos, lineamientos y servicios es coherente y está respaldada por evidencia?"}
+  D4: {criterio: Coherencia externa, instrumentos: [REV_ALI], texto: "¿De qué manera la política se articula vertical y horizontalmente con los instrumentos del Sinaplan y con los compromisos internacionales?"}
+  D5: {criterio: Calidad técnica, instrumentos: [REV_IND, REV_DOC], texto: "¿En qué medida los indicadores, metas y líneas de base permiten seguir y evaluar la política (RQ32, RQ33)?"}
+  D6: {criterio: Coherencia interna, instrumentos: [REV_DOC, REV_ALI], texto: "¿En qué medida el diseño incorpora los enfoques transversales exigidos (RQ31)?"}
+instrumentos_sugeridos: [REV_DOC, REV_ALI, REV_IND, REV_EVI, ENTREV]
+escalas:
+  valoracion: [Satisfactorio, Parcial, Insuficiente]
+  confianza: [Sólido, Con respaldo parcial, Indicio]
+  alineamiento: [Directa, Indirecta, Sin correspondencia]
+  solidez_evidencia: [Sólida, Moderada, Limitada, Sin evidencia identificada]
+informe:   # Tabla 3 (pp. 54–55), con el énfasis del diseño
+  - {seccion: Resumen ejecutivo, contenido: "Síntesis de los hallazgos (RQ09)."}
+  - {seccion: "1. Descripción de la política", contenido: "Problema público, situación futura, población objetivo y lógica de intervención (RQ10)."}
+  - {seccion: "2. Metodología", contenido: "Preguntas, criterios, instrumentos, triangulación y limitaciones (RQ23, RQ24)."}
+  - {seccion: "3. Análisis del diseño", preguntas: D, contenido: "Una subsección por pregunta de diseño."}
+  - {seccion: "4. Conclusiones", contenido: "Respuesta a cada pregunta (RQ13)."}
+  - {seccion: "5. Recomendaciones", contenido: "Matriz de la Tabla 4, aspectos de mejora de diseño (RQ14, RQ18)."}
+  - {seccion: Anexos, contenido: "Matriz de evaluación, hallazgos y confianza, evidencia y documentos de respaldo."}
+nota_integralidad: >-
+  [POR VERIFICAR] Si la evaluación de diseño se presenta como informe bienal de la política, la guía exige un informe
+  integral con resultados e implementación (p. 21; RQ08); en ese caso se usa la estructura de cierre o de resultados.
+requisitos: [RQ09, RQ10, RQ13, RQ14, RQ16, RQ18, RQ21, RQ23, RQ24, RQ28, RQ31, RQ32, RQ33]

@@ -1,0 +1,105 @@
+# Estado de los servicios (rev_doc_estado_servicios.py): etiquetas de entidades, órganos del MIMP identificados en los informes LIO,
+# evidencia de ejecución 2025 resumida del LIO y ajustes por lectura cualitativa (ADR-011).
+etiquetas_entidad:
+  WARMINAN: MIMP (PN Warmi Ñan)
+  MIMP-DGCVG: MIMP (DGCVG)
+  MIMP-DGTEG: MIMP (DTEG)
+  MIMP-DFF: MIMP (DFF)
+organos_mimp_lio:
+  4.1.1: MIMP (DGPDAEM)
+  6.2.1: MIMP (DTEG y DPIGND)
+  6.3.3: MIMP (DPIGND)
+  6.3.5: MIMP (DPIGND)
+  6.4.1: MIMP (INABIF y DGFC)
+evidencia_ejecucion_2025:
+  1.1.1: 33 MAMIS en 13 regiones; 8960 atenciones a NNA (−13 % frente a 2024).
+  1.1.2: 301 CSMC, 13 nuevos en 2025; atención de víctimas de violencia.
+  1.1.3: 433 CEMF; 169 536 casos atendidos; cobertura distrital de 18,16 %.
+  1.1.4: SIDPOL en 1326 comisarías; módulo de medidas de protección en 1235.
+  1.1.5: 145 órganos jurisdiccionales especializados; 274 464 expedientes de VCMIGF.
+  1.1.6: 101 fiscalías provinciales y 8 superiores especializadas; 181 448 denuncias.
+  1.1.7: 2235 defensores públicos (385 de asistencia legal y 447 de defensa de víctimas); 39 sedes del PPoR 1002.
+  1.1.8: 'MTPE: 606 casos atendidos en «Trabaja sin Acoso»; SERVIR: 65 víctimas atendidas en «Estado sin Acoso».'
+  1.1.9: Plan de Capacitación 2025 del Centro de Altos Estudios; acciones formativas virtuales para operadores del
+    SNEJ.
+  1.2.1: Productos P13A y P15A del PPoR en distritos priorizados por el PN Warmi Ñan.
+  1.2.2: 149 distritos; 23 687 hombres en espacios «Entre Patas»; 2270 hombres formados en comportamientos no violentos.
+  1.2.3: 65 centros operativos del SAR; 3 servicios itinerantes (PIAS); 25 de 55 pueblos indígenas alcanzados.
+  1.2.4: Plan TOECE aprobado en el 85 % de II. EE. (55 011); 83 % afiliadas al SíseVe.
+  1.2.5: 10 941 consultas en el Chat 100 (+25 % frente a 2024).
+  1.2.6: Programa TAS en el E. P. Lurigancho; 188 internos atendidos.
+  2.1.1: Sin protocolo; acciones comunicacionales y 81 notas de prensa sobre SSR.
+  2.1.2: 7 211 328 atenciones de consejería en SSR.
+  2.1.3: 980 186 métodos anticonceptivos distribuidos (−7,6 % frente a 2024).
+  2.1.4: 14 719 atenciones de anticoncepción oral de emergencia.
+  2.2.1: Solo informa que el protocolo está en desarrollo. En 2023 y 2024 reporta acciones vinculadas en 158 y 163
+    II. EE.; el LIO 2023 señala que el servicio no se ha implementado como tal.
+  2.2.2: Asistencia técnica de DISER y DEIB a UGEL focalizadas; herramientas curriculares para primaria rural.
+  2.3.1: 2 770 833 atenciones preliminares a adolescentes; 497 servicios diferenciados.
+  3.1.1: Protocolo aprobado en 2025; asistencia técnica a 47 de 54 partidos inscritos.
+  3.1.2: Formación a 285 personas, principalmente mujeres; sin acciones con organizaciones sociales ni asistencia
+    técnica.
+  4.1.1: CEDIF del INABIF y piloto «Comunidades para los cuidados» (Comas, Villa El Salvador y Tambopata); protocolo
+    en elaboración.
+  4.2.1: 33 870 personas empadronadas (53 % mujeres) y 25 651 tituladas; protocolo en desarrollo.
+  4.2.2: 40 527 títulos inscritos; 30 313 personas tituladas mujeres (54,9 %).
+  4.2.3: 6624 certificados en el RADA, 1977 para mujeres.
+  4.2.4: Transferencias directas condicionadas para conservación en ANP de 10 regiones; protocolo en elaboración.
+  4.3.1: 930 personas atendidas por el PNEJP; 530 mujeres evaluadas y certificadas.
+  4.3.2: 11 831 personas atendidas (6500 mujeres); protocolo en elaboración.
+  4.3.3: Matrícula de 61 910 estudiantes en IESP y EESP (70,6 % mujeres); protocolo en formulación.
+  4.3.4: 'SENCICO: 90 620 participantes, 27,2 % mujeres; protocolo en elaboración.'
+  4.3.5: 'PNTE: 77 359 asesorías (37 723 a mujeres) y 30 977 empresas lideradas por mujeres formalizadas; «Ella
+    Exporta»: 23 empresas.'
+  4.3.6: 'FONDEPES: créditos para pesca artesanal y acuicultura en 25 regiones; AGROBANCO: 18 220 créditos a mujeres.'
+  4.3.7: 5822 lactarios institucionales (339 nuevos); 7449 trabajadoras beneficiadas.
+  4.4.1: 135 708 hogares con adolescentes mujeres acompañados.
+  5.1.1: Asistencia técnica a 10 entidades del nivel nacional (13 servicios), frente a 21 en 2024.
+  5.2.1: 'Solo acciones preparatorias: línea de base con las Mesas de Concertación y propuesta de protocolo. En
+    2023 y 2024 no reporta acciones.'
+  5.3.1: 15 entidades nacionales aplicaron el autodiagnóstico (22 en 2024); 5 superan el umbral en planeamiento.
+  5.4.1: 'Curso de SERVIR–ENAP: 40 matriculados y 28 aprobados (70 %).'
+  5.5.1: Protocolo aprobado el 03-11-2025; el servicio está en fase de diagnóstico.
+  6.1.1: 'Sin provisión reportada: en 2023 no realizó acciones y en 2024 y 2025 solo hace referencias generales
+    al CNEB y a la elaboración del protocolo.'
+  6.1.2: 104 IESP y EESP públicos ofertan programas con enfoque de igualdad de género; 8 actividades de fortalecimiento.
+  6.1.3: 4 asistencias técnicas de la OTEPA a secretarías técnicas; protocolo en elaboración.
+  6.2.1: Estrategia comunicacional en diseño; campaña «Juntas avanzamos»; protocolo en elaboración.
+  6.3.1: ENARES 2024 ejecutada; resultados presentados en 2025.
+  6.3.2: ENUT 2024 ejecutada; resultados presentados en 2025; propuesta de protocolo concluida.
+  6.3.3: 8 investigaciones de 6 entidades; propuesta de protocolo concluida.
+  6.3.4: Actualización de la guía de remisión de indicadores de programas presupuestales; procedimiento de anonimización
+    validado.
+  6.3.5: Piloto de taxonomía del gasto en 3 programas presupuestales del MIMP (2025); en 2023 y 2024, fase de diseño.
+  6.4.1: 'SIEF de la DFF: 557 servidores de 262 gobiernos locales capacitados; servicios del INABIF; sin protocolo.'
+ajustes:
+  2.2.1:
+    estado: Implementado parcialmente
+    motivo: Orientación en educación sexual integral a familias reportada en 2021 y 2022 (LIO 2021, p. 157; LIO
+      2022, p. 94), sin protocolo; el LIO 2023 indica que el servicio no se ha implementado como tal y en 2025 solo
+      informa el protocolo en desarrollo.
+  5.2.1:
+    estado: No implementado
+    motivo: 'Solo acciones preparatorias en todo el periodo: acercamiento a organizaciones privadas en 2019 (LIO
+      2019, p. 59), sin logro en 2021 (LIO 2021, p. 517), sin información por ser un servicio nuevo en 2022 (LIO
+      2022, p. 151) y línea de base y propuesta de protocolo en 2023–2025.'
+  6.4.1:
+    estado: No implementado
+    motivo: El servicio como tal siguió en diseño durante todo el periodo, sin protocolo (LIO 2022, p. 171; LIO
+      2023, p. 163; LIO 2025, p. 25); los servicios del INABIF y las capacitaciones del SIEF que reportan los informes
+      LIO son actividades conexas y no constituyen su provisión (revisión institucional del 13-11-2026).
+  6.1.1:
+    estado: Implementado parcialmente
+    motivo: Programas educativos reportados en 2021 y 2022 (LIO 2021, p. 246; LIO 2022, p. 163), sin protocolo;
+      sin acciones en 2023 y solo referencias generales al CNEB en 2024 y 2025.
+  6.3.1:
+    estado: Implementado parcialmente
+    motivo: ENARES 2024 ejecutada; la sección del LIO es breve, pero informa la provisión.
+  6.3.5:
+    estado: Implementado parcialmente
+    motivo: Piloto ejecutado en 2025; la sección del LIO es breve, pero informa la provisión.
+# Asignaciones identificadas por coincidencia de monto que se descartan por falta de correspondencia funcional entre la
+# meta del MEF y el servicio (revisión institucional del 13-11-2026).
+asignacion_descartada:
+  6.4.1: El monto del LIO 2022 coincide con el devengado de la meta «26 servicios de atención a afectados por la
+    violencia familiar», que no financia el acompañamiento y la consejería a las familias del servicio.

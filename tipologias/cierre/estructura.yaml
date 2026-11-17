@@ -1,0 +1,52 @@
+# Evaluación de cierre. Probada en el piloto PNIG 2026 (evaluaciones/pnig_2026).
+tipologia: cierre
+nombre: Evaluación de cierre
+estado: probada en el piloto PNIG 2026
+fuente: Guía para el seguimiento y evaluación de políticas nacionales y planes del Sinaplan (CEPLAN, 2024), p. 73
+definicion: >-
+  Evaluación que debe tener una política nacional, Pesem o PDC que vaya a ser actualizado o reemplazado por una nueva
+  estrategia. Contiene el análisis, como mínimo, hasta el cierre del año previo al inicio del nuevo proceso de
+  formulación, y sus recomendaciones retroalimentan ese proceso, dando cuenta de los temas que siguen vigentes (Guía,
+  p. 73).
+planos:
+  ceplan: >-
+    Obligatoria si la política se actualiza o reemplaza (RQ03); informe integral de diseño, implementación y resultados
+    (Guía, p. 21; RQ08); estructura general de la Tabla 3 (pp. 54–55) y matriz de recomendaciones de la Tabla 4 (p. 56).
+  piloto: >-
+    Periodo completo de la política (2019–2025), siete preguntas de diseño y cinco de implementación, seis
+    instrumentos, triangulación con confianza por número de fuentes independientes, escala de implementación con dos de
+    tres componentes y ejecución al cierre (ADR-011 y ADR-012), informe autocontenido con rastro en el anexo técnico
+    (ADR-010).
+  equipo_evaluador: Delimitación del alcance, preguntas específicas, umbrales de las escalas y fuentes.
+criterios: [Pertinencia, Coherencia interna, Coherencia externa, Calidad técnica, Eficacia, Eficiencia, Implementación,
+  Sostenibilidad]
+preguntas_tipo:
+  D1: {criterio: Pertinencia, instrumentos: [REV_DOC, REV_EVI], texto: "¿En qué medida el diagnóstico del problema público mantiene vigencia, considerando la evolución de las brechas, los cambios normativos y la temporalidad de la política?"}
+  D2: {criterio: Pertinencia, instrumentos: [REV_IND, REV_DOC], texto: "¿En qué medida la situación futura deseada es consistente con el problema público y qué tan alcanzable es al fin del horizonte temporal?"}
+  D3: {criterio: Coherencia interna, instrumentos: [REV_ALI, REV_EVI], texto: "¿En qué medida la cadena de resultados es coherente entre las causas, los objetivos prioritarios, los lineamientos y los servicios, y en qué medida la evidencia respalda que los servicios actúan sobre las causas?"}
+  D4: {criterio: Coherencia externa, instrumentos: [REV_ALI], texto: "¿De qué manera la política se alinea con las Políticas de Estado, el PEDN, la PGG, otras políticas nacionales y los compromisos internacionales?"}
+  D5: {criterio: Calidad técnica, instrumentos: [REV_IND, REV_DOC], texto: "¿En qué medida los indicadores son suficientes, medibles y conformes al estándar del Sinaplan, y qué factores explican sus deficiencias?"}
+  D6: {criterio: Coherencia interna, instrumentos: [REV_DOC, REV_ALI], texto: "¿En qué medida el diseño incorpora los enfoques transversales y con qué nivel de desarrollo?"}
+  I1: {criterio: Eficacia, instrumentos: [REV_DOC, REP_ENT], texto: "¿En qué medida los servicios fueron efectivamente implementados por las entidades responsables, y qué factores explican su implementación parcial o su no implementación?"}
+  I2: {criterio: Eficacia, instrumentos: [REV_IND], texto: "¿En qué medida avanzaron los indicadores de los objetivos prioritarios durante el periodo respecto de las metas previstas?"}
+  I3: {criterio: Eficiencia, instrumentos: [REV_IND, ENTREV], texto: "¿Qué recursos se asignaron y ejecutaron para conducir la política, y cómo se relacionan con el desarrollo de sus instrumentos de implementación?"}
+  I4: {criterio: Implementación, instrumentos: [ENTREV, REP_ENT, REV_DOC], texto: "¿Cómo funcionan la rectoría y los mecanismos de articulación, y qué factores explican su desempeño?"}
+  I5: {criterio: Sostenibilidad, instrumentos: [REP_ENT, ENTREV], texto: "¿Qué capacidades existen, qué brechas persisten y qué condiciones se requieren para sostener los componentes de la política ante su sustitución o actualización?"}
+instrumentos_sugeridos: [REV_DOC, ENTREV, REP_ENT, REV_ALI, REV_IND, REV_EVI]
+escalas:
+  valoracion: [Satisfactorio, Parcial, Insuficiente]
+  confianza: [Sólido, Con respaldo parcial, Indicio]
+  implementacion: {componentes: [protocolo, asignación identificable, reporte de indicador], minimo_componentes: 2,
+                   anios_cierre: "los dos últimos años del periodo"}
+  avance: semáforo de los reportes de cumplimiento de la política (nucleo.escalas.AVANCE_PNIG como referencia)
+informe:
+  - {seccion: Resumen ejecutivo, contenido: "Síntesis de los hallazgos más relevantes, de dos páginas como máximo."}
+  - {seccion: "1. La política", contenido: "Antecedentes, problema público, situación futura deseada, objetivos, lineamientos y servicios, indicadores, actores, alineamiento e instrumentos de implementación (Tabla 3, sección 1)."}
+  - {seccion: "2. Metodología", contenido: "Tipo de evaluación, preguntas y criterios, instrumentos, reglas de clasificación, triangulación y limitaciones."}
+  - {seccion: "3. Análisis del diseño", preguntas: D, contenido: "Una subsección por pregunta de diseño."}
+  - {seccion: "4. Análisis de la implementación", preguntas: I, contenido: "Grado de implementación de los servicios, recursos, coordinación, factores, sostenibilidad y seguimiento de recomendaciones previas (Tabla 3, sección 3)."}
+  - {seccion: "5. Análisis de los resultados", contenido: "Valoración integral, logros por objetivo prioritario y perspectivas para la situación futura (Tabla 3, sección 2)."}
+  - {seccion: "6. Conclusiones", contenido: "Respuesta a cada pregunta de evaluación (Tabla 3, sección 4)."}
+  - {seccion: "7. Recomendaciones", contenido: "Matriz de la Tabla 4, dirigidas a la nueva política y a la transición (Tabla 3, sección 5)."}
+  - {seccion: Anexos, contenido: "Matriz de evaluación, hallazgos y confianza, estado por servicio, evidencia, reporte de seguimiento, documentos de respaldo, glosario."}
+requisitos: [RQ03, RQ08, RQ09, RQ10, RQ11, RQ12, RQ13, RQ14, RQ15, RQ16, RQ18, RQ19, RQ21, RQ23, RQ24, RQ25]

@@ -1,0 +1,40 @@
+# Evaluación de resultados. Estructura sin probar en un caso real.
+tipologia: resultados
+nombre: Evaluación de resultados
+estado: estructura sin probar
+fuente: Guía para el seguimiento y evaluación de políticas nacionales y planes del Sinaplan (CEPLAN, 2024), p. 21
+definicion: >-
+  Valora el cumplimiento y los efectos, esperados y no esperados, de las políticas y planes. Es integral al contrastar
+  la implementación con los resultados obtenidos, identificando cómo se viene alcanzando la situación futura deseada
+  (Guía, p. 21; RQ30).
+elementos_que_valora:   # Guía, p. 21
+  - Cumplimiento de los objetivos prioritarios o estratégicos.
+  - Consistencia entre los resultados obtenidos y la implementación.
+  - Contribución de los resultados al logro de la situación futura deseada.
+  - Factores que contribuyen o dificultan alcanzar los logros esperados.
+  - Otros efectos no esperados.
+criterios: [Eficacia, Coherencia, Sostenibilidad]
+preguntas_tipo:
+  R1: {criterio: Eficacia, instrumentos: [REV_IND], texto: "¿En qué medida avanzaron los indicadores de los objetivos prioritarios respecto de sus metas y de su línea de base (RQ26, RQ27)?"}
+  R2: {criterio: Coherencia, instrumentos: [REV_IND, REV_DOC], texto: "¿En qué medida los resultados obtenidos son consistentes con el grado de implementación de los servicios?"}
+  R3: {criterio: Eficacia, instrumentos: [REV_IND, REV_DOC], texto: "¿En qué medida los resultados contribuyen al logro de la situación futura deseada?"}
+  R4: {criterio: Eficacia, instrumentos: [REP_ENT, ENTREV], texto: "¿Qué factores contribuyen o dificultan alcanzar los logros esperados?"}
+  R5: {criterio: Eficacia, instrumentos: [ENTREV, REV_DOC], texto: "¿Qué efectos no esperados, positivos o negativos, se identifican?"}
+instrumentos_sugeridos: [REV_IND, REP_ENT, REV_DOC, ENTREV]
+escalas:
+  valoracion: [Satisfactorio, Parcial, Insuficiente]
+  confianza: [Sólido, Con respaldo parcial, Indicio]
+  avance: >-
+    [POR VERIFICAR] Avance tipo I con semáforo [0–75>, [75–95> y [95–100] e índice de gestión (RQ26), y avance tipo
+    II frente a la línea de base (RQ27); el piloto usó el semáforo de cinco niveles de los reportes de cumplimiento de
+    la política (nucleo.escalas.AVANCE_PNIG).
+informe:   # Tabla 3 (pp. 54–55) y Tabla A7.1, sección 2 (RQ11)
+  - {seccion: Resumen ejecutivo, contenido: "Síntesis de los hallazgos (RQ09)."}
+  - {seccion: "1. Descripción de la política", contenido: "Problema, situación futura, población y lógica de intervención (RQ10)."}
+  - {seccion: "2. Metodología", contenido: "Preguntas, criterios, instrumentos, triangulación y limitaciones (RQ23, RQ24)."}
+  - {seccion: "3. Análisis de los resultados", preguntas: R, contenido: "Valoración integral, logros por objetivo prioritario, contribución a la situación futura, factores y efectos no esperados (RQ11)."}
+  - {seccion: "4. Análisis de implementación", contenido: "Grado de implementación de los servicios que explican los resultados (Tabla 3, sección 3; RQ08)."}
+  - {seccion: "5. Conclusiones", contenido: "Respuesta a cada pregunta (RQ13)."}
+  - {seccion: "6. Recomendaciones", contenido: "Matriz de la Tabla 4 (RQ14, RQ18)."}
+  - {seccion: Anexos, contenido: "Reporte de seguimiento o enlace al PTE, revisión bibliográfica y documentos de respaldo (RQ15)."}
+requisitos: [RQ08, RQ09, RQ10, RQ11, RQ13, RQ14, RQ15, RQ16, RQ18, RQ21, RQ23, RQ24, RQ26, RQ27, RQ30, RQ34]

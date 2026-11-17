@@ -1,0 +1,21 @@
+# Portada de los informes técnicos de evaluación (módulo src/nucleo/portada; instrucciones en docs/portada.md).
+# Todo lo que se ve en la portada sale de aquí: no hace falta tocar código para cambiar textos, logos o colores.
+portada:
+  # Diseño: centrado (G), el único vigente desde la ronda 35 (src/nucleo/portada/opcion_g.py).
+  etiqueta: "Informe de evaluación de cierre"
+  titulo: "Política Nacional de Igualdad de Género (2019–2025)"
+  subtitulo: ""   # vacío desde la ronda 33 (pedido del usuario): la portada no lleva subtítulo
+  institucion: "Ministerio de la Mujer y Poblaciones Vulnerables"
+  organo_elaborador: "Oficina General de Monitoreo, Evaluación de Políticas y Gestión Descentralizada · Oficina de Monitoreo y Evaluación de Políticas"
+  lugar_fecha: "Lima, noviembre de 2026"
+  logos:
+    institucion: "assets/logos/logo_institucion.png"
+    gobierno: "assets/logos/logo_gobierno.png"
+  colores:
+    # Rojo de «La Pastilla» de los ministerios del Perú (Pantone 485 C). Es un valor por defecto: confírmelo con el
+    # manual de identidad de la institución o con la guía de identidad visual de la PCM y cámbielo aquí si difiere.
+    primario: "#E1251B"
+    gris_oscuro: "#575756"
+    gris_claro: "#E3E3E3"
+    texto: "#2C2C2A"
+  tipografia: "Poppins"      # si no está instalada, se usa Calibri y se avisa

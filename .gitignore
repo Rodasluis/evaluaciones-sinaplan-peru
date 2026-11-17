@@ -1,0 +1,39 @@
+# Datos crudos pesados o sensibles: decide si versionarlos
+evaluaciones/*/03_datos/raw/*
+!evaluaciones/*/03_datos/raw/.gitkeep
+evaluaciones/*/03_datos/procesado/*
+!evaluaciones/*/03_datos/procesado/.gitkeep
+
+# Anexo técnico: copias que se regeneran con src/analisis_pnig/anexo_tecnico.py (ronda 36)
+evaluaciones/*/07_anexo_tecnico/
+
+# Gestión administrativa con datos personales (CV, recibos, órdenes de servicio, contactos): nunca versionar
+evaluaciones/*/_gestion/
+src/formulario_fie03/datos/directorio_destinatarios.csv
+
+# Rutas propias de cada equipo (src/nucleo/entorno.py): llevan el nombre de usuario
+config/entorno.local.yaml
+
+# Temporales de Office
+~$*
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+.ipynb_checkpoints/
+
+# Sistema
+.DS_Store
+
+# Formulario FIE-03: semilla con hashes de contraseñas (se regenera con generar_semilla_js.py)
+src/formulario_fie03/apps_script/Semilla.js
+
+# Fuentes: se obtienen con src/fuentes/descargar_inventario.py y no se versionan (docs/fuentes/LEEME.md)
+docs/fuentes/**
+!docs/fuentes/LEEME.md
+!docs/fuentes/inventario_publico.csv
+
+# Pruebas y marca del armado
+.pytest_cache/
+.version_publica

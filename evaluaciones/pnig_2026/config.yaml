@@ -1,0 +1,171 @@
+# Configuración de la evaluación (src/nucleo/config.py). Lo que es propio de la evaluación va aquí o en 02_insumos/,
+# no en el código. Las preguntas se leen de aquí (sintesis_hallazgos.PREGUNTAS).
+id: pnig_2026
+tipologia: cierre
+titulo: Evaluación de cierre de la Política Nacional de Igualdad de Género (2019–2025)
+politica:
+  nombre: Política Nacional de Igualdad de Género
+  sigla: PNIG
+  norma: D.S. N.° 008-2019-MIMP
+  aprobacion: '2019-04-04'
+  documento: docs/fuentes/pnig/01_normativa/2019_mimp_ds-008-2019-mimp_pnig.pdf
+  plan_implementacion: PEMIG (D.S. N.° 002-2020-MIMP)
+periodo:
+  inicio: 2019
+  fin: 2025
+entidad:
+  nombre: Ministerio de la Mujer y Poblaciones Vulnerables
+  sigla: MIMP
+  pliego: 039
+  conduccion:
+  - DGIGND
+  - DPIGND
+  - DPPDM
+  seguimiento: OGMEPGD
+  planeamiento: OGPPM
+  elabora: Oficina General de Monitoreo, Evaluación de Políticas y Gestión Descentralizada · Oficina de Monitoreo
+    y Evaluación de Políticas
+instrumentos:
+  REV_DOC: Revisión documental
+  ENTREV: Entrevistas al nivel conductor
+  REP_ENT: Información reportada por las entidades
+  REV_ALI: Coherencia y alineamiento
+  REV_IND: Indicadores y recursos
+  REV_EVI: Revisión de evidencia
+preguntas:
+  D1:
+    criterio: Pertinencia
+    texto: >-
+      ¿En qué medida el diagnóstico del problema público de la PNIG mantiene vigencia, considerando la evolución
+      de las brechas entre mujeres y hombres, los cambios normativos nacionales e internacionales y la temporalidad
+      de la Política?
+    instrumentos:
+    - REV_DOC
+    - REV_EVI
+  D2:
+    criterio: Pertinencia
+    texto: >-
+      ¿En qué medida la situación futura deseada es consistente con el problema público y qué tan alcanzable es
+      al fin del horizonte temporal de la Política?
+    instrumentos:
+    - REV_IND
+    - REV_DOC
+  D3:
+    criterio: Coherencia interna
+    texto: >-
+      ¿En qué medida la cadena de resultados es coherente entre las causas del problema público, los objetivos prioritarios,
+      los lineamientos y los servicios, y en qué medida la evidencia respalda que los servicios actúan sobre las
+      causas que atienden?
+    instrumentos:
+    - REV_ALI
+    - REV_EVI
+  D4:
+    criterio: Coherencia externa
+    texto: >-
+      ¿De qué manera la Política se alinea con las Políticas de Estado, el PEDN, la PGG, otras políticas nacionales
+      y los compromisos internacionales, y qué brechas de alineamiento se identifican frente a la Ley N.° 32535?
+    instrumentos:
+    - REV_ALI
+  D5:
+    criterio: Calidad técnica
+    texto: >-
+      ¿En qué medida los indicadores de la Política son suficientes, medibles y conformes al estándar del SINAPLAN,
+      y qué factores explican las deficiencias identificadas?
+    instrumentos:
+    - REV_IND
+    - REV_DOC
+  D6:
+    criterio: Coherencia interna
+    texto: >-
+      ¿En qué medida el diseño incorpora los siete enfoques transversales y con qué nivel de desarrollo?
+    instrumentos:
+    - REV_DOC
+    - REV_ALI
+  D7:
+    criterio: Pertinencia y coherencia externa
+    texto: >-
+      ¿Qué implicancias tiene el marco conceptual del enfoque de igualdad de oportunidades sobre el diagnóstico,
+      los objetivos prioritarios, los lineamientos y los servicios de la Política?
+    instrumentos:
+    - REV_ALI
+    - ENTREV
+  I1:
+    criterio: Eficacia
+    texto: >-
+      ¿En qué medida los servicios de la Política fueron efectivamente implementados por las entidades responsables,
+      y qué factores explican su implementación parcial o su no implementación?
+    instrumentos:
+    - REV_DOC
+    - REP_ENT
+  I2:
+    criterio: Eficacia
+    texto: >-
+      ¿En qué medida avanzaron los indicadores de los objetivos prioritarios durante 2019–2025 respecto de las metas
+      previstas?
+    instrumentos:
+    - REV_IND
+  I3:
+    criterio: Eficiencia (alcance acotado)
+    texto: >-
+      ¿Qué recursos asignó y ejecutó el MIMP en las actividades presupuestales vinculadas a la conducción de la
+      Política durante 2019–2025, y cómo se relacionan con el desarrollo de los instrumentos de implementación?
+    instrumentos:
+    - REV_IND
+    - ENTREV
+  I4:
+    criterio: Implementación
+    texto: >-
+      ¿Cómo funcionan la rectoría del MIMP, la CONAIG y los mecanismos de articulación multisectorial e intergubernamental,
+      y qué factores explican su desempeño?
+    instrumentos:
+    - ENTREV
+    - REP_ENT
+    - REV_DOC
+  I5:
+    criterio: Sostenibilidad
+    texto: >-
+      ¿Qué capacidades institucionales existen, qué brechas persisten y qué condiciones se requieren para sostener
+      los componentes de la Política ante la transición normativa?
+    instrumentos:
+    - REP_ENT
+    - ENTREV
+escalas:
+  valoracion:
+  - Satisfactorio
+  - Parcial
+  - Insuficiente
+  confianza:
+  - Sólido
+  - Con respaldo parcial
+  - Indicio
+  - No determinado
+  implementacion:
+    componentes:
+    - protocolo
+    - asignación identificable
+    - reporte de indicador
+    minimo_componentes: 2
+    anios_cierre:
+    - 2024
+    - 2025
+    min_lineas_lio: 15
+    decisiones:
+    - ADR-011
+    - ADR-012
+  avance:
+  - desde: 150
+    nivel: Alto con posible falla de planeación
+  - desde: 95
+    nivel: Alto
+  - desde: 75
+    nivel: Medio
+  - desde: 15
+    nivel: Bajo
+  - desde: -.inf
+    nivel: Bajo con posible falla de planeación
+productos:
+  nota: 00_encargo/nota_metodologica/Nota Metodologica Evaluación PNIG - evaluación de cierre.docx
+  informe: 06_informe/2026_mimp-ogmepgd_informe-evaluacion-cierre-pnig.docx
+  presentacion: 06_informe/2026_mimp-ogmepgd_presentacion-resultados-evaluacion-cierre-pnig.pptx
+  anexo: 07_anexo_tecnico/Anexo_tecnico_PNIG_2019-2025
+  portada: evaluaciones/pnig_2026/portada.yaml

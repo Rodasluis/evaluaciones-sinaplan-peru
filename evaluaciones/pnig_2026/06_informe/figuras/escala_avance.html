@@ -1,0 +1,19 @@
+<!doctype html><html lang="es"><head><meta charset="utf-8"><style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:#fff;font-family:Arial,Helvetica,sans-serif;color:#1d1d1b;width:760px}
+.fig{padding:18px 22px;position:relative}
+.ley{display:flex;gap:18px;flex-wrap:wrap;font-size:12px;color:#52514e;margin-top:14px;align-items:center}
+.ley .i{display:inline-flex;align-items:center;gap:6px}
+.sw{width:13px;height:13px;border-radius:3px;display:inline-block}
+.nota{font-size:11px;color:#898781;margin-top:8px;line-height:1.35}
+.col-t{font-size:11px;font-weight:bold;letter-spacing:.04em;text-transform:uppercase;color:#52514e}
+
+.fx{font-size:15px;color:#1d1d1b;background:#f2f4f8;border-radius:8px;padding:9px 12px;margin-bottom:12px}
+.br{display:flex;height:42px;border-radius:6px;overflow:hidden;margin-top:4px}
+.sg{display:flex;align-items:center;justify-content:center;font-size:15px;font-weight:bold}
+.ej{position:relative;height:22px;margin-top:3px;font-size:14px;color:#52514e}
+.mk{position:absolute;transform:translateX(-50%)}
+.ap{font-size:14px;color:#52514e;background:#f7f7f4;border-radius:8px;padding:9px 12px;margin-top:10px;
+     line-height:1.35}
+.ap b{color:#1d1d1b}
+</style></head><body><div class="fig"><div class="fx">Avance = valor obtenido / meta × 100 (sentido ascendente) o meta / valor obtenido × 100 (sentido descendente)</div><div class="br"><div class="sg" style="width:8.33%;background:repeating-linear-gradient(45deg,#d03b3b 0 6px,#e59393 6px 12px);color:#fff"></div><div class="sg" style="width:33.33%;background:#d03b3b;color:#fff">Bajo</div><div class="sg" style="width:11.11%;background:#fab219;color:#1d1d1b">Medio</div><div class="sg" style="width:30.56%;background:#0ca30c;color:#fff">Alto</div><div class="sg" style="width:16.67%;background:repeating-linear-gradient(45deg,#0ca30c 0 6px,#79cc79 6px 12px);color:#fff"></div></div><div class="ej"><span class="mk" style="left:0.00%">0</span><span class="mk" style="left:8.33%">15</span><span class="mk" style="left:41.67%">75</span><span class="mk" style="left:52.78%">95</span><span class="mk" style="left:83.33%">150</span></div><div class="ley"><span class="i"><span class="sw" style="background:repeating-linear-gradient(45deg,#d03b3b 0 6px,#e59393 6px 12px)"></span>Bajo con posible falla de planeación (menos de 15)</span><span class="i"><span class="sw" style="background:repeating-linear-gradient(45deg,#0ca30c 0 6px,#79cc79 6px 12px)"></span>Alto con posible falla de planeación (150 o más)</span></div><div class="ap"><b>Casos aparte</b> (no se clasifican y constituyen un hallazgo de calidad técnica): sin meta, sin valor, sin sentido definido o no interpretable (meta o valor de 0 o menos).</div><div class="nota">La escala no considera la línea de base. Cuando el valor no proviene de la fuente que fija la ficha, el nivel lleva la advertencia “fuente no comparable”.</div></div><script>document.body.setAttribute("data-alto",Math.ceil(document.documentElement.getBoundingClientRect().height));</script></body></html>

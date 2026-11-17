@@ -1,0 +1,24 @@
+# Portada de los informes técnicos de evaluación (módulo src/nucleo/portada; instrucciones en docs/portada.md).
+# Modelo neutral de la versión pública: cada evaluación tiene su evaluaciones/<id>/portada.yaml, que crea
+# src/nucleo/nueva_evaluacion.py a partir de este archivo con su etiqueta, título y fecha.
+portada:
+  # Diseño: centrado (G), el único vigente (src/nucleo/portada/opcion_g.py).
+  etiqueta: "Informe de evaluación"
+  titulo: "[POR COMPLETAR] Política o plan evaluado (periodo)"
+  subtitulo: ""
+  institucion: "[POR COMPLETAR] Entidad"
+  organo_elaborador: "[POR COMPLETAR] Órgano que elabora el informe"
+  lugar_fecha: "[POR COMPLETAR] Lugar, mes de año"
+  logos:
+    # Los logos no vienen con el repositorio: copie los de su institución en estas rutas (relativas a la raíz).
+    # Si faltan, la portada lleva un recuadro punteado en su lugar y un aviso.
+    institucion: "assets/logos/logo_institucion.png"
+    gobierno: "assets/logos/logo_gobierno.png"
+  colores:
+    # Rojo de «La Pastilla» de los ministerios del Perú (Pantone 485 C). Es un valor por defecto: confírmelo con el
+    # manual de identidad de la institución y cámbielo aquí si difiere.
+    primario: "#E1251B"
+    gris_oscuro: "#575756"
+    gris_claro: "#E3E3E3"
+    texto: "#2C2C2A"
+  tipografia: "Poppins"      # si no está instalada, se usa Calibri y se avisa

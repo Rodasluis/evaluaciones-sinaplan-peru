@@ -1,0 +1,169 @@
+# Verificaciones de los indicadores (rev_ind_indicadores.py): metas y líneas de base verificadas en el documento primario,
+# notas sobre el formulario y los reportes de seguimiento, serie de SERVIR y correcciones.
+metas_verificadas:
+  ISS.01.01.02.01:
+    metas:
+      2024: 10
+      2025: 20
+    fuente: Protocolo R.M. 1110-2023-MINSA, Anexo 2, p. 20 (p. 22 del PDF), en docs/fuentes/pnig/01_normativa/protocolos/
+  ISS.01.01.02.02:
+    metas:
+      2024: 10
+      2025: 12
+    fuente: Protocolo R.M. 1110-2023-MINSA, Anexo 2, p. 22 (p. 24 del PDF), en docs/fuentes/pnig/01_normativa/protocolos/
+  ISS.01.01.03.01:
+    metas:
+      2023: 41.3
+      2024: 41.3
+      2025: 44.3
+    fuente: Acta de validación N.° 004-2023-OMEP-PNIG (ratificada, dic. 2023), anexo, p. 6 del PDF, en docs/fuentes/pnig/03_indicadores_protocolos/actas_modificacion_fichas/
+  ISS.01.02.02.01:
+    metas:
+      2021: 19.3
+      2022: 23.0
+      2023: 26.7
+      2024: 29.4
+      2025: 34.8
+    fuente: Acta de validación N.° 003-2023-OMEP-PNIG (ratificada, dic. 2023), anexo, p. 6 del PDF, en docs/fuentes/pnig/03_indicadores_protocolos/actas_modificacion_fichas/
+  ISS.01.02.02.02:
+    metas:
+      2021: 73.9
+      2022: 73.9
+      2023: 84.3
+      2024: 84.3
+      2025: 84.5
+    fuente: Acta de validación N.° 003-2023-OMEP-PNIG (ratificada, dic. 2023), anexo, p. 8 del PDF, en docs/fuentes/pnig/03_indicadores_protocolos/actas_modificacion_fichas/
+  ISS.04.02.03.01:
+    metas:
+      2020: 0.384
+      2021: 0.388
+      2022: 0.392
+      2023: 0.396
+      2024: 0.4
+    fuente: Protocolo R.J. 0114-2024-ANA, ficha del indicador, p. 16, en docs/fuentes/pnig/01_normativa/protocolos/;
+      el RS 2024 (p. 2) las consigna redondeadas y el consolidado solo en sus notas
+lb_verificada:
+  ISS.01.01.02.02:
+    valor: null
+    nota: La ficha no consigna valor de línea de base 2023 (protocolo R.M. 1110-2023-MINSA, p. 22); el consolidado
+      registra 10 %, que es la meta 2024.
+notas_formulario:
+- indicador: ISS.01.02.02.02
+  anio: 2023
+  nota: 'Meta: el formulario registró 43,5; el Acta N.° 003-2023 fija 84,3.'
+- indicador: ISS.01.02.02.02
+  anio: 2024
+  nota: 'Meta: el formulario registró 51,3; el Acta N.° 003-2023 fija 84,3.'
+- indicador: ISS.03.01.01.02
+  anio: 2025
+  nota: 'Meta: el formulario registró 13, que es el valor absoluto; la ficha fija 30 % en valor relativo (protocolo
+    R.J. 000113-2025-JN/ONPE, p. 28 del PDF). El LIO 2025 advierte el error del aplicativo.'
+- indicador: ISS.03.01.02.01
+  anio: 2025
+  nota: 'Meta: el formulario registró 0,40, que es la meta de 2026; la ficha fija 0,35 (protocolo R.P. 064-2021-P/JNE,
+    p. 14 del PDF).'
+- indicador: IOP.06.01
+  anio: 2025
+  nota: 'Valor: el formulario repite el de 2024 (50). La encuesta no se aplicó en 2025 y el RC 2025 lo consigna
+    como no reportado (p. 8).'
+- indicador: IOP.03.02
+  anio: 2023
+  nota: 'Valor: el formulario registró 52,94, que no aparece en ninguna edición de SERVIR. El valor de la ENAHO
+    2023 es 39,0 (SERVIR 2025, Gráfico 10, p. 19).'
+notas_rs:
+- indicador: ISS.01.02.02.02
+  anio: 2021
+  nota: Los RS 2023 a 2025 consignan 38,3, que es la meta de la ficha anterior (Acta N.° 003-2023, Anexo 1, que
+    medía redes de hombres con acciones sostenidas). El acta ratificada redefinió el indicador por distritos y fijó
+    metas nuevas (Anexo 2, p. 8 del PDF); los valores reportados desde 2023 ya se miden con la ficha nueva, por
+    lo que el RS compara una meta y un valor de definiciones distintas. El RS 2025 sí usa la meta nueva para 2025
+    (84,5).
+- indicador: ISS.01.02.02.02
+  anio: 2022
+  nota: Los RS 2023 a 2025 consignan 38,3, que es la meta de la ficha anterior (Acta N.° 003-2023, Anexo 1, que
+    medía redes de hombres con acciones sostenidas). El acta ratificada redefinió el indicador por distritos y fijó
+    metas nuevas (Anexo 2, p. 8 del PDF); los valores reportados desde 2023 ya se miden con la ficha nueva, por
+    lo que el RS compara una meta y un valor de definiciones distintas. El RS 2025 sí usa la meta nueva para 2025
+    (84,5).
+- indicador: ISS.01.02.02.02
+  anio: 2023
+  nota: Los RS 2023 a 2025 consignan 43,5, que es la meta de la ficha anterior (Acta N.° 003-2023, Anexo 1, que
+    medía redes de hombres con acciones sostenidas). El acta ratificada redefinió el indicador por distritos y fijó
+    metas nuevas (Anexo 2, p. 8 del PDF); los valores reportados desde 2023 ya se miden con la ficha nueva, por
+    lo que el RS compara una meta y un valor de definiciones distintas. El RS 2025 sí usa la meta nueva para 2025
+    (84,5).
+- indicador: ISS.01.02.02.02
+  anio: 2024
+  nota: Los RS 2023 a 2025 consignan 51,3, que es la meta de la ficha anterior (Acta N.° 003-2023, Anexo 1, que
+    medía redes de hombres con acciones sostenidas). El acta ratificada redefinió el indicador por distritos y fijó
+    metas nuevas (Anexo 2, p. 8 del PDF); los valores reportados desde 2023 ya se miden con la ficha nueva, por
+    lo que el RS compara una meta y un valor de definiciones distintas. El RS 2025 sí usa la meta nueva para 2025
+    (84,5).
+- indicador: ISS.03.01.01.02
+  anio: 2025
+  nota: 'El RS 2025 (p. 2) consigna 13 y un avance de 377 %, igual que el formulario: 13 es el valor absoluto, y
+    la ficha fija 30 % en valor relativo (protocolo R.J. 000113-2025-JN/ONPE, p. 28 del PDF). Se usa 30.'
+- indicador: ISS.01.02.02.01
+  anio: 2022
+  nota: El RS 2022 consigna 32,7, la meta de la ficha anterior; el Acta N.° 003-2023 (ratificada en diciembre de
+    2023) la cambió a 23,0, y así figura desde el RS 2023.
+- indicador: ISS.01.01.03.01
+  anio: 2021
+  nota: El RS 2025 no consigna meta (ND) porque el Acta N.° 004-2023 fija metas desde 2023; se usa la del RS 2022
+    y la ficha original.
+- indicador: ISS.01.01.03.01
+  anio: 2022
+  nota: El RS 2025 no consigna meta (ND) porque el Acta N.° 004-2023 fija metas desde 2023; se usa la del RS 2022
+    y la ficha original.
+- indicador: IOP.03.01
+  anio: 2021
+  nota: El RS 2021 consigna 25,5 %, meta de la ficha original en porcentaje. El Acta N.° 04-2022 (no ratificada)
+    cambió el indicador a índice de ratios y recalculó las metas; los RS 2023 a 2025 usan las metas recalculadas.
+serie_servir:
+- indicador: IOP.03.02
+  anio: 2019
+  valor: 40.0
+  fuente: SERVIR 2023, Gráfico 28, p. 31 (ENAHO 2019)
+- indicador: IOP.03.02
+  anio: 2021
+  valor: 34.4
+  fuente: SERVIR 2023, Gráfico 28, p. 31 (ENAHO 2021)
+- indicador: IOP.03.02
+  anio: 2023
+  valor: 39.0
+  fuente: SERVIR 2025, Gráfico 10, p. 19 (ENAHO 2023)
+- indicador: IOP.03.02
+  anio: 2024
+  valor: 44.1
+  fuente: SERVIR 2026, Gráfico 12, p. 22 (ENAHO 2024)
+- indicador: IOP.05.03
+  anio: 2019
+  valor: 46.4
+  fuente: SERVIR 2026, Gráfico 1, p. 10 (ENAHO 2019, metodología actualizada)
+- indicador: IOP.05.03
+  anio: 2020
+  valor: 47.5
+  fuente: SERVIR 2026, Gráfico 1, p. 10 (ENAHO 2020, metodología actualizada)
+- indicador: IOP.05.03
+  anio: 2021
+  valor: 46.8
+  fuente: SERVIR 2026, Gráfico 1, p. 10 (ENAHO 2021, metodología actualizada)
+- indicador: IOP.05.03
+  anio: 2022
+  valor: 47.3
+  fuente: SERVIR 2026, Gráfico 1, p. 10 (ENAHO 2022, metodología actualizada)
+- indicador: IOP.05.03
+  anio: 2023
+  valor: 50.1
+  fuente: SERVIR 2026, Gráfico 1, p. 10 (ENAHO 2023, metodología actualizada)
+- indicador: IOP.05.03
+  anio: 2024
+  valor: 48.2
+  fuente: SERVIR 2026, Gráfico 1, p. 10 (ENAHO 2024, metodología actualizada)
+correcciones:
+- indicador: IOP.05.02
+  anio: 2024
+  valor: 1.98
+  sustento: El valor registrado, 101,98, es el cociente A/B × 100 (3 612 / 3 542). Con la fórmula de la ficha, ((A
+    − B) / B) × 100, corresponde 1,98. El RC 2024 no analiza el indicador por esa razón (análisis de suficiencia
+    del 27-10-2026, sección 2.6).

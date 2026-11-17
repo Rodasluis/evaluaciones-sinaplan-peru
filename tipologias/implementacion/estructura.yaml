@@ -1,0 +1,38 @@
+# Evaluación de implementación. Estructura sin probar en un caso real.
+tipologia: implementacion
+nombre: Evaluación de implementación
+estado: estructura sin probar
+fuente: Guía para el seguimiento y evaluación de políticas nacionales y planes del Sinaplan (CEPLAN, 2024), p. 21
+definicion: >-
+  Analiza la puesta en marcha de las políticas y planes, enfocándose en los medios para alcanzar los objetivos
+  propuestos (Guía, p. 21; RQ29).
+elementos_que_valora:   # Guía, p. 21
+  - Cumplimiento de los servicios (política nacional) o de las acciones estratégicas (plan).
+  - Procesos de transformación de recursos para el cumplimiento de los servicios o acciones.
+  - Procesos o mecanismos de distribución (entrega) de los productos.
+  - Asignación y ejecución de recursos financieros, humanos, tecnológicos y otros.
+  - Mecanismos de recolección y análisis de datos para el seguimiento y la evaluación.
+criterios: [Eficacia, Eficiencia, Implementación, Sostenibilidad]
+preguntas_tipo:
+  I1: {criterio: Eficacia, instrumentos: [REV_DOC, REP_ENT], texto: "¿En qué medida los servicios fueron implementados por las entidades responsables, y qué factores explican su implementación parcial o su no implementación?"}
+  I2: {criterio: Implementación, instrumentos: [REP_ENT, ENTREV], texto: "¿Cómo funcionan los procesos de transformación de recursos y los mecanismos de entrega de los servicios priorizados?"}
+  I3: {criterio: Eficiencia, instrumentos: [REV_IND, ENTREV], texto: "¿Qué recursos se asignaron y ejecutaron para los servicios y la conducción de la política, y cómo se relacionan con su cumplimiento?"}
+  I4: {criterio: Implementación, instrumentos: [ENTREV, REP_ENT, REV_DOC], texto: "¿Cómo funcionan la rectoría y los mecanismos de articulación multisectorial e intergubernamental?"}
+  I5: {criterio: Implementación, instrumentos: [REV_IND, REV_DOC], texto: "¿En qué medida los mecanismos de recolección y análisis de datos permiten seguir y evaluar la política?"}
+  I6: {criterio: Implementación, instrumentos: [REV_DOC, REP_ENT], texto: "¿Qué avance tienen las recomendaciones de evaluaciones anteriores (RQ19)?"}
+instrumentos_sugeridos: [REV_DOC, REP_ENT, REV_IND, ENTREV]
+escalas:
+  valoracion: [Satisfactorio, Parcial, Insuficiente]
+  confianza: [Sólido, Con respaldo parcial, Indicio]
+  implementacion: {componentes: [protocolo, asignación identificable, reporte de indicador], minimo_componentes: 2,
+                   anios_cierre: "[POR VERIFICAR] los dos últimos años del periodo evaluado"}
+  recomendaciones_previas: [En proceso, No iniciado, Completado]
+informe:   # Tabla 3 (pp. 54–55) y Tabla A7.1, sección 3 (RQ12)
+  - {seccion: Resumen ejecutivo, contenido: "Síntesis de los hallazgos (RQ09)."}
+  - {seccion: "1. Descripción de la política", contenido: "Problema, situación futura, población y lógica de intervención (RQ10)."}
+  - {seccion: "2. Metodología", contenido: "Preguntas, criterios, instrumentos, triangulación y limitaciones (RQ23, RQ24)."}
+  - {seccion: "3. Análisis de implementación", preguntas: I, contenido: "Grado de implementación de los servicios, recursos, procesos, entrega, factores y lineamientos sin servicio (RQ12, RQ25)."}
+  - {seccion: "4. Conclusiones", contenido: "Respuesta a cada pregunta (RQ13)."}
+  - {seccion: "5. Recomendaciones", contenido: "Matriz de la Tabla 4 (RQ14, RQ17, RQ18)."}
+  - {seccion: Anexos, contenido: "Estado por servicio, seguimiento de recomendaciones previas, reporte de seguimiento y documentos de respaldo."}
+requisitos: [RQ09, RQ10, RQ12, RQ13, RQ14, RQ16, RQ17, RQ18, RQ19, RQ21, RQ23, RQ24, RQ25, RQ29, RQ32]
