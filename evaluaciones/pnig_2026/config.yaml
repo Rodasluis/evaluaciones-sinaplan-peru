@@ -45,7 +45,7 @@ preguntas:
   D2:
     criterio: Pertinencia
     texto: >-
-      ¿En qué medida la situación futura deseada es consistente con el problema público y qué tan alcanzable es
+      ¿En qué medida la situación futura deseada era consistente con el problema público y qué tan alcanzable era
       al fin del horizonte temporal de la Política?
     instrumentos:
     - REV_IND
@@ -53,23 +53,23 @@ preguntas:
   D3:
     criterio: Coherencia interna
     texto: >-
-      ¿En qué medida la cadena de resultados es coherente entre las causas del problema público, los objetivos prioritarios,
-      los lineamientos y los servicios, y en qué medida la evidencia respalda que los servicios actúan sobre las
-      causas que atienden?
+      ¿En qué medida la cadena de resultados fue coherente entre las causas del problema público, los objetivos prioritarios,
+      los lineamientos y los servicios, y en qué medida la evidencia respalda que los servicios actuaban sobre las
+      causas que atendían?
     instrumentos:
     - REV_ALI
     - REV_EVI
   D4:
     criterio: Coherencia externa
     texto: >-
-      ¿De qué manera la Política se alinea con las Políticas de Estado, el PEDN, la PGG, otras políticas nacionales
+      ¿De qué manera la Política se alineó con las Políticas de Estado, el PEDN, la PGG, otras políticas nacionales
       y los compromisos internacionales, y qué brechas de alineamiento se identifican frente a la Ley N.° 32535?
     instrumentos:
     - REV_ALI
   D5:
     criterio: Calidad técnica
     texto: >-
-      ¿En qué medida los indicadores de la Política son suficientes, medibles y conformes al estándar del SINAPLAN,
+      ¿En qué medida los indicadores de la Política fueron suficientes, medibles y conformes al estándar del SINAPLAN,
       y qué factores explican las deficiencias identificadas?
     instrumentos:
     - REV_IND
@@ -77,7 +77,7 @@ preguntas:
   D6:
     criterio: Coherencia interna
     texto: >-
-      ¿En qué medida el diseño incorpora los siete enfoques transversales y con qué nivel de desarrollo?
+      ¿En qué medida el diseño incorporó los siete enfoques transversales y con qué nivel de desarrollo?
     instrumentos:
     - REV_DOC
     - REV_ALI
@@ -115,7 +115,7 @@ preguntas:
   I4:
     criterio: Implementación
     texto: >-
-      ¿Cómo funcionan la rectoría del MIMP, la CONAIG y los mecanismos de articulación multisectorial e intergubernamental,
+      ¿Cómo funcionaron la rectoría del MIMP, la CONAIG y los mecanismos de articulación multisectorial e intergubernamental,
       y qué factores explican su desempeño?
     instrumentos:
     - ENTREV

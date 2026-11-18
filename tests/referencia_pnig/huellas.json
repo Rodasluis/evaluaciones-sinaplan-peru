@@ -51,7 +51,7 @@
   "evaluaciones/pnig_2026/04_analisis/rev_evi_insumos/seleccion_academica.csv": "fc382e6d7c1d8f032e54445e0ac6fa5feb06bcbc925c886551dac3f54ce241df",
   "evaluaciones/pnig_2026/04_analisis/rev_evi_insumos/tipologia.csv": "d062659d37a7ed19b95d835bc5b56d37edf0c4236e195dd49bee8e8e77a8cadc",
   "evaluaciones/pnig_2026/04_analisis/seguimiento_recomendaciones/recomendaciones_previas.csv": "59cfdcb020c2c89d242ff96c27bccbdb8bf6f229670a6c9e3a9fab5570e772e6",
-  "evaluaciones/pnig_2026/04_analisis/seguimiento_recomendaciones/valoracion_recomendaciones.csv": "ff078c5bd64954545f0bf3e58c32ce37866ca8fcb207afe07e1f4241e85feb75",
+  "evaluaciones/pnig_2026/04_analisis/seguimiento_recomendaciones/valoracion_recomendaciones.csv": "534bc05bdb57c587c5ea1e82bfd09510a34ba446955f6da8db57cc216568d961",
   "evaluaciones/pnig_2026/05_entrevistas/ENTREV_aplicacion.csv": "352a4c86183c8d56518c788f47e2ccde138213eb8159254642a481ef4b3feb76",
   "evaluaciones/pnig_2026/05_entrevistas/ENTREV_codificacion.csv": "162d1d0db1db0490a67bec6e59527d3256c91b99f7cdd82a5c4acfc4fbb8cd8e",
   "evaluaciones/pnig_2026/05_entrevistas/ENTREV_deducciones.csv": "5185f09fb1fb4635b837bd794335e27fc71d422ba781e5e2a593fdb8345d3ad1",
@@ -76,15 +76,15 @@
   "fichas.html": "4945f14a0c9f4d64d0cec113ce6872f3522514cf5227ced302050a4b13992c5a",
   "flujo_evidencia.html": "e419f379a42ff1f1a5338d889aedd49eef51e048c9d25bc75f38e991ad656396",
   "indicadores.html": "b6dea747e1da84b73f2dce04a44e7ca69cf07648681e4be6c3085d4a05c87cd8",
-  "indicadores_2025.html": "57c6358a46af6551f46b44c9bb022b0a5aa618fa06e8031cd49ed43f6314693c",
+  "indicadores_2025.html": "fe0afdfbab5278d25c9ec3794f6d8bbce48f55417243df89e8798a0ad3adec6a",
   "linea_tiempo.html": "1396f2bc1422cb7bbca1f4b2663a5a9f709b9dac75dae37de62cd3704d613344",
   "mapa_servicios_op1.html": "00082d5f49eaf5cfb842690f9eed17a131d2b1af439fc35aa85a56d29a07e62b",
   "mapa_servicios_op2.html": "80291baa020aad255abd277cca3fedd01c68fadbd4a1c72f792f662ffd6e4737",
-  "mapa_servicios_op3.html": "9f6d72a8fce8215822d783a1b9d8b15bc27eb499378140c647da7155cab0e623",
+  "mapa_servicios_op3.html": "57067026c361972f11630b9af127f7fd03bf8213b9056d727fe67587285d834a",
   "mapa_servicios_op4.html": "7ca1fcec2ad06d4784132bb26084a85a43b7e2d36297284e70e4d75436acb7e1",
   "mapa_servicios_op5.html": "658218539d2b7df688d6d522c4c7d9d1641827aa67f575de899ef7712d54202a",
   "mapa_servicios_op6.html": "dc6e6d5bf5da5e2dd3a16c4ea77291ceb695061fcf98b57549ea0c7dd470e7d0",
-  "matriz_evaluacion.html": "8e63cc3ad3240de1f2af0ad3396420b100946cac7a6fee46c05fc9fdea4ef9b9",
+  "matriz_evaluacion.html": "710f8b12910649b3ca92f03d3f66337814cf2660b21c38e293dca793ff73b203",
   "problema_publico.html": "b163404549cdb22c360c3f0ea49ae532e9abc65569cef320d4bbc7d37d2a0e2d",
   "recomendaciones.html": "8a5550c6d71cc2727ef4330e80b246def7a02259d76c9014dce7dee9ac626ad1",
   "recursos.html": "ce3b8fa702bc3cc173354a5e33e7a73edd1617b53bc80a6f9917513e5dae0076",
@@ -828,7 +828,7 @@
    "Matriz de triangulación": [
     44,
     17,
-    "be32e5dda7b7de760d6605ebf682d8c98484cac73d717d75e9cf473f90f9df27"
+    "22f5be5d094a25677b7af30e31e5068d5771a9a3ab50cb93df178567cb4c0f75"
    ],
    "Pendientes": [
     1,
@@ -838,7 +838,7 @@
    "Valoración por pregunta": [
     13,
     11,
-    "047c320d1ae986c70b230d7240ea476d1a3b3b10ef67abc82e2586466f300130"
+    "2c9c73775b60526331056e4c546df526d516204afd46b534d5ab2cc42bf07165"
    ]
   },
   "evaluaciones/pnig_2026/04_analisis/seguimiento_recomendaciones_previas.xlsx": {
@@ -850,7 +850,7 @@
    "Matriz": [
     94,
     16,
-    "de6fc44a90dc992753c97b7944a0b7046e4b14ce380aeadd42b65cf27c2c1910"
+    "b1f4e0604494fc70a0a7ced5011a6ce09bc5627f096498fcd54be38b6dc2d479"
    ],
    "Resumen por evaluación": [
     6,

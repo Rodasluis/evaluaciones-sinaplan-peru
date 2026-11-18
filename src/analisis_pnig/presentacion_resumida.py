@@ -110,19 +110,19 @@ def main():
     y = K.bajada(d, s, q("La PNIG respondía a brechas que persisten, pero se implementó en parte y perdió vigencia con "
                          "la Ley N.° 32535."))
     for i, (num, etq, col) in enumerate([
-            (f"{C['serv_impl']} de {n}", f"servicios implementados; {C['serv_parc']} lo están en parte y "
+            (f"{C['serv_impl']} de {n}", f"servicios implementados; {C['serv_parc']} lo estuvieron en parte y "
                                          f"{C['serv_noimpl']} no se implementaron", GOLD),
             (str(C["brechas_n"]), f"brechas del diagnóstico persisten: {len(C['brechas_reduce'])} se redujeron y "
                                   f"{len(C['brechas_amplia'])} se amplió", TEAL),
-            (f"{C['op_mejora']} de {C['op_ind']}", "indicadores de objetivo prioritario mejoran frente a su línea de "
+            (f"{C['op_mejora']} de {C['op_ind']}", "indicadores de objetivo prioritario mejoraron frente a su línea de "
                                                    "base", GREEN),
             ("0 de 12", f"preguntas alcanzan una valoración satisfactoria: {parc} parciales y {insu} insuficiente",
              RED)]):
         K.tarjeta_cifra(d, s, d.M + i * (w4 + 0.2), y, w4, 1.95, num, etq, col)
     d.icon_bullets(s, d.M, y + 2.2, d.CW, 2.1, [
-        ("alerta", RED, q(f"{sin_prot} de los {n} servicios siguen sin protocolo aprobado, aunque la comisión de alto "
+        ("alerta", RED, q(f"{sin_prot} de los {n} servicios siguieron sin protocolo aprobado, aunque la comisión de alto "
                           f"nivel (CONAIG) acordó cada año culminarlos.")),
-        ("crecimiento", GREEN, q(f"El reporte oficial no tiene valor 2025 para {C['op_sinvalor_2025']} de los "
+        ("crecimiento", GREEN, q(f"El reporte oficial no tuvo valor 2025 para {C['op_sinvalor_2025']} de los "
                                  f"{C['op_ind']} indicadores; esta evaluación estimó los que pudo con microdatos.")),
         ("idea", VIOLET, q("Según la OGAJ, la PNIG perdió vigencia el 25 de diciembre de 2025; la mayoría de sus "
                            "servicios puede continuar con sustento en la Ley N.° 32535.")),
@@ -186,11 +186,11 @@ def main():
             ("Un diagnóstico vigente", f"Las {C['brechas_n']} brechas que motivaron la PNIG persisten: el problema "
                                        f"sigue presente y tendrá que explicarse con el enfoque de la Ley N.° 32535.",
              TEAL),
-            ("Servicios que pueden continuar", f"{C['serv_impl']} servicios están implementados y la matriz de la "
+            ("Servicios que pueden continuar", f"{C['serv_impl']} servicios estuvieron implementados y la matriz de la "
                                                f"DPIGND coincide con esta evaluación en {int(mc['Coinciden'])} de "
                                                f"{int(mc['Servicios'])}: la mayoría tiene sustento en la nueva ley.",
              GREEN),
-            ("Lo que hay que fortalecer", f"Los protocolos ({sin_prot} servicios no los tienen), los indicadores con "
+            ("Lo que hay que fortalecer", f"Los protocolos ({sin_prot} servicios no los tuvieron), los indicadores con "
                                           f"línea de base y desagregación, y un mecanismo de articulación que "
                                           f"reemplace a la CONAIG.", GOLD),
             ("Una transición ordenada", "Comunicar a las entidades qué sigue vigente y qué no, y comunicar la "

@@ -138,7 +138,7 @@ GLOSARIO = [
      "con acuerdo perfecto y 0 cuando el acuerdo es el que daría el azar."),
     ("Línea de base", "Valor del indicador en el año que se toma como punto de partida para medir su evolución."),
     ("Meta", "Valor que el indicador debe alcanzar en un año, según su ficha técnica."),
-    ("Nivel conductor", "Órganos del MIMP que conducen la Política o intervienen en su seguimiento: la DGIGND, la OGPPM "
+    ("Nivel conductor", "Órganos del MIMP que condujeron la Política o intervinieron en su seguimiento: la DGIGND, la OGPPM "
      "y la OGMEPGD. Son los entrevistados de esta evaluación."),
     ("Nivel de avance", "Clasificación del avance de un indicador: alto con posible falla de planeación, alto, medio, "
      "bajo o bajo con posible falla de planeación (numeral 2.4)."),
@@ -153,7 +153,7 @@ GLOSARIO = [
     ("Segmento", "Fragmento de texto de un reporte o de una entrevista que trata un solo tema y recibe uno o más "
      "códigos del libro de códigos."),
     ("Servicio", "Prestación que una entidad entrega a la población para cumplir un lineamiento de la Política."),
-    ("Situación futura deseada", "Situación que la Política se propone alcanzar al 2030, expresada en enunciados con "
+    ("Situación futura deseada", "Situación que la Política se proponía alcanzar al 2030, expresada en enunciados con "
      "metas."),
     ("Solidez de la evidencia", "Grado de respaldo de la evidencia sobre un tipo de intervención: sólida, moderada, "
      "limitada o sin evidencia identificada (numeral 2.4 y Anexo 4)."),

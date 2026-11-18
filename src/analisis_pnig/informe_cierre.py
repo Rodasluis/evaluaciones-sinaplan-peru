@@ -442,8 +442,8 @@ def fig(d, FI, clave, ancho=16.0, alt=None, nota=None):
 def _listas(C):
     """Limitaciones, lecciones y temas vigentes, que se citan en más de una sección."""
     limitaciones = (
-        "La OMEP, que condujo esta evaluación, también participa en el seguimiento de la Política: aplica el "
-        "formulario de seguimiento a las entidades y consolida los indicadores que la evaluación analiza. Además, forma "
+        "La OMEP, que condujo esta evaluación, también participó en el seguimiento de la Política: aplicó el "
+        "formulario de seguimiento a las entidades y consolidó los indicadores que la evaluación analiza. Además, forma "
         "parte de la OGMEPGD, uno de los tres órganos entrevistados. Para acotar ese conflicto de interés se tomaron tres "
         "medidas: la entrevista a la OGMEPGD no se cuenta como fuente independiente al clasificar la confianza de los "
         "hallazgos (con esa regla ningún hallazgo cambió de nivel, porque todos los que la citan tienen al menos otras "
@@ -540,7 +540,7 @@ def recomendaciones(C, nombre_serv):
         ["Diseño: priorización", "Acotar el problema público y los servicios de la nueva política a lo que es posible "
          "lograr en su horizonte y con los recursos disponibles, sin incluir servicios cuyo alcance no basta para el "
          "objetivo que atienden.", "DGIGND, con la OGPPM", "Antes de la aprobación de la nueva política", "D2, D3"],
-        ["Diseño: articulación horizontal", "Ordenar los servicios que la PNIG comparte con otras políticas "
+        ["Diseño: articulación horizontal", "Ordenar los servicios que la PNIG compartía con otras políticas "
          "nacionales con el mismo proveedor, como los Centros Emergencia Mujer o los lactarios: comprobar si hay "
          "duplicidad de población, prestaciones y recursos, y definir reglas de registro y de conteo que eviten el doble "
          "conteo sin perder la contribución de cada política, en coordinación con el CEPLAN y los rectores de esas "
@@ -706,7 +706,7 @@ def construir(paginas=None):
     cs, dev = C["cond_suma"], C["cond_dev"]
     est25 = C["op_est25"].set_index("Código")
     sfd = C["sfd"]
-    d = Informe(N, pie=f"Informe de evaluación de cierre · PNIG 2019–2025 · OMEP–OGMEPGD · {VERSION}",
+    d = Informe(N, pie="Informe de evaluación de cierre · PNIG 2019–2025",   # pie del usuario (2026-11-18)
                 titulo_doc=f"Informe de evaluación de cierre de la PNIG (2019–2025), {VERSION.lower()}", informe=True)
 
     # ------------------------------------------------------------------ portada (sección sin encabezado ni pie)
@@ -746,12 +746,12 @@ def construir(paginas=None):
     noimpl = C["serv_noimpl"]
     d.h1("Resumen ejecutivo")
     d.p(f"La Política Nacional de Igualdad de Género (PNIG), aprobada en abril de 2019 con el D.S. N.° 008-2019-MIMP, "
-        f"aborda como problema público la discriminación estructural contra las mujeres. Su modelo identifica tres "
+        f"abordó como problema público la discriminación estructural contra las mujeres. Su modelo identificaba tres "
         f"causas (patrones socioculturales que privilegian lo masculino sobre lo femenino, la asignación desigual de "
         f"roles productivos y reproductivos, y normas y cultura institucional que refuerzan la subordinación de las "
         f"mujeres) y cuatro efectos sobre sus derechos a una vida libre de violencia, a la salud sexual y "
         f"reproductiva, a participar en la toma de decisiones y a los derechos económicos y sociales. Para "
-        f"enfrentarlos, la Política se organiza en seis objetivos prioritarios, {C['lin_total']} lineamientos y {n} "
+        f"enfrentarlos, la Política se organizó en seis objetivos prioritarios, {C['lin_total']} lineamientos y {n} "
         f"servicios a cargo de {P['n_entidades']} entidades de los tres niveles de gobierno, que el Plan Estratégico "
         f"Multisectorial de Igualdad de Género (PEMIG) ordenó desde 2020. La Ley N.° 32535, publicada en diciembre de "
         f"2025, dispuso sustituirla por una nueva política con el enfoque de igualdad de oportunidades entre mujeres y "
@@ -768,50 +768,49 @@ def construir(paginas=None):
         "sostenibilidad.")
     d.p(f"El enfoque es mixto y no pidió información nueva a las entidades. Combina seis instrumentos: una revisión "
         f"documental de {P['n_corpus']} documentos, que determina el estado de implementación de cada servicio en todo "
-        f"el periodo; entrevistas a profesionales de los tres órganos del MIMP que conducen la Política o intervienen "
+        f"el periodo; entrevistas a profesionales de los tres órganos del MIMP que condujeron la Política o intervinieron "
         f"en su seguimiento; el análisis de lo que las entidades reportaron entre 2019 y 2025 en los reportes de "
         f"seguimiento y de cumplimiento, en los informes anuales de la Ley de Igualdad de Oportunidades y en el "
-        f"formulario de seguimiento, con {fmt_num(C['seg_total'])} segmentos codificados y una segunda codificación "
-        f"ciega de los que podían cambiar una valoración; el análisis de la coherencia interna y del alineamiento con "
+        f"formulario de seguimiento de la OMEP; el análisis de la coherencia interna y del alineamiento con "
         f"el planeamiento nacional, otras políticas y los compromisos internacionales; la revisión de los indicadores y "
         f"de los recursos, con los microdatos de las encuestas del INEI y los datos abiertos del gasto del MEF, y una "
         f"revisión rápida de {C['rev_fuentes']} estudios sobre la eficacia de los tipos de servicio. Cada hallazgo "
         f"contrasta fuentes, métodos y actores, y su nivel de confianza depende de cuántas fuentes independientes lo "
         f"respaldan.")
-    d.p(f"En el diseño, la cadena causal es coherente: {C['lin_total'] - len(C['lin_sin_serv'])} de "
-        f"{C['lin_total']} lineamientos tienen servicio y la evidencia respalda de forma sólida {C['rev_sólida']} de "
+    d.p(f"En el diseño, la cadena causal fue coherente: {C['lin_total'] - len(C['lin_sin_serv'])} de "
+        f"{C['lin_total']} lineamientos tuvieron servicio y la evidencia respalda de forma sólida {C['rev_sólida']} de "
         f"los {C['rev_tipos']} tipos de servicio. El diagnóstico conserva vigencia: las {C['brechas_n']} brechas entre "
-        f"mujeres y hombres que describe persisten; {len(C['brechas_reduce'])} se redujeron desde 2019, "
+        f"mujeres y hombres que describía persisten; {len(C['brechas_reduce'])} se redujeron desde 2019, "
         f"{len(C['brechas_sincambio'])} no cambiaron de forma significativa y "
         f"{len(C['brechas_amplia'])} {S.pl(len(C['brechas_amplia']), 'se amplió', 'se ampliaron')} "
         f"({lista_es(C['brechas_amplia'])}, en una "
         f"comparación indicativa), y por departamento su reducción se concentra en pocos lugares. La debilidad "
-        f"principal está en la medición: {C['serv_sin_ind_vig']} de los {n} servicios no tienen indicador aprobado, "
-        f"{C['ficha_lb_nc']} de {C['fichas_total']} fichas de indicador carecen de línea de base y ninguna prevé "
-        f"desagregación. De los siete enfoques transversales, solo el de género se operacionaliza con amplitud. El "
-        f"alineamiento con las Políticas de Estado, el PEDN y los compromisos internacionales es alto en el periodo, "
+        f"principal está en la medición: {C['serv_sin_ind_vig']} de los {n} servicios no tuvieron indicador aprobado, "
+        f"{C['ficha_lb_nc']} de {C['fichas_total']} fichas de indicador carecían de línea de base y ninguna preveía "
+        f"desagregación. De los siete enfoques transversales, solo el de género se operacionalizó con amplitud. El "
+        f"alineamiento con las Políticas de Estado, el PEDN y los compromisos internacionales fue alto en el periodo, "
         f"pero se debilita con la PGG 2026–2031, que no corresponde a {lista_es(C['pgg127_sin_op'])}, y la Política "
-        f"comparte {C['hor_dup']} duplicidades con otras políticas nacionales.")
-    d.p(f"En la implementación, de los {n} servicios, {C['serv_impl']} están implementados, {C['serv_parc']} lo están "
+        f"compartía {C['hor_dup']} duplicidades con otras políticas nacionales.")
+    d.p(f"En la implementación, de los {n} servicios, {C['serv_impl']} estuvieron implementados, {C['serv_parc']} lo estuvieron "
         f"parcialmente y {noimpl} {S.pl(noimpl, 'no se implementó', 'no se implementaron')}; solo "
-        f"{C['serv_prot_si']} cuentan con protocolo aprobado, que es el componente que más separa a los servicios "
-        f"implementados de los parciales. Las entidades atribuyen las dificultades sobre todo al presupuesto, al "
+        f"{C['serv_prot_si']} contaron con protocolo aprobado, que fue el componente que más separó a los servicios "
+        f"implementados de los parciales. Las entidades atribuyeron las dificultades sobre todo al presupuesto, al "
         f"contexto externo y al personal. La conducción ejecutó casi todo lo que se le asignó, pero su devengado bajó "
         f"de {monto(cs[2022])} en 2022 a {monto(cs[2024])} en 2024 antes de recuperarse en 2025, y la "
         f"DGIGND considera que no contó con los recursos necesarios. Para la DGIGND, la CONAIG fue el único mecanismo "
         f"de articulación efectivo, aunque con baja asistencia de los titulares y baja adopción de sus recomendaciones; el PEMIG no "
         f"tuvo seguimiento propio. En los resultados, {C['op_mejora']} de los {C['op_ind']} indicadores de los "
-        f"objetivos prioritarios mejoran frente a su línea de base; el reporte oficial no tiene valor 2025 para "
+        f"objetivos prioritarios mejoraron frente a su línea de base; el reporte oficial no tuvo valor 2025 para "
         f"{C['op_sinvalor_2025']} de ellos, y esta evaluación estimó o recalculó {len(est25)} con la ENDES, la ENAHO y "
         f"registros electorales ({niveles_est}, frente a su meta). Al ritmo observado, de las metas de la situación "
         f"futura deseada que pueden evaluarse, solo la de embarazo adolescente se alcanzaría al 2030.")
     d.p(f"En conjunto, ninguna de las doce preguntas alcanza una valoración satisfactoria: {vv.get('Parcial', 0)} son "
         f"parciales y {vv.get('Insuficiente', 0)} {S.pl(vv.get('Insuficiente', 0), 'insuficiente', 'insuficientes')} "
         f"({lista_es(insuf)}, calidad de los indicadores), con {confs.get('Sólido', 0)} de los {len(H)} hallazgos de "
-        f"confianza sólida. El desempeño de la PNIG en 2019–2025 es parcial: su diseño es en general coherente y "
-        f"respaldado por evidencia, pero su sistema de medición no permite valorar el cumplimiento de la mayoría de "
+        f"confianza sólida. El desempeño de la PNIG en 2019–2025 fue parcial: su diseño fue en general coherente y "
+        f"respaldado por evidencia, pero su sistema de medición no permitió valorar el cumplimiento de la mayoría de "
         f"los objetivos, la implementación de los servicios quedó incompleta y las brechas que la motivaron persisten. "
-        f"Como la Ley N.° 32535 dispone su sustitución, las recomendaciones se dirigen a la nueva política: "
+        f"Como la Ley N.° 32535 dispuso su sustitución, las recomendaciones se dirigen a la nueva política: "
         f"{TEMAS[0].rstrip(';')}; {TEMAS[1].rstrip(';')}; {TEMAS[2].rstrip(';')}; {TEMAS[3].rstrip(';')}, y "
         f"{TEMAS[4].rstrip('.')}.")
 
@@ -851,7 +850,7 @@ def construir(paginas=None):
     d.p(f"Leída de arriba abajo, la tabla cuenta una misma historia en el diseño y en la implementación: ninguna "
         f"pregunta llega a una valoración satisfactoria, {vv6.get('Parcial', 0)} quedan en parcial y solo la de la "
         f"calidad de los indicadores cae a insuficiente. Que los problemas aparezcan en ambas etapas indica que no "
-        f"dependen de un solo eslabón de la Política: un diseño con vacíos de medición se tradujo en una "
+        f"dependieron de un solo eslabón de la Política: un diseño con vacíos de medición se tradujo en una "
         f"implementación difícil de seguir. Las valoraciones descansan en hallazgos firmes: {confs6.get('Sólido', 0)} "
         f"de los {len(H)} son sólidos, {confs6.get('Con respaldo parcial', 0)} tienen respaldo parcial y "
         f"{confs6.get('Indicio', 0)} son indicios, de modo que la mayoría se apoya en dos o más fuentes "
@@ -859,10 +858,10 @@ def construir(paginas=None):
     d.h2("Juicio sobre el desempeño de la Política")
     d.p("El juicio es de conjunto y lo formula el equipo evaluador sin ponderación numérica: ninguna de las doce "
         "preguntas alcanza la valoración satisfactoria, la de calidad de los indicadores es insuficiente y ninguna de "
-        "las tres dimensiones que sostienen la Política (su diseño, su sistema de medición y la implementación de sus "
-        "servicios) muestra un desempeño satisfactorio.")
-    d.p("Con la evidencia disponible, el desempeño de la PNIG en 2019–2025 es parcial: su diseño es en general coherente "
-        "y está respaldado por evidencia, pero su sistema de medición no permite valorar el cumplimiento de la mayoría "
+        "las tres dimensiones que sostenían la Política (su diseño, su sistema de medición y la implementación de sus "
+        "servicios) mostró un desempeño satisfactorio.")
+    d.p("Con la evidencia disponible, el desempeño de la PNIG en 2019–2025 fue parcial: su diseño fue en general coherente "
+        "y estuvo respaldado por evidencia, pero su sistema de medición no permitió valorar el cumplimiento de la mayoría "
         "de los objetivos al cierre, la implementación de los servicios fue incompleta y las brechas que motivaron la "
         "Política persisten. Las entrevistas al nivel conductor confirman este juicio; la DGIGND agrega que la "
         "conducción no contó con los recursos necesarios, y los tres órganos coinciden en que el PEMIG no funcionó como "
@@ -908,7 +907,7 @@ def construir(paginas=None):
     d.p(f"La matriz se concentra en el momento en que todavía se puede corregir el rumbo: "
         f"{int(asp.get('Diseño', 0))} de las {len(RR)} recomendaciones son de diseño y deben aplicarse durante la "
         f"formulación de la nueva política, {int(asp.get('Implementación', 0))} son de implementación y "
-        f"{int(asp.get('Seguimiento y evaluación', 0))} de seguimiento y evaluación. La DGIGND, como órgano que conduce "
+        f"{int(asp.get('Seguimiento y evaluación', 0))} de seguimiento y evaluación. La DGIGND, como órgano que condujo "
         f"la Política, participa en {int(resp.str.contains('DGIGND').sum())} de ellas, sola o con la OGPPM y la "
         f"OGMEPGD. Varias tienen un plazo anterior a la aprobación de la nueva política, porque se refieren a "
         f"decisiones que no pueden esperar: el destino de los protocolos en trámite y de los servicios no "
@@ -942,7 +941,7 @@ def seccion_1(d, C, P, FI, sfd):
         "Disposición Complementaria Final) y dio a las entidades un año para adecuar sus políticas, planes y programas "
         "(Cuarta Disposición Complementaria Final).")
     d.p("La figura siguiente ordena en el tiempo esos hitos normativos y de implementación, desde la ley que dio "
-        "origen a la Política hasta la que dispone su sustitución.")
+        "origen a la Política hasta la que dispuso su sustitución.")
     fig(d, FI, "linea_tiempo", 14.5)
     sin_prot = n - C["serv_prot_si"]
     d.p("Los hitos se concentran al inicio del periodo. En los dos años y medio que siguieron a la aprobación de la "
@@ -975,11 +974,11 @@ def seccion_1(d, C, P, FI, sfd):
         "numeral 3.2.")
 
     d.h2("1.2 Problema público y población")
-    d.p("La PNIG aborda como problema público la discriminación estructural contra las mujeres, que genera "
+    d.p("La PNIG abordó como problema público la discriminación estructural contra las mujeres, que genera "
         "desigualdad y limita el ejercicio de sus derechos y oportunidades de desarrollo, y que se reproduce y se "
-        f"transmite entre generaciones ({PNIG}, p. 6). El documento no contiene una sección de población objetivo; "
-        "su diagnóstico se refiere a las mujeres, que constituyen el 50,8 % de la población (p. 6).")
-    d.p("El modelo causal identifica tres causas (patrones socioculturales discriminatorios que privilegian lo "
+        f"transmite entre generaciones ({PNIG}, p. 6). El documento no contenía una sección de población objetivo; "
+        "su diagnóstico se refería a las mujeres, que constituían el 50,8 % de la población (p. 6).")
+    d.p("El modelo causal identificaba tres causas (patrones socioculturales discriminatorios que privilegian lo "
         "masculino sobre lo femenino; asignación desigual de roles productivos y reproductivos; y normas y cultura "
         "institucional que refuerzan la subordinación de las mujeres) y cuatro efectos sobre los derechos a una vida "
         "libre de violencia, a la salud sexual y reproductiva, a la participación en la toma de decisiones y a los "
@@ -987,36 +986,36 @@ def seccion_1(d, C, P, FI, sfd):
     vin = P["vinculo"]
     sin_causa = C["serv_sin_causa"]
     total_nodos = int(P["mod"].Servicios.sum())
-    d.p(f"La vinculación de cada servicio con el modelo causal está establecida en la matriz de consistencia de la "
-        f"Política (Anexo 5 del D.S. N.° 008-2019-MIMP), cuya columna «Causa/Componentes» asocia cada servicio con una "
+    d.p(f"La vinculación de cada servicio con el modelo causal estaba establecida en la matriz de consistencia de la "
+        f"Política (Anexo 5 del D.S. N.° 008-2019-MIMP), cuya columna «Causa/Componentes» asociaba cada servicio con una "
         f"causa o un efecto del modelo, junto con la alternativa de solución, el objetivo prioritario y el lineamiento "
-        f"al que pertenece. Esa matriz vincula {n - len(sin_causa)} de los {n} "
+        f"al que pertenece. Esa matriz vinculaba {n - len(sin_causa)} de los {n} "
         f"servicios: {vin.get('Causa', 0)} solo con una causa, {vin.get('Efecto', 0)} solo con un efecto y "
         f"{vin.get('Efecto y causa', 0)} con un efecto y una causa a la vez; en "
-        f"{S.pl(len(sin_causa), 'el servicio', 'los servicios')} {lista_es(sin_causa)} no se consigna ninguna. La "
+        f"{S.pl(len(sin_causa), 'el servicio', 'los servicios')} {lista_es(sin_causa)} no se consignaba ninguna. La "
         f"figura siguiente presenta, para cada causa y cada efecto, el número de servicios asociados y los objetivos "
         f"prioritarios a los que pertenecen.")
     fig(d, FI, "problema_publico")
     mod = P["mod"].sort_values("Servicios", ascending=False)
     top, ult = mod.iloc[0], mod.iloc[-1]
     causas = mod[mod.Tipo == "Causa"]
-    d.p(f"La distribución de los servicios en el modelo es desigual. La causa "
-        f"«{str(top['Causa o efecto del modelo']).lower()}» concentra {int(top.Servicios)} servicios de casi todos los "
-        f"objetivos prioritarios, mientras que el efecto sobre la participación en la toma de decisiones tiene "
+    d.p(f"La distribución de los servicios en el modelo fue desigual. La causa "
+        f"«{str(top['Causa o efecto del modelo']).lower()}» concentraba {int(top.Servicios)} servicios de casi todos los "
+        f"objetivos prioritarios, mientras que el efecto sobre la participación en la toma de decisiones tenía "
         f"{int(ult.Servicios)} y la causa institucional, "
         f"{int(causas[causas['Causa o efecto del modelo'].str.startswith('Normas')].Servicios.iloc[0])}, todos del OP5. "
-        f"Como {vin.get('Efecto y causa', 0)} servicios se asocian a la vez con un efecto y con una causa, la suma de "
+        f"Como {vin.get('Efecto y causa', 0)} servicios se asociaban a la vez con un efecto y con una causa, la suma de "
         f"los servicios por causa y efecto ({total_nodos}) supera el número de servicios. Esta distribución es "
         f"relevante para la evaluación, porque la evidencia y la implementación se analizan según la causa o el efecto "
-        f"que atiende cada servicio: donde hay pocos servicios, la Política depende de muy pocas intervenciones para "
+        f"que atendía cada servicio: donde había pocos servicios, la Política dependía de muy pocas intervenciones para "
         f"incidir en un eslabón completo de su modelo.")
 
     d.h2("1.3 Situación futura deseada")
     d.p("La situación futura deseada al 2030 se enuncia así:")
     d.cita("Al 2030 se reducirá la discriminación estructural que afecta a las mujeres", f"{PNIG}, numeral 1.4.5, p. 20")
     n_enun = sfd["Enunciado (cita literal)"].nunique()
-    d.p(f"El mismo numeral la concreta en {n_enun} enunciados, cada uno vinculado a una causa o un efecto del modelo. "
-        f"El cuarto enunciado (SFD4) fija dos metas, de congresistas y de alcaldesas, por lo que la tabla siguiente "
+    d.p(f"El mismo numeral la concretaba en {n_enun} enunciados, cada uno vinculado a una causa o un efecto del modelo. "
+        f"El cuarto enunciado (SFD4) fijaba dos metas, de congresistas y de alcaldesas, por lo que la tabla siguiente "
         f"tiene {len(sfd)} filas. Para saber si la Política podía medir su propia situación futura, cada enunciado se "
         f"compara con el indicador del objetivo prioritario al que corresponde. La correspondencia es «misma» cuando el "
         f"indicador tiene la misma definición (población, numerador, denominador, unidad y fuente) y la misma línea de base que el enunciado; «aproximada», cuando comparte "
@@ -1032,21 +1031,21 @@ def seccion_1(d, C, P, FI, sfd):
             fuente=f"Fuente: {PNIG}, numeral 1.4.5. Elaboración propia.",
             rastro="D1_D2_brechas_situacion_futura.xlsx, hoja «Situación futura deseada»", nombrar=False)
     corr = sfd.drop_duplicates("Enunciado (cita literal)")["Correspondencia con el indicador del OP"].value_counts()
-    d.p(f"La situación futura cubre todos los objetivos prioritarios, pero solo {corr.get('Misma', 0)} de sus {n_enun} "
-        f"enunciados se miden "
+    d.p(f"La situación futura cubría todos los objetivos prioritarios, pero solo {corr.get('Misma', 0)} de sus {n_enun} "
+        f"enunciados se medían "
         f"con el mismo indicador: el de violencia contra las mujeres (SFD3) y el de embarazo adolescente (SFD7). Los "
-        f"demás se alejan de su indicador por razones distintas. El de tolerancia social (SFD1) comparte la línea de "
-        f"base, pero su indicador lo denomina de otra forma; el de ministerios que incorporan el enfoque (SFD2) se "
-        f"compara con un indicador que mide entidades públicas; los de congresistas y alcaldesas (SFD4) y el de "
-        f"ingresos (SFD5), con índices de empoderamiento que no los miden por separado, y el del Sistema Nacional de "
-        f"Cuidado (SFD6) no tiene indicador. Esto limita la posibilidad de valorar la situación futura con el "
+        f"demás se alejaban de su indicador por razones distintas. El de tolerancia social (SFD1) compartía la línea de "
+        f"base, pero su indicador lo denominaba de otra forma; el de ministerios que incorporan el enfoque (SFD2) se "
+        f"compara con un indicador que medía entidades públicas; los de congresistas y alcaldesas (SFD4) y el de "
+        f"ingresos (SFD5), con índices de empoderamiento que no los medían por separado, y el del Sistema Nacional de "
+        f"Cuidado (SFD6) no tenía indicador. Esto limitó la posibilidad de valorar la situación futura con el "
         f"seguimiento de la Política, como se verá en el numeral 5.4.")
 
     d.h2("1.4 Objetivos prioritarios, lineamientos y servicios")
-    d.p(f"La Política se organiza en seis objetivos prioritarios (OP), {C['lin_total']} lineamientos y {n} servicios a "
+    d.p(f"La Política se organizó en seis objetivos prioritarios (OP), {C['lin_total']} lineamientos y {n} servicios a "
         f"cargo de entidades de los tres niveles de gobierno, con {C['op_ind']} indicadores de OP y "
-        f"{C['serv_ind']} indicadores de servicio vigentes. La cadena de valor va del problema público a los servicios: "
-        f"cada OP atiende causas o efectos del modelo y se despliega en lineamientos y servicios, que se siguen con "
+        f"{C['serv_ind']} indicadores de servicio vigentes. La cadena de valor iba del problema público a los servicios: "
+        f"cada OP atendía causas o efectos del modelo y se desplegaba en lineamientos y servicios, que se seguían con "
         f"indicadores. La tabla siguiente resume esa estructura por OP; el catálogo completo está en el Anexo 9.")
     obj = P["obj"]
     d.tabla(["OP", "Objetivo prioritario", "Lineamientos", "Servicios", "Con indicador aprobado"],
@@ -1055,29 +1054,29 @@ def seccion_1(d, C, P, FI, sfd):
              for o in obj.index], [700, 4626, 1400, 1100, 1200], size=16,
             leyenda="Estructura de la PNIG por objetivo prioritario",
             fuente=f"Fuente: {PNIG} y matriz de consistencia (Anexo 5 de la PNIG); OGMEPGD (2026). Elaboración propia.",
-            nota="El lineamiento 3.2 no tiene servicio.",
+            nota="El lineamiento 3.2 no tuvo servicio.",
             rastro="REV_ALI_coherencia_alineamiento.xlsx, hoja «REV_ALI.1 Por objetivo»", nombrar=False)
     serv_op = obj["Servicios"].astype(int)
     con_ind = obj["Servicios con indicador vigente"].astype(int)
     mayor, menor = serv_op.idxmax(), serv_op.idxmin()
-    d.p(f"La tabla muestra una Política muy concentrada: el {mayor} reúne {int(serv_op[mayor])} de los {n} servicios, "
-        f"mientras que el {menor} tiene {int(serv_op[menor])}. En todos los OP hay servicios sin indicador aprobado, "
-        f"porque los indicadores de servicio solo existen cuando el servicio tiene protocolo aprobado: en conjunto, "
-        f"{int(con_ind.sum())} de los {n} servicios tienen al menos uno. La figura siguiente une esa estructura con el "
+    d.p(f"La tabla muestra una Política muy concentrada: el {mayor} reunía {int(serv_op[mayor])} de los {n} servicios, "
+        f"mientras que el {menor} tenía {int(serv_op[menor])}. En todos los OP hubo servicios sin indicador aprobado, "
+        f"porque los indicadores de servicio solo existían cuando el servicio tenía protocolo aprobado: en conjunto, "
+        f"{int(con_ind.sum())} de los {n} servicios tuvieron al menos uno. La figura siguiente une esa estructura con el "
         f"modelo del problema en una sola cadena de valor.")
     fig(d, FI, "cadena_valor")
-    d.p("La cadena de valor está completa en su estructura formal: cada objetivo prioritario se vincula con causas o "
-        "efectos del modelo, con un grosor proporcional al número de servicios que los unen, y cuenta con lineamientos y "
-        "servicios. La cadena se adelgaza, en cambio, en la medición: los servicios con indicador aprobado son el "
-        "eslabón que más se reduce frente al total de servicios de cada objetivo. El seguimiento pierde capacidad "
-        "justamente donde la Política debía mostrar lo que producen sus servicios.")
+    d.p("La cadena de valor estuvo completa en su estructura formal: cada objetivo prioritario se vinculaba con causas o "
+        "efectos del modelo, con un grosor proporcional al número de servicios que los unían, y contaba con lineamientos y "
+        "servicios. La cadena se adelgazaba, en cambio, en la medición: los servicios con indicador aprobado fueron el "
+        "eslabón que más se reducía frente al total de servicios de cada objetivo. El seguimiento perdió capacidad "
+        "justamente donde la Política debía mostrar lo que producían sus servicios.")
 
     d.h2("1.5 Indicadores")
     tp, vig = P["tp"], P["vig_op"]
     tipos = tp.tipo.value_counts()
     sin_vig = [f"OP{o[-1]}" for o, v in vig.items() if v == 0]
-    d.p(f"La Política se sigue con {C['op_ind']} indicadores de OP, definidos en el anexo del decreto supremo, y con "
-        f"los indicadores de servicio que se aprueban con los protocolos: al cierre, {C['serv_ind']} indicadores "
+    d.p(f"La Política se siguió con {C['op_ind']} indicadores de OP, definidos en el anexo del decreto supremo, y con "
+        f"los indicadores de servicio que se aprobaban con los protocolos: al cierre, {C['serv_ind']} indicadores "
         f"vigentes en {n - C['serv_sin_ind_vig']} servicios. El PEMIG había asignado {C['pemig_ind']} indicadores a "
         f"los {C['pemig_serv']} servicios, pero no tuvieron seguimiento propio (numeral 3.3). La figura siguiente "
         f"compara lo que se planificó medir con lo que efectivamente se midió.")
@@ -1090,38 +1089,38 @@ def seccion_1(d, C, P, FI, sfd):
     d.p(f"El PEMIG planificó medir sobre todo la cobertura de los servicios ({int(tipos.get('Cobertura', 0))} de "
         f"{len(tp)} indicadores) y en mucho menor medida su calidad ({int(tipos.get('Calidad', 0))}). Lo que "
         f"efectivamente se midió fue distinto: los indicadores de objetivo y los {C['serv_ind']} indicadores aprobados "
-        f"de servicio, distribuidos de forma muy desigual; el OP{op_max_vig[0][-1]} concentra {int(op_max_vig[1])} y "
-        f"{lista_es(sin_vig)} {S.pl(len(sin_vig), 'no tiene', 'no tienen')} ninguno. Como los indicadores de "
+        f"de servicio, distribuidos de forma muy desigual; el OP{op_max_vig[0][-1]} concentró {int(op_max_vig[1])} y "
+        f"{lista_es(sin_vig)} {S.pl(len(sin_vig), 'no tuvo', 'no tuvieron')} ninguno. Como los indicadores de "
         f"servicio se aprobaron con cada protocolo, los que tuvieron valor reportado fueron "
         f"{lista_es([f'{int(con_valor.get(a, 0))} en {a}' for a in range(2019, 2026)])}. La distancia entre lo "
         f"planificado y lo medido anticipa una de las conclusiones del informe: la Política no contó con un sistema "
         f"para seguir lo que producían sus servicios.")
 
     d.h2("1.6 Actores")
-    d.p(f"La rectoría corresponde al MIMP. La DGIGND conduce la Política y su Dirección de Políticas (DPIGND) la "
-        f"formula, la diseña y brinda asistencia técnica a las entidades; la OGPPM es el punto focal ante el CEPLAN y "
-        f"la OGMEPGD, por medio de la OMEP, hace el seguimiento y la evaluación. La CONAIG reúne a las entidades para el "
+    d.p(f"La rectoría correspondió al MIMP. La DGIGND condujo la Política y su Dirección de Políticas (DPIGND) la "
+        f"formuló, la diseñó y brindó asistencia técnica a las entidades; la OGPPM fue el punto focal ante el CEPLAN y "
+        f"la OGMEPGD, por medio de la OMEP, hizo el seguimiento y la evaluación. La CONAIG reunió a las entidades para el "
         f"seguimiento de la implementación, y el CEPLAN, como rector del Sinaplan, emite las guías de seguimiento y "
-        f"evaluación. Los {n} servicios están a cargo de {P['n_entidades']} entidades. La figura siguiente muestra "
-        f"cómo se distribuyen esos papeles.")
+        f"evaluación. Los {n} servicios estuvieron a cargo de {P['n_entidades']} entidades. La figura siguiente muestra "
+        f"cómo se distribuyeron esos papeles.")
     fig(d, FI, "actores")
-    d.p("La figura muestra una Política multisectorial cuyo rector es también proveedor: el MIMP conduce, da "
-        "seguimiento y presta servicios en cuatro de los seis objetivos prioritarios, mientras que la mayoría de los "
-        "servicios depende de otras entidades, que se coordinan con el rector a través de la CONAIG y de los reportes "
-        "anuales. En el OP4, por ejemplo, la responsabilidad se reparte entre más de una decena de entidades. Esta "
+    d.p("La figura muestra una Política multisectorial cuyo rector fue también proveedor: el MIMP condujo, dio "
+        "seguimiento y prestó servicios en cuatro de los seis objetivos prioritarios, mientras que la mayoría de los "
+        "servicios dependía de otras entidades, que se coordinaban con el rector a través de la CONAIG y de los reportes "
+        "anuales. En el OP4, por ejemplo, la responsabilidad se repartía entre más de una decena de entidades. Esta "
         "dispersión explica el peso de la articulación en el análisis de la implementación (numeral 4.4).")
 
     d.h2("1.7 Alineamiento")
-    d.p("La Política se vincula verticalmente con las Políticas de Estado, el Plan Bicentenario y el PEDN, las "
+    d.p("La Política se vinculó verticalmente con las Políticas de Estado, el Plan Bicentenario y el PEDN, las "
         "políticas generales de gobierno (PGG) y el PESEM del sector, y en la transición con los instrumentos vigentes "
-        "en 2026. Se vincula también con la Ley N.° 32535 y con los compromisos internacionales del Perú. El análisis "
+        "en 2026. Se vinculó también con la Ley N.° 32535 y con los compromisos internacionales del Perú. El análisis "
         "de esas relaciones y de las duplicidades con otras políticas nacionales está en el numeral 3.5; aquí se "
         "presentan las dos miradas por separado.")
     vp, vt = C["vert_periodo"], C["vert_transicion"]
     d.p("La figura siguiente presenta el alineamiento vertical: la relación de cada objetivo prioritario con los "
         "instrumentos del planeamiento nacional del periodo 2019–2025 y de la transición.")
     fig(d, FI, "alin_vertical")
-    d.p(f"En el periodo, el alineamiento es amplio: {vp[0]} relaciones directas, {vp[1]} indirectas y {vp[2]} sin "
+    d.p(f"En el periodo, el alineamiento fue amplio: {vp[0]} relaciones directas, {vp[1]} indirectas y {vp[2]} sin "
         f"correspondencia. En la transición, las relaciones directas bajan a {vt[0]} y las relaciones sin "
         f"correspondencia suben a {vt[2]}, casi todas con la PGG 2026–2031, que no corresponde a "
         f"{lista_es(C['pgg127_sin_op'])}. Es la primera señal de que la nueva política deberá explicitar su "
@@ -1131,14 +1130,14 @@ def seccion_1(d, C, P, FI, sfd):
         "y con seis compromisos internacionales del Perú.")
     fig(d, FI, "alin_internacional")
     d.p(f"En este caso, el alineamiento es casi pleno: de las {i4n} relaciones evaluadas, {i4.get('Directa', 0)} son relaciones directas, {i4.get('Indirecta', 0)} indirectas y "
-        f"{i4.get('Sin correspondencia', 0)} no tienen correspondencia. Los objetivos de la PNIG responden a los "
+        f"{i4.get('Sin correspondencia', 0)} no tienen correspondencia. Los objetivos de la PNIG respondían a los "
         f"compromisos que el Perú asumió, y la Ley N.° 32535 recoge los seis, de forma directa o indirecta, de modo "
         f"que el cambio de marco no deja objetivos sin respaldo normativo; los vacíos están en el planeamiento "
         f"nacional de la transición.")
 
     d.h2("1.8 Instrumentos de implementación y seguimiento")
     d.p("La implementación de una política nacional requiere instrumentos que traduzcan sus objetivos en acciones de "
-        "las entidades y que permitan conocer su avance. En la PNIG son de cinco clases: un plan de implementación, "
+        "las entidades y que permitan conocer su avance. En la PNIG fueron de cinco clases: un plan de implementación, "
         "que ordena qué debe hacer cada entidad y cuándo; los protocolos, normas operativas que fijan cómo se presta y "
         "cómo se mide cada servicio; los reportes periódicos, que recogen lo que hicieron las entidades y el avance de "
         "los indicadores; una instancia multisectorial, que reúne a las entidades para el seguimiento y la propuesta de "
@@ -1146,33 +1145,33 @@ def seccion_1(d, C, P, FI, sfd):
         "como fuente; a continuación se describe cada uno.")
     for t in (
         [("Plan Estratégico Multisectorial de Igualdad de Género (PEMIG). ", {"b": True}), "Aprobado con el D.S. "
-         f"N.° 002-2020-MIMP, asigna indicadores a los {n} servicios y fija un cronograma para que cada entidad apruebe "
+         f"N.° 002-2020-MIMP, asignó indicadores a los {n} servicios y fijó un cronograma para que cada entidad aprobara "
          "el protocolo de su servicio. Era el instrumento llamado a ordenar la implementación, pero no tuvo seguimiento "
          "propio (numeral 3.3)."],
-        [("Protocolos de servicio. ", {"b": True}), f"Normas que cada entidad aprueba para fijar los estándares de "
+        [("Protocolos de servicio. ", {"b": True}), f"Normas que cada entidad aprobaba para fijar los estándares de "
          f"su servicio y sus indicadores, con la asistencia técnica del MIMP y los lineamientos de la R.M. N.° "
          f"116-2021-MIMP. Al 31 de diciembre de 2025 había {P['n_protocolos']} protocolos aprobados en "
-         f"{C['serv_prot_si']} servicios; son la condición para que un servicio tenga indicadores aprobados."],
+         f"{C['serv_prot_si']} servicios; eran la condición para que un servicio tuviera indicadores aprobados."],
         [("Reportes de seguimiento y de cumplimiento. ", {"b": True}), "Reportes anuales que el MIMP elabora con el "
          "formato del CEPLAN desde el primer año de implementación (2020), con los valores de los indicadores de "
          "objetivo desde 2019 y su nivel de avance frente a la meta. Son la fuente oficial del avance de la Política "
          "(Anexo 5)."],
         [("Informes anuales de cumplimiento de la Ley N.° 28983 (informes LIO). ", {"b": True}), "Informes que el "
-         "MIMP presenta cada año con lo que reportan las entidades; desde 2019 informan sobre cada servicio de la PNIG, "
+         "MIMP presentó cada año con lo que reportaron las entidades; desde 2019 informaron sobre cada servicio de la PNIG, "
          "con sus acciones, su cobertura y sus dificultades. Son la fuente más completa de la ejecución de los "
          "servicios en todo el periodo (MIMP, 2020-2026)."],
         [("Formulario de seguimiento de la OMEP. ", {"b": True}), "Reporte anual de las entidades por indicador, de "
          "2023 a 2025, con el valor, el nivel de cumplimiento y las dificultades; complementa a los anteriores en los "
          "últimos tres años (OGMEPGD, 2023-2025)."],
         [("Informes de gobernanza de la CONAIG. ", {"b": True}), "Cuatro informes anuales, de 2022 a 2025, en los que "
-         "la comisión revisa la implementación y propone mejoras de gobernanza a las entidades (MIMP y CONAIG, "
+         "la comisión revisó la implementación y propuso mejoras de gobernanza a las entidades (MIMP y CONAIG, "
          "2022-2025)."],
         [("Evaluaciones anteriores. ", {"b": True}), "La evaluación de implementación 2020, la de resultados 2021, la "
          "evaluación 2023 y el informe técnico del CEPLAN sobre los servicios del OP1, cuyas recomendaciones se siguen "
          "en el numeral 4.7."],
     ):
         d.vineta(*t)
-    d.p("En conjunto, los instrumentos conforman un sistema completo en su diseño, pero desigual en su aplicación. "
+    d.p("En conjunto, los instrumentos conformaron un sistema completo en su diseño, pero desigual en su aplicación. "
         "El plan que debía articularlos no se siguió, y los protocolos, que debían dar a cada servicio estándares e "
         "indicadores, llegaron a menos de la mitad de los servicios. El peso del seguimiento recayó entonces en los "
         "reportes oficiales, que miden los objetivos, y en los informes LIO, que narran las acciones de las entidades "
@@ -1297,7 +1296,7 @@ def seccion_3(d, C, H, V, P, F, FI, nombre_serv):
         f"la referencia a las mujeres en su diversidad cambia por la de los grupos que requieren especial protección, y "
         f"la familia, sin categoría propia en la PNIG, entra como enfoque. Para la nueva política, esto significa que "
         f"el cambio de enfoque afecta más la justificación y el modelo del problema que el portafolio de servicios: "
-        f"buena parte de lo que la PNIG presta puede trasladarse, pero tendrá que explicarse con otro marco.")
+        f"buena parte de lo que la PNIG prestaba puede trasladarse, pero tendrá que explicarse con otro marco.")
     mc, ms = C["mic_conc"], C["mic_serv"]
     ev, mx = "Clasificación de la evaluación (REV_ALI.5)", "Clasificación según la matriz"
     efectos = ["Se mantiene", "Se ajusta", "Se rediseña"]
@@ -1338,9 +1337,9 @@ def seccion_3(d, C, H, V, P, F, FI, nombre_serv):
 
     d.h2("3.3 Coherencia interna (D3)")
     abre(d, "D3")
-    d.p("La coherencia interna se examina sobre la cadena de valor del numeral 1.4: si cada lineamiento tiene "
-        "servicio, si cada servicio tiene una causa o un efecto del modelo y si cuenta con indicadores para seguirlo. "
-        "La plausibilidad de esa cadena, es decir, si la evidencia respalda que los servicios actúan sobre las causas, "
+    d.p("La coherencia interna se examina sobre la cadena de valor del numeral 1.4: si cada lineamiento tuvo "
+        "servicio, si cada servicio tuvo una causa o un efecto del modelo y si contó con indicadores para seguirlo. "
+        "La plausibilidad de esa cadena, es decir, si la evidencia respalda que los servicios actuaban sobre las causas, "
         "se analiza en el numeral 3.4.")
     for i in ("D3-H1", "D3-H2"):
         hallazgo(d, H, i)
@@ -1370,11 +1369,11 @@ def seccion_3(d, C, H, V, P, F, FI, nombre_serv):
         f"contribuye a la política general del gobierno. La figura siguiente presenta las relaciones de los servicios "
         f"con otras políticas nacionales.")
     fig(d, FI, "alin_horizontal")
-    d.p(f"Los servicios y lineamientos de la PNIG se relacionan con {C['hor_pol']} políticas nacionales afines. Se "
-        f"registran {C['hor_dup']} duplicidades, es decir, servicios con el mismo proveedor que figuran en la PNIG y en "
+    d.p(f"Los servicios y lineamientos de la PNIG se relacionaban con {C['hor_pol']} políticas nacionales afines. Se "
+        f"registran {C['hor_dup']} duplicidades, es decir, servicios con el mismo proveedor que figuraban en la PNIG y en "
         f"otra política, además de {C['hor_comp']} complementariedades y "
         f"{C['hor_vac']} vacíos de atención. Las duplicidades más visibles son las de los Centros Emergencia Mujer, "
-        f"presentes en {len(C['hor_cem_pol'])} políticas: un mismo servicio se reporta varias veces, lo que dispersa su "
+        f"presentes en {len(C['hor_cem_pol'])} políticas: un mismo servicio se reportaba varias veces, lo que dispersaba su "
         f"seguimiento y obliga a la nueva política a definir dónde se registra.")
     for i in ("D4-H3", "D4-H4"):
         hallazgo(d, H, i)
@@ -1384,10 +1383,10 @@ def seccion_3(d, C, H, V, P, F, FI, nombre_serv):
     abre(d, "D5")
     hallazgo(d, H, "D5-H1")
     d.p("La figura siguiente muestra, para cada atributo que exige la guía de indicadores del CEPLAN, cuántas fichas lo "
-        "cumplen, lo cumplen en parte o no lo cumplen.")
+        "cumplían, lo cumplían en parte o no lo cumplían.")
     fig(d, FI, "fichas")
-    d.p(f"Sobre un total de {C['fichas_total']} fichas, los atributos críticos son los que menos se cumplen: la línea de base con año y "
-        f"valor, que falta en {C['ficha_lb_nc']} fichas, y la desagregación, que ninguna prevé. Sin ellos, un indicador "
+    d.p(f"Sobre un total de {C['fichas_total']} fichas, los atributos críticos fueron los que menos se cumplieron: la línea de base con año y "
+        f"valor, que faltaba en {C['ficha_lb_nc']} fichas, y la desagregación, que ninguna preveía. Sin ellos, un indicador "
         f"no permite medir el cambio desde un punto de partida ni seguir los enfoques de la Política por territorio o "
         f"grupo de población.")
     for i in ("D5-H2", "D5-H3", "D5-H4", "D5-H5"):
@@ -1403,9 +1402,9 @@ def seccion_3(d, C, H, V, P, F, FI, nombre_serv):
     fig(d, FI, "enfoques")
     ef = C["enfoques"]
     niv = ef.nivel.astype(str).value_counts()
-    d.p(f"La incorporación de los enfoques es desigual: solo el enfoque de género llega a operacionalizarse con "
-        f"amplitud, {niv.get('Operacionalizado', 0)} de los siete se operacionalizan en algún grado y "
-        f"{niv.get('Ausente', 0)} están ausentes del diseño; la figura indica además cuántos protocolos aprobados "
+    d.p(f"La incorporación de los enfoques es desigual: solo el enfoque de género llegó a operacionalizarse con "
+        f"amplitud, {niv.get('Operacionalizado', 0)} de los siete se operacionalizaron en algún grado y "
+        f"{niv.get('Ausente', 0)} estuvieron ausentes del diseño; la figura indica además cuántos protocolos aprobados "
         f"mencionan cada enfoque. La tabla siguiente precisa en qué elemento se verificó cada nivel.")
     d.tabla(["Enfoque", "Nivel", "Alcance", "Elemento donde se verifica", "Protocolos"],
             [[r.enfoque, r.nivel, r.alcance, r.elementos_donde_se_verifica, r.protocolos] for _, r in ef.iterrows()],
@@ -1415,10 +1414,10 @@ def seccion_3(d, C, H, V, P, F, FI, nombre_serv):
                    "servicios (Anexo 10). Elaboración propia.",
             nota="Nivel: ausente, mencionado, desarrollado u operacionalizado (numeral 2.4). Protocolos: protocolos "
                  "aprobados que mencionan el enfoque.", nombrar=False)
-    d.p("La tabla confirma la lectura de la figura y añade de dónde viene cada nivel: el enfoque de género es el único "
-        "que se traduce de forma amplia en lineamientos, estándares e indicadores, mientras que los demás aparecen sobre "
+    d.p("La tabla confirma la lectura de la figura y añade de dónde viene cada nivel: el enfoque de género fue el único "
+        "que se tradujo de forma amplia en lineamientos, estándares e indicadores, mientras que los demás aparecieron sobre "
         "todo en los protocolos aprobados. Los enfoques entraron, entonces, más por las entidades que por el diseño de "
-        "la Política, y por eso su alcance depende de cuántos servicios llegaron a tener protocolo.")
+        "la Política, y por eso su alcance dependió de cuántos servicios llegaron a tener protocolo.")
     hallazgo(d, H, "D6-H2")
     cierra(d, "D6", H, V)
 
@@ -1466,10 +1465,10 @@ def seccion_4(d, C, H, V, P, FI, g, por_op, anios, n, cs, dev):
     g2 = g[g["OP"] == "OP.02"]
     op2_sin = (op2 == 0 and (g2["Protocolo aprobado"] == "No").all() and g2["Años con valor reportado"].isna().all())
     assert domina_p and domina_i, "la tabla ya no tiene objetivos de ambos tipos: revisar el texto"
-    d.p(f"La tabla muestra que la implementación parcial predomina en {lista_es(domina_p)}, mientras que los servicios "
-        f"implementados son mayoría en {lista_es(domina_i)}. El {op_mas} reúne la mayor cantidad de servicios "
+    d.p(f"La tabla muestra que la implementación parcial predominó en {lista_es(domina_p)}, mientras que los servicios "
+        f"implementados fueron mayoría en {lista_es(domina_i)}. El {op_mas} reunió la mayor cantidad de servicios "
         f"implementados"
-        + (", y el OP2, a cargo sobre todo del Minsa, no tiene ninguno: sus servicios carecen de protocolo aprobado y "
+        + (", y el OP2, a cargo sobre todo del Minsa, no tuvo ninguno: sus servicios carecieron de protocolo aprobado y "
            "de reporte de indicadores, dos de los tres componentes que exige la escala." if op2_sin else ".")
         + " Las figuras siguientes presentan cada servicio con su estado, su protocolo y su indicador.")
     gg = g.assign(opn=g["OP"].astype(str).str[-1].astype(int))
@@ -1479,7 +1478,7 @@ def seccion_4(d, C, H, V, P, FI, g, por_op, anios, n, cs, dev):
         return x, int(e_.get("Implementado", 0)), int(e_.get("Implementado parcialmente", 0)), \
             int(e_.get("No implementado", 0)), int((x["Protocolo aprobado"] == "Sí").sum())
     d.p("Las seis figuras siguientes presentan, por objetivo prioritario, el estado de cada servicio agrupado por "
-        "lineamiento, e indican si el servicio cuenta con protocolo aprobado y con indicador aprobado.")
+        "lineamiento, e indican si el servicio contó con protocolo aprobado y con indicador aprobado.")
     obj_op = P["obj"]
     falta = lambda x, comp: int(x["Componentes faltantes"].fillna("").str.contains(comp).sum())
     for k in range(1, 7):
@@ -1488,7 +1487,7 @@ def seccion_4(d, C, H, V, P, FI, g, por_op, anios, n, cs, dev):
         nombre_op = str(obj_op.loc[ok, "Objetivo prioritario"]) if ok in obj_op.index else ""
         nombre_op = nombre_op[0].lower() + nombre_op[1:] if nombre_op else ""
         n_lin = int(obj_op.loc[ok, "Lineamientos"]) if ok in obj_op.index else 0
-        d.p(f"El OP{k} busca {nombre_op.rstrip('.')}. Tiene {len(x)} {S.pl(len(x), 'servicio', 'servicios')} en "
+        d.p(f"El OP{k} buscaba {nombre_op.rstrip('.')}. Tenía {len(x)} {S.pl(len(x), 'servicio', 'servicios')} en "
             f"{n_lin} {S.pl(n_lin, 'lineamiento', 'lineamientos')}; la figura siguiente {S.pl(len(x), 'lo', 'los')} "
             f"muestra con su estado.")
         fig(d, FI, f"mapa_servicios_op{k}", 16.0)
@@ -1497,28 +1496,28 @@ def seccion_4(d, C, H, V, P, FI, g, por_op, anios, n, cs, dev):
         reporta = int(x["Años con valor reportado"].notna().sum())
         cu = lambda m, sing, plur, cero: cero if m == 0 else f"{m} {S.pl(m, sing, plur)}"
         if p_ == len(x):          # todos parciales
-            estado_txt = f"los {len(x)} servicios están implementados parcialmente"
+            estado_txt = f"los {len(x)} servicios estuvieron implementados parcialmente"
         elif i_ == len(x):        # todos implementados
-            estado_txt = f"los {len(x)} servicios están implementados ({lista_es(impl_cod)})"
+            estado_txt = f"los {len(x)} servicios estuvieron implementados ({lista_es(impl_cod)})"
         else:
-            estado_txt = ((f"ninguno de los {len(x)} servicios está implementado" if i_ == 0 else
-                           f"{i_} de los {len(x)} servicios {S.pl(i_, 'está implementado', 'están implementados')}"
+            estado_txt = ((f"ninguno de los {len(x)} servicios estuvo implementado" if i_ == 0 else
+                           f"{i_} de los {len(x)} servicios {S.pl(i_, 'estuvo implementado', 'estuvieron implementados')}"
                            f" ({lista_es(impl_cod)})")
-                          + ((f" y {p_} {S.pl(p_, 'lo está', 'lo están')} parcialmente" if not n_ else
-                              f", {p_} {S.pl(p_, 'lo está', 'lo están')} parcialmente") if p_ else "")
+                          + ((f" y {p_} {S.pl(p_, 'lo estuvo', 'lo estuvieron')} parcialmente" if not n_ else
+                              f", {p_} {S.pl(p_, 'lo estuvo', 'lo estuvieron')} parcialmente") if p_ else "")
                           + (f" y {n_} no se {S.pl(n_, 'implementó', 'implementaron')}" if n_ else ""))
         t = (f"En el OP{k}, " + estado_txt
-             + f"; {cu(pr_, 'tiene', 'tienen', 'ninguno tiene')} protocolo aprobado y "
-             f"{cu(reporta, 'reporta', 'reportan', 'ninguno reporta')} valores de sus indicadores. ")
-        COMP = {"protocolo": ("no tiene protocolo", "no tienen protocolo", "protocolo aprobado"),
-                "asignación": ("no tiene recursos identificados en el MEF", "no tienen recursos identificados en el MEF",
+             + f"; {cu(pr_, 'tuvo', 'tuvieron', 'ninguno tuvo')} protocolo aprobado y "
+             f"{cu(reporta, 'reportó', 'reportaron', 'ninguno reportó')} valores de sus indicadores. ")
+        COMP = {"protocolo": ("no tuvo protocolo", "no tuvieron protocolo", "protocolo aprobado"),
+                "asignación": ("no tuvo recursos identificados en el MEF", "no tuvieron recursos identificados en el MEF",
                                "recursos identificados en el MEF"),
-                "reporte": ("no reporta indicadores", "no reportan indicadores", "valores de sus indicadores")}
+                "reporte": ("no reportó indicadores", "no reportaron indicadores", "valores de sus indicadores")}
         # lo que ya dijo la primera frase (ningún protocolo, ningún reporte) no se repite
         ya = {"protocolo": pr_ == 0, "asignación": False, "reporte": reporta == 0}
         if len(px) == 1:
             le_faltan = [v[2] for c, v in COMP.items() if falta(px, c)]
-            t += f"El servicio parcial ({px['Código'].iloc[0]}) carece de {lista_es(le_faltan)}. "
+            t += f"El servicio parcial ({px['Código'].iloc[0]}) careció de {lista_es(le_faltan)}. "
         elif len(px) > 1:
             partes = [("ninguno " + v[0][3:]) if falta(px, c) == len(px) else f"{falta(px, c)} {S.pl(falta(px, c), v[0], v[1])}"
                       for c, v in COMP.items() if falta(px, c) and not ya[c]]
@@ -1528,40 +1527,40 @@ def seccion_4(d, C, H, V, P, FI, g, por_op, anios, n, cs, dev):
         sp_r = falta(sp, "reporte")
         ni = x[x["Estado asignado (preliminar)"] == "No implementado"]
         if pr_ == 0 and reporta == 0:
-            t += ("Al carecer de protocolo y de reporte de indicadores, ninguno reúne los dos componentes que exige el "
-                  "estado de implementado, aunque todos reportan ejecución en algún año del periodo.")
+            t += ("Al carecer de protocolo y de reporte de indicadores, ninguno reunió los dos componentes que exige el "
+                  "estado de implementado, aunque todos reportaron ejecución en algún año del periodo.")
         elif i_ >= len(x) / 2:
-            t += ("La mitad o más de sus servicios están implementados, es decir, reúnen al menos dos de los tres "
+            t += ("La mitad o más de sus servicios estuvieron implementados, es decir, reunieron al menos dos de los tres "
                   "componentes y seguían funcionando en 2024 o 2025.")
         elif len(sp) and sp_r == len(sp):
-            t += (f"La falta de protocolo es lo que más pesa: "
+            t += (f"La falta de protocolo fue lo que más pesó: "
                   f"{'el parcial' if len(sp) == 1 else f'los {len(sp)} parciales'} sin protocolo tampoco "
-                  f"{S.pl(len(sp), 'reporta', 'reportan')} indicadores, porque el protocolo trae consigo los estándares "
+                  f"{S.pl(len(sp), 'reportó', 'reportaron')} indicadores, porque el protocolo traía consigo los estándares "
                   f"y la medición del servicio.")
         if len(ni):
             t += (f" El servicio {lista_es([f'{c} «{n}»' for c, n in zip(ni['Código'], ni['Servicio'])])} no llegó a "
                   f"ejecutarse en ningún año del periodo.")
         sin = [c for c in C["lin_sin_serv"] if c.startswith(f"{k}.")]
         if sin:
-            t += f" El lineamiento {lista_es(sin)} no tiene servicio, por lo que su avance no puede seguirse."
+            t += f" El lineamiento {lista_es(sin)} no tuvo servicio, por lo que su avance no pudo seguirse."
         d.p(t)
     parc = g[g["Estado asignado (preliminar)"] == "Implementado parcialmente"]
     parc_prot = int((parc["Protocolo aprobado"] == "Sí").sum())
-    d.p(f"En conjunto, el protocolo es el componente que más pesa en el estado de los servicios, en parte porque la "
-        f"regla le asigna ese peso y de él depende el indicador: de los {len(parc)} servicios "
-        f"implementados parcialmente, solo {parc_prot} {S.pl(parc_prot, 'tiene', 'tienen')} protocolo, y la mayoría de "
-        f"los demás reporta ejecución en varios años sin haberlo aprobado. Esos servicios funcionaron, pero sin los "
+    d.p(f"En conjunto, el protocolo fue el componente que más pesó en el estado de los servicios, en parte porque la "
+        f"regla le asigna ese peso y de él dependía el indicador: de los {len(parc)} servicios "
+        f"implementados parcialmente, solo {parc_prot} {S.pl(parc_prot, 'tuvo', 'tuvieron')} protocolo, y la mayoría de "
+        f"los demás reportó ejecución en varios años sin haberlo aprobado. Esos servicios funcionaron, pero sin los "
         f"estándares ni los indicadores que permitirían conocer cómo se prestaron y con qué resultado.")
 
     d.h2("4.2 Asignación y ejecución de los recursos")
     hallazgo(d, H, "I1-H2")
     abre(d, "I3")
-    d.p("La figura siguiente presenta el devengado anual de las metas presupuestales de los órganos que conducen la "
+    d.p("La figura siguiente presenta el devengado anual de las metas presupuestales de los órganos que condujeron la "
         "Política, en millones de soles.")
     fig(d, FI, "recursos", 15.0)
     pico0 = max(anios, key=lambda a: cs[a])
     valle = min([a for a in anios if a > pico0] or [pico0], key=lambda a: cs[a])
-    d.p(f"Hasta 2022, el gasto de la conducción corresponde a la meta de la DGIGND; desde 2023 se reparte también "
+    d.p(f"Hasta 2022, el gasto de la conducción correspondió a la meta de la DGIGND; desde 2023 se repartió también "
         f"entre la DPIGND y la DPPDM, creadas por el ROF de ese año. El devengado alcanzó su máximo en {pico0} "
         f"({monto(cs[pico0])}), bajó hasta {monto(cs[valle])} en {valle}, ya con la meta distribuida entre tres "
         f"órganos, y se recuperó en 2025 ({monto(cs[2025])}). La ejecución de la meta de la DGIGND, indicada bajo cada "
@@ -1579,9 +1578,9 @@ def seccion_4(d, C, H, V, P, FI, g, por_op, anios, n, cs, dev):
             rastro="REV_IND_3_verificacion_presupuestal.xlsx, hoja «Conducción por órgano»", nombrar=False)
     pico = max(anios, key=lambda a: cs[a])
     d.p(f"La tabla muestra que la conducción alcanzó su mayor devengado en {pico} ({monto(cs[pico])}) y que, "
-        f"desde 2023, el gasto se reparte entre la DGIGND y las dos direcciones creadas por el ROF de ese año. La suma "
+        f"desde 2023, el gasto se repartió entre la DGIGND y las dos direcciones creadas por el ROF de ese año. La suma "
         f"bajó a {monto(cs[2024])} en 2024 y se recuperó a {monto(cs[2025])} en 2025. Como la meta de "
-        f"la dirección general financia también otros compromisos, estas cifras, en soles corrientes y solo con las "
+        f"la dirección general financiaba también otros compromisos, estas cifras, en soles corrientes y solo con las "
         f"metas de los órganos de conducción (sin otras fuentes, como la cooperación), son el techo del gasto de la "
         f"conducción, no su costo exacto.")
     pdg = f"{EVAL}/04_analisis/REV_IND_3_presupuesto_dgignd.xlsx"
@@ -1617,7 +1616,7 @@ def seccion_4(d, C, H, V, P, FI, g, por_op, anios, n, cs, dev):
         d.vineta((f"Servicio {c}. ", {"b": True}), (str(gi.loc[c, "Servicio"]).rstrip(". ") + ". ", {"i": True}),
                  str(gi.loc[c, "Ajuste por lectura cualitativa"]))
     d.p(f"El "
-        f"lineamiento {lista_es(C['lin_sin_serv'])} no tiene servicio, por lo que su avance no puede seguirse.")
+        f"lineamiento {lista_es(C['lin_sin_serv'])} no tuvo servicio, por lo que su avance no pudo seguirse.")
 
     d.h2("4.4 Mecanismos de coordinación de actores")
     abre(d, "I4")
@@ -1626,7 +1625,7 @@ def seccion_4(d, C, H, V, P, FI, g, por_op, anios, n, cs, dev):
     ses_per = [x for x in ses if x[0] <= 2025]
     n_ses = sum(len(f) for _, f, _ in ses_per)
     con_prot = [a for a, _, ac in ses_per if any("protocolo" in t.lower() for t in ac)]
-    d.p(f"La CONAIG es el espacio de coordinación de las entidades para la implementación de la Política. Su ayuda "
+    d.p(f"La CONAIG fue el espacio de coordinación de las entidades para la implementación de la Política. Su ayuda "
         f"memoria (MIMP y CONAIG, 2026) registra, por año, las sesiones y los acuerdos de la comisión, que la figura "
         f"siguiente resume.")
     fig(d, FI, "conaig_sesiones")
@@ -1718,13 +1717,13 @@ def seccion_5(d, C, H, V, P, F, FI, est25, sfd, anios):
     sinv = sv.loc[[i for i in sv.index if i.startswith("Sin valor")]].sum()
     d.p(f"La tabla muestra que el número de indicadores sin valor creció hacia el final del periodo: pasó de "
         f"{int(sinv[2019])} en 2019 a {int(sinv[2025])} en 2025. En los años con más datos, la mayoría de los "
-        f"indicadores con valor estaba en nivel alto; el problema principal al cierre no es el bajo avance, sino la "
+        f"indicadores con valor estaba en nivel alto; el problema principal al cierre no fue el bajo avance, sino la "
         f"falta de información para medirlo.")
 
     d.h2("5.2 Logros por objetivo prioritario")
     hallazgo(d, H, "I2-H2")
     d.p("La figura siguiente presenta el nivel de avance 2025 de cada indicador de OP en una sola columna: el del "
-        "reporte oficial y, cuando el reporte no tiene valor, el calculado en esta evaluación, marcado con un asterisco.")
+        "reporte oficial y, cuando el reporte no tuvo valor, el calculado en esta evaluación, marcado con un asterisco.")
     fig(d, FI, "indicadores_2025")
     op_t = C["op_tabla"].set_index("Código")
     ofi_n = int(op_t["Semáforo 2025"].astype(str).str.startswith(("Alto", "Medio", "Bajo")).sum())
@@ -1733,12 +1732,12 @@ def seccion_5(d, C, H, V, P, F, FI, est25, sfd, anios):
     niv = pd.Series([str(op_t.loc[c, "Semáforo 2025"]).split(" ")[0] if c not in calc else str(est25.loc[c, "Nivel"])
                      for c in op_t.index]).str.capitalize().value_counts()
     sin_n = len(op_t) - ofi_n - len(calc)
-    d.p(f"De los {len(op_t)} indicadores de objetivo prioritario, {ofi_n} tienen nivel en el reporte oficial y {len(calc)} lo tienen solo por el cálculo de esta "
+    d.p(f"De los {len(op_t)} indicadores de objetivo prioritario, {ofi_n} tuvieron nivel en el reporte oficial y {len(calc)} lo tuvieron solo por el cálculo de esta "
         f"evaluación" + (f"; {sin_n} {S.pl(sin_n, 'queda', 'quedan')} sin nivel, por falta de valor o porque el valor "
-                         f"no permite calcular el avance" if sin_n else "") + ". Considerando ambas fuentes, "
+                         f"no permitía calcular el avance" if sin_n else "") + ". Considerando ambas fuentes, "
         f"{int(niv.get('Alto', 0))} quedan en nivel alto frente a su meta 2025. Que {len(calc)} de los {len(op_t)} "
         f"niveles dependan de un cálculo de esta evaluación es, en sí mismo, un resultado: el reporte oficial no "
-        f"permite cerrar el periodo con información propia. Ese resultado debe leerse, además, con la advertencia del "
+        f"permitió cerrar el periodo con información propia. Ese resultado debe leerse, además, con la advertencia del "
         f"párrafo siguiente: el nivel de avance no considera la línea de base.")
     s_ex = est25.loc["IOP.02.01"]
     lb21, mt21 = float(op_t.loc["IOP.02.01", "Valor LB"]), float(op_t.loc["IOP.02.01", "Meta 2025"])
@@ -1749,10 +1748,10 @@ def seccion_5(d, C, H, V, P, F, FI, est25, sfd, anios):
         f"El nivel compara el valor obtenido con la meta del año (valor/meta, o meta/valor si el sentido es "
         f"descendente) y no considera la línea de base. Por eso un indicador puede quedar en nivel alto aunque haya "
         f"recorrido poco desde su punto de partida, o en nivel medio aunque haya empeorado. Por ejemplo, el uso de "
-        f"métodos anticonceptivos (IOP.02.01) queda en nivel alto con {fmt_num(s_ex.Estimación, 1)} % en 2025, aunque "
+        f"métodos anticonceptivos (IOP.02.01) quedó en nivel alto con {fmt_num(s_ex.Estimación, 1)} % en 2025, aunque "
         f"solo recorrió el {fmt_num(dist, 0)} % de la distancia entre su línea de base ({fmt_num(lb21, 1)} %) y su meta "
-        f"({fmt_num(mt21, 1)} %); el índice de empoderamiento social de niñas y adolescentes (IOP.04.03) queda en nivel "
-        f"medio con {fmt_num(v43, 2)}, aunque está por debajo de su línea de base ({fmt_num(lb43, 3)}). Por eso este "
+        f"({fmt_num(mt21, 1)} %); el índice de empoderamiento social de niñas y adolescentes (IOP.04.03) quedó en nivel "
+        f"medio con {fmt_num(v43, 2)}, aunque estuvo por debajo de su línea de base ({fmt_num(lb43, 3)}). Por eso este "
         f"informe presenta, junto al nivel, la comparación con la línea de base.", size=20)
     filas = []
     for _, r in C["op_tabla"].iterrows():
@@ -1767,7 +1766,7 @@ def seccion_5(d, C, H, V, P, F, FI, est25, sfd, anios):
                       f"{num(r['Último valor'])} ({r['Año del último valor']})", num(r["Meta 2025"]),
                       nivel, r["Respecto de la LB"]])
     d.p("La tabla siguiente presenta cada indicador de OP con su línea de base, su último valor, su meta 2025, su nivel "
-        "2025 y su comparación con la línea de base. El nivel es el del reporte oficial; cuando el reporte no tiene "
+        "2025 y su comparación con la línea de base. El nivel es el del reporte oficial; cuando el reporte no tuvo "
         "valor 2025, es el calculado en esta evaluación y lleva un asterisco.")
     h23 = H["I2-H3"]
     d.tabla(["Código", "Indicador", "Línea de base", "Último valor", "Meta 2025", "Nivel 2025", "Frente a la LB"],
@@ -1776,14 +1775,14 @@ def seccion_5(d, C, H, V, P, F, FI, est25, sfd, anios):
                             "xlsx, hoja «Manifestaciones ENDES»; REV_IND_4_recalculo_OP3.xlsx, hoja «Resultado 2025»",
             fuente="Fuente: reporte de seguimiento 2025 (Anexo 5); OGMEPGD (2026); INEI (2026), microdatos de la ENDES "
                    "y la ENAHO 2025; JNE (2022a); ONPE (2026a). Elaboración propia.",
-            nota="* Nivel calculado en esta evaluación, porque el reporte no tiene valor 2025; entre paréntesis, el "
+            nota="* Nivel calculado en esta evaluación, porque el reporte no tuvo valor 2025; entre paréntesis, el "
                  "valor estimado. No sustituye al reporte oficial (hallazgo I2-H3). La estimación de IOP.03.02 es "
                  "una alternativa de comparabilidad limitada, porque SERVIR cambió su metodología en 2023. "
                  + h23["nota"] + " " + h23["nota_tabla"].replace("(INEI, s. f.)", "(SERVIR, 2025, 2026)")
                  + " s. d.: sin dato.", nombrar=False)
-    d.p(f"La tabla confirma que {C['op_mejora']} de los {C['op_ind']} indicadores mejoran frente a su línea de base. "
-        f"Los vacíos se concentran en el OP6, cuyo único indicador depende de la ENARES, que no se aplicó en 2025, y en "
-        f"la brecha salarial del sector público (IOP.05.02), cuyo valor 2025 no permite calcular el avance.")
+    d.p(f"La tabla confirma que {C['op_mejora']} de los {C['op_ind']} indicadores mejoraron frente a su línea de base. "
+        f"Los vacíos se concentraron en el OP6, cuyo único indicador dependía de la ENARES, que no se aplicó en 2025, y en "
+        f"la brecha salarial del sector público (IOP.05.02), cuyo valor 2025 no permitió calcular el avance.")
     br = pd.read_excel(f"{EVAL}/04_analisis/D1_D2_brechas_situacion_futura.xlsx",
                        sheet_name="Brechas por año")
     gp = br[br.indicador == "ingreso_publico"].set_index("anio")
@@ -1793,7 +1792,7 @@ def seccion_5(d, C, H, V, P, F, FI, est25, sfd, anios):
             for a in (2019, 2020, 2021, 2023) if a in gp.index and pd.notna(ofi.get(a))]
     assert all(abs(v - o) > 0.5 for a, v, o in comp if a != 2020), "la ENAHO reproduce IOP.05.02: revisar el texto"
     d.p(("Por qué no se estimó la brecha salarial del sector público (IOP.05.02). ", {"b": True}),
-        "La ficha fija la ENAHO como fuente, y el numeral 3.1 usa la ENAHO para medir el ingreso de los asalariados "
+        "La ficha fijaba la ENAHO como fuente, y el numeral 3.1 usa la ENAHO para medir el ingreso de los asalariados "
         "públicos. Pero esa serie, con la fórmula de la ficha, no reproduce los valores que reportó el indicador: "
         + lista_es([f"{fmt_num(v, 1)} frente a {fmt_num(o, 1)} en {a}" for a, v, o in comp]) +
         ". Como esta evaluación solo admite estimaciones que reproducen los valores oficiales de años anteriores, el "
@@ -1873,7 +1872,7 @@ def seccion_5(d, C, H, V, P, F, FI, est25, sfd, anios):
     cierra(d, "D2", H, V)
 
     d.h2("5.5 Factores que influyeron en los resultados")
-    d.p("Los factores que las entidades asocian a los resultados se tratan con los de implementación en el numeral 4.5. "
+    d.p("Los factores que las entidades asociaron a los resultados se tratan con los de implementación en el numeral 4.5. "
         "En la medición, el principal factor es la disponibilidad de las fuentes: varias encuestas nacionales no se "
         "publicaron o no se aplicaron en los años previstos, y algunas entidades calcularon sus indicadores con "
         "fuentes distintas de las que fija la ficha (hallazgo D5-H3).")
@@ -1890,13 +1889,13 @@ def seccion_5(d, C, H, V, P, F, FI, est25, sfd, anios):
         criticos.append([f"Servicio {c}", "No implementado", "Revisión documental"])
     for c in C["lin_sin_serv"]:
         criticos.append([f"Lineamiento {c}", "Sin servicio", "Coherencia interna"])
-    d.p("La tabla siguiente reúne los elementos de la Política que cierran el periodo con alerta: indicadores de OP sin "
+    d.p("La tabla siguiente reúne los elementos de la Política que cerraron el periodo con alerta: indicadores de OP sin "
         "valor 2025, no interpretables o en nivel bajo; servicios no implementados, y lineamientos sin servicio.")
     d.tabla(["Elemento", "Alerta al cierre", "Análisis"], criticos, [2800, 4426, 1800],
             leyenda="Objetivos prioritarios y servicios con alerta crítica",
             fuente="Fuente: hallazgos de esta evaluación (Anexos 2 y 3). Elaboración propia.")
     d.p("La lista muestra que las alertas se concentran en la medición (indicadores sin valor) más que en el avance, y "
-        "que los servicios no implementados son pocos. Son los elementos que la transición debe resolver primero.")
+        "que los servicios no implementados fueron pocos. Son los elementos que la transición debe resolver primero.")
 
 
 def metodologia(d, C, H, V, P, FI):
@@ -1962,7 +1961,7 @@ def metodologia(d, C, H, V, P, FI):
             nombrar=False)
     d.p("La tabla muestra dónde pone el acento la evaluación. La coherencia reúne cinco de las doce preguntas, porque "
         "una evaluación de cierre que alimenta una nueva formulación necesita saber, sobre todo, si la lógica de la "
-        "Política se sostiene. La eficiencia se acota a la conducción, porque los datos públicos no identifican el "
+        "Política se sostenía. La eficiencia se acota a la conducción, porque los datos públicos no identifican el "
         "gasto de los servicios por política. La tabla siguiente presenta el texto completo de las doce preguntas.")
     d.tabla(["Pregunta", "Criterio", "Texto de la pregunta"],
             [[p, crit, [(texto, {"i": True})]] for p, (crit, texto, _) in S.PREGUNTAS.items()],
@@ -1999,14 +1998,14 @@ def metodologia(d, C, H, V, P, FI):
         f"cada servicio. El corpus reúne {P['n_corpus']} documentos: normas, documentos de la Política y del PEMIG, "
         f"protocolos, reportes de seguimiento y de cumplimiento, informes LIO y de la CONAIG, evaluaciones anteriores, "
         f"instrumentos de planeamiento y políticas afines. Para cada servicio se registró, en todo el periodo "
-        f"2019–2025, si tiene protocolo aprobado, si su presupuesto puede identificarse en los datos abiertos del MEF, "
-        f"si reporta indicadores y qué ejecución reportó en los informes LIO de cada año; con esos componentes se "
+        f"2019–2025, si tuvo protocolo aprobado, si su presupuesto podía identificarse en los datos abiertos del MEF, "
+        f"si reportó indicadores y qué ejecución reportó en los informes LIO de cada año; con esos componentes se "
         f"clasificó su estado (numeral 2.4). La revisión incluye una lista de verificación de los siete enfoques "
         f"transversales en el documento de la Política, sus anexos y los protocolos.")
     d.h3("Entrevistas al nivel conductor")
     g_ = C["entrev"]
-    d.p(f"Se entrevistó a profesionales de la OGPPM, la OGMEPGD y la DGIGND, los tres órganos del MIMP que conducen la "
-        f"Política o intervienen en su seguimiento, a los que este informe llama «nivel conductor». La guía tenía "
+    d.p(f"Se entrevistó a profesionales de la OGPPM, la OGMEPGD y la DGIGND, los tres órganos del MIMP que condujeron la "
+        f"Política o intervinieron en su seguimiento, a los que este informe llama «nivel conductor». La guía tenía "
         f"preguntas orientadoras por bloque y preguntas de contraste de los hallazgos preliminares. Las entrevistas se "
         f"grabaron con consentimiento verbal, se transcribieron, se verificaron en el audio los pasajes dudosos y se "
         f"anonimizaron, de modo que cada intervención se atribuye al órgano y no a la persona. Las respuestas se "
@@ -2017,7 +2016,7 @@ def metodologia(d, C, H, V, P, FI):
         f"codificación independiente (numeral 2.6). La aplicación se detalla en el Anexo 8.")
     d.h3("Información reportada por las entidades")
     d.p(f"Analiza lo que las entidades responsables reportaron al MIMP entre 2019 y 2025, sin pedirles información "
-        f"nueva. La base son los reportes de seguimiento y de cumplimiento de la PNIG, que el MIMP elabora cada año "
+        f"nueva. La base son los reportes de seguimiento y de cumplimiento de la PNIG, que el MIMP elaboró cada año "
         f"desde el primer año de implementación (2020), con los valores de los indicadores de objetivo desde 2019: de "
         f"ellos salen la trayectoria oficial de los indicadores y su nivel de avance (Anexo 5). Les siguen los informes "
         f"anuales de cumplimiento de la Ley N.° 28983 (informes LIO) de 2019 a 2025, que recogen, servicio por "
@@ -2066,7 +2065,7 @@ def metodologia(d, C, H, V, P, FI):
         "que reproduce la variable oficial de 2019 a 2023.")
     d.h3("Revisión de evidencia")
     d.p(f"Revisión rápida de literatura y evaluaciones para valorar si los tipos de intervención de los servicios "
-        f"producen los resultados que la PNIG espera de ellos. Los {n} servicios se agruparon en "
+        f"producen los resultados que la PNIG esperaba de ellos. Los {n} servicios se agruparon en "
         f"{C['rev_tipos']} tipos de intervención. Para cada tipo se buscaron revisiones sistemáticas y evaluaciones de "
         f"impacto con estrategias replicables: {rev['academica']} estrategias en bases académicas con sus tesauros "
         f"({rev['bases']}), {rev['dep']} en el portal de evidencia del 3ie, {rev['manual']} manuales en SciELO, LILACS, "
@@ -2124,8 +2123,8 @@ def metodologia(d, C, H, V, P, FI):
         f"pueden medirse, como un indicador sin valor, sin meta o con valor o meta igual a cero, no se clasifican y se registran como hallazgo de "
         f"calidad técnica. La escala tiene un límite que el informe tiene presente: no mira la línea de base, de modo "
         f"que un indicador puede quedar en nivel alto aunque haya avanzado poco desde su punto de partida (numeral "
-        f"5.2). En 2025, según el reporte oficial, solo {con_nivel} de los {C['op_ind']} indicadores de objetivo tienen "
-        f"un valor que permita clasificarlos.")
+        f"5.2). En 2025, según el reporte oficial, solo {con_nivel} de los {C['op_ind']} indicadores de objetivo tuvieron "
+        f"un valor que permitiera clasificarlos.")
     d.p("Las dos escalas siguientes ordenan el razonamiento de la evaluación: la confianza mide cuánto respaldo tiene "
         "cada hallazgo, y la valoración, qué tan bien responde la evidencia a cada pregunta.")
     d.tabla(["Nivel", "Criterio"], [
@@ -2227,7 +2226,7 @@ def metodologia(d, C, H, V, P, FI):
     d.p(f"Ninguna pregunta alcanza una valoración satisfactoria: {vv.get('Parcial', 0)} son parciales y "
         f"{vv.get('Insuficiente', 0)} {S.pl(vv.get('Insuficiente', 0), 'insuficiente', 'insuficientes')} "
         f"({lista_es(insuf)}, calidad de los indicadores). La valoración parcial predomina tanto en las preguntas de "
-        f"diseño como en las de implementación, lo que indica que los problemas no se concentran en una sola etapa de "
+        f"diseño como en las de implementación, lo que indica que los problemas no se concentraron en una sola etapa de "
         f"la Política. El predominio de los hallazgos sólidos (en verde) muestra que esas valoraciones descansan sobre "
         f"todo en dos o más fuentes independientes.")
 
@@ -2241,7 +2240,7 @@ def evidencia_34(d, C, H, P, FI, nombre_serv):
     """Numeral 3.4: la evidencia como marco teórico, por objetivo prioritario y tipo de intervención."""
     tip, mt, me = P["tip"], P["mt"], P["me"]
     d.p(f"La revisión de evidencia responde si los tipos de intervención de los servicios producen los resultados que "
-        f"la PNIG espera de ellos. Los {C['serv_total']} servicios se agruparon en {C['rev_tipos']} tipos de "
+        f"la PNIG esperaba de ellos. Los {C['serv_total']} servicios se agruparon en {C['rev_tipos']} tipos de "
         f"intervención, y para cada uno se buscó evidencia con el procedimiento del numeral 2.3. La figura siguiente "
         f"resume la búsqueda y la selección.")
     fig(d, FI, "flujo_evidencia")
@@ -2305,7 +2304,7 @@ def evidencia_34(d, C, H, P, FI, nombre_serv):
     d.p(f"Los estudios peruanos cubren pocos tipos de intervención ({tipos_peru}) y casi todos son evaluaciones "
         f"cuasiexperimentales; para los demás tipos, la aplicabilidad al Perú depende de estudios de otros países.")
     d.p("La evidencia se presenta a continuación por tipo de intervención, ordenada por objetivo prioritario. Para "
-        "cada tipo se describe qué es, qué servicios lo implementan y cómo se espera que actúe sobre el modelo del "
+        "cada tipo se describe qué es, qué servicios lo implementaron y cómo se espera que actúe sobre el modelo del "
         "problema; luego, qué encontraron los estudios, de los de mayor peso a los del Perú, y, por último, el "
         "respaldo del conjunto y su implicancia para los servicios. Los resultados son los que registró la revisión, "
         "tomados del resumen de cada estudio.")
@@ -2423,11 +2422,11 @@ def anexos(d, C, H, P, F, E, nombre_serv):
         else:
             partes.append("No se identificó un monto que coincida con una estructura presupuestal del MEF.")
         partes.append(f"Reporta indicadores con valor en {anios_v}." if reporta else
-                      ("Sus indicadores no tienen valor reportado." if prot else "No tiene indicador aprobado."))
+                      ("Sus indicadores no tuvieron valor reportado." if prot else "No tuvo indicador aprobado."))
         if pd.notna(r["Ajuste por lectura cualitativa"]):
             partes.append(str(r["Ajuste por lectura cualitativa"]).rstrip(".") + ".")
         elif r["Estado asignado (preliminar)"] == "Implementado parcialmente" and pd.notna(r["Componentes faltantes"]):
-            partes.append(f"Componentes que le faltan: {r['Componentes faltantes'].replace('asignación identificable', 'recursos presupuestales identificados')}.")
+            partes.append(f"Componentes que le faltaron: {r['Componentes faltantes'].replace('asignación identificable', 'recursos presupuestales identificados')}.")
         filas.append([c, [(nombre_serv[c], {"i": True})], R.entidad_completa(r["Entidad u órgano responsable"]),
                       "Sí" if prot else "No", "Sí" if rec else "No", "Sí" if reporta else "No",
                       [(r["Estado asignado (preliminar)"] + ". ", {"b": True}), (" ".join(partes), {})]])
@@ -2442,7 +2441,7 @@ def anexos(d, C, H, P, F, E, nombre_serv):
     # Anexo 4. Evidencia por tipo de intervención
     tip, mt, me = P["tip"], P["mt"], P["me"]
     d.h1("Anexo 4. Evidencia por tipo de intervención")
-    d.p("Para cada tipo de intervención, el anexo presenta los servicios de la PNIG que lo implementan, sus entidades "
+    d.p("Para cada tipo de intervención, el anexo presenta los servicios de la PNIG que lo implementaron, sus entidades "
         "responsables, la clasificación de su evidencia con el motivo que la explica y todos los estudios incluidos, "
         "con su resultado principal. La regla de solidez es la del numeral 2.4: sólida, con al menos una revisión "
         "sistemática favorable cuya evidencia no sea de calidad baja, o con dos evaluaciones experimentales o "

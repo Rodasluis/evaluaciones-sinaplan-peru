@@ -81,3 +81,9 @@
   (configuración del escaneo de secretos, que GitHub lee de la rama por defecto y por eso va primero) y `71d0ed5`
   (versión pública inicial, 363 archivos, armada desde `d58b4d4`). La prueba automática de GitHub (`pruebas.yml`)
   pasó en el primer push.
+
+## Actualizaciones
+- **2026-11-18, Fase 4 (ADR-017):** commit `62a8a2c`, armado desde `ce3775f` (416 archivos, auditoría sin problemas,
+  58 pruebas en verde desde un entorno nuevo). Agrega los agentes por etapa, `/evaluar`, las preguntas iniciales de
+  `/nueva-evaluacion`, los instrumentos genéricos y `docs/agentes.md`. Push confirmado por el usuario; la prueba
+  automática de GitHub pasó.

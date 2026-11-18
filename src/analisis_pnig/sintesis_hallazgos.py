@@ -91,7 +91,7 @@ NOMBRE_EST = {  # indicadores de OP sin valor oficial 2025 que el equipo estimó
 }
 INDICES = ("IOP.03.01",)  # se expresan como índice (tres decimales), no en porcentaje
 MOTIVO_SIN_VALOR = {  # indicadores de OP sin valor oficial 2025 que el equipo no estimó (verificado al 2026-11-06)
-    "IOP.06.01": "IOP.06.01 no tiene fuente en 2025, porque la ENARES no se aplicó ese año",
+    "IOP.06.01": "IOP.06.01 no tuvo fuente en 2025, porque la ENARES no se aplicó ese año",
 }
 
 
@@ -967,11 +967,11 @@ def hallazgos(C):
         detalle="El problema público de la PNIG diverge del marco de igualdad de oportunidades; la OGAJ considera "
                 "incompatibles su modelo del problema y su finalidad con el artículo 6.1 de la Ley N.° 32535.")
     add("D1-H2", "D1", "Manifestaciones medidas por los indicadores de los OP",
-        f"Las manifestaciones del problema que miden los indicadores de los OP mejoran sin desaparecer: "
-        f"{C['op_mejora']} de {C['op_ind']} indicadores mejoran frente a su línea de base, "
-        f"{len(C['op_nomejora'])} {pl(len(C['op_nomejora']), 'no mejora', 'no mejoran')} ({lista_es(C['op_nomejora'])}), "
-        f"{len(C['op_sinlb'])} {pl(len(C['op_sinlb']), 'no tiene', 'no tienen')} línea de base numérica ({lista_es(C['op_sinlb'])}) y "
-        f"{len(C['op_noint_lb'])} {pl(len(C['op_noint_lb']), 'tiene', 'tienen')} un último valor no interpretable "
+        f"Las manifestaciones del problema que medían los indicadores de los OP mejoraron sin desaparecer: "
+        f"{C['op_mejora']} de {C['op_ind']} indicadores mejoraron frente a su línea de base, "
+        f"{len(C['op_nomejora'])} {pl(len(C['op_nomejora']), 'no mejoró', 'no mejoraron')} ({lista_es(C['op_nomejora'])}), "
+        f"{len(C['op_sinlb'])} {pl(len(C['op_sinlb']), 'no tuvo', 'no tuvieron')} línea de base numérica ({lista_es(C['op_sinlb'])}) y "
+        f"{len(C['op_noint_lb'])} {pl(len(C['op_noint_lb']), 'tuvo', 'tuvieron')} un último valor no interpretable "
         f"({lista_es(C['op_noint_lb'])}).",
         [_ev("Cuantitativa", "REV_IND", "Último valor disponible de cada indicador de OP frente a su línea de base.",
              C.origen["op_tabla"], "Reportes de seguimiento (RS)"),
@@ -1067,28 +1067,28 @@ def hallazgos(C):
 
     # D2
     add("D2-H2", "D2", "Trayectoria de los indicadores frente a sus metas",
-        f"Con el reporte oficial, la situación futura deseada no puede valorarse para la mayoría de los OP con datos "
-        f"de 2025: {C['op_sinvalor_2025']} de {C['op_ind']} indicadores de OP no tienen valor 2025 y "
-        f"{C['op_noint_2025']} no permite calcular el avance. Con las estimaciones y los recálculos de esta evaluación "
+        f"Con el reporte oficial, la situación futura deseada no pudo valorarse para la mayoría de los OP con datos "
+        f"de 2025: {C['op_sinvalor_2025']} de {C['op_ind']} indicadores de OP no tuvieron valor 2025 y "
+        f"{C['op_noint_2025']} no permitió calcular el avance. Con las estimaciones y los recálculos de esta evaluación "
         f"(I2-H3), {len(C['op_est25'])} de esos indicadores se comparan con su meta 2025 y "
-        f"{queda_sin_valor(C)}. Con los datos de 2024, {C['op_alto_2024']} indicadores están en "
+        f"{queda_sin_valor(C)}. Con los datos de 2024, {C['op_alto_2024']} indicadores quedaron en "
         f"nivel alto, {C['op_medio_2024']} en medio, {C['op_bajo_2024']} en bajo y {C['op_sinvalor_2024']} sin valor. "
-        f"Las metas de la ficha llegan a 2025; la trayectoria hasta el horizonte de 2030 no se ha proyectado en las fichas oficiales, aunque esta "
+        f"Las metas de la ficha llegaban a 2025; la trayectoria hasta el horizonte de 2030 no se proyectó en las fichas oficiales, aunque esta "
         f"evaluación presenta escenarios referenciales (numeral 5.4).",
         [_ev("Cuantitativa", "REV_IND", "Semaforización anual de los indicadores de OP.",
              C.origen["resumen_semaforo"], "Reportes de seguimiento (RS)"),
          _ev("Cuantitativa", "REV_IND", "Contraste de valores y metas con el consolidado de la OMEP y el formulario.",
              _hoja(PSI, "Contraste de fuentes"), "Consolidado de indicadores de la OMEP")],
         "Indicio",
-        detalle=f"Con el reporte oficial, {C['op_sinvalor_2025']} de {C['op_ind']} indicadores de OP no tienen valor "
-                f"2025, de modo que la situación futura no puede valorarse para la mayoría de los OP; con las "
+        detalle=f"Con el reporte oficial, {C['op_sinvalor_2025']} de {C['op_ind']} indicadores de OP no tuvieron valor "
+                f"2025, de modo que la situación futura no pudo valorarse para la mayoría de los OP; con las "
                 f"estimaciones de esta evaluación, {queda_sin_valor(C)}.")
     add("D2-H3", "D2", "Calidad de las metas",
-        f"Las metas al fin del horizonte tienen problemas de estimación: de {C['fichas_total']} fichas, "
-        f"{C['ficha_meta_nc']} no fijan meta anual hasta el fin del horizonte y {C['ficha_lb_nc']} no tienen línea de "
+        f"Las metas al fin del horizonte tuvieron problemas de estimación: de {C['fichas_total']} fichas, "
+        f"{C['ficha_meta_nc']} no fijaban meta anual hasta el fin del horizonte y {C['ficha_lb_nc']} no tenían línea de "
         f"base con año y valor; en 2025, "
-        f"{C['serv25_falla']} de {C['serv25_total']} indicadores de servicio muestran una posible falla de planeación "
-        f"(avance de 150 % o más, o menor de 15 %). Las entidades atribuyen las desviaciones a metas mal estimadas "
+        f"{C['serv25_falla']} de {C['serv25_total']} indicadores de servicio mostraron una posible falla de planeación "
+        f"(avance de 150 % o más, o menor de 15 %). Las entidades atribuyeron las desviaciones a metas mal estimadas "
         f"({C['fie_cod_total'].get('D5.META', 0)} segmentos codificados).",
         [_ev("Documental", "REV_IND", "Atributos de las fichas técnicas.", C.origen["ficha_lb_nc"], "Fichas técnicas"),
          _ev("Cuantitativa", "REV_IND", "Semaforización 2025 de los indicadores de servicio.",
@@ -1096,9 +1096,9 @@ def hallazgos(C):
          _ev("Entidades", "REP_ENT", "Código D5.META en el formulario y los informes LIO.",
              C.origen["fie_cod_total"], "Formulario de seguimiento e informes LIO")],
         "Sólido",
-        detalle=f"De {C['fichas_total']} fichas, {C['ficha_meta_nc']} no fijan meta anual hasta el fin del horizonte y "
-                f"{C['ficha_lb_nc']} no tienen línea de base con año y valor; en 2025, {C['serv25_falla']} de "
-                f"{C['serv25_total']} indicadores de servicio muestran una posible falla de planeación.")
+        detalle=f"De {C['fichas_total']} fichas, {C['ficha_meta_nc']} no fijaban meta anual hasta el fin del horizonte y "
+                f"{C['ficha_lb_nc']} no tenían línea de base con año y valor; en 2025, {C['serv25_falla']} de "
+                f"{C['serv25_total']} indicadores de servicio mostraron una posible falla de planeación.")
     sfd = C["sfd"].set_index("Código")
     # SFD4 enuncia dos metas (congresistas y alcaldesas) en un solo enunciado
     corr = C["sfd"].drop_duplicates("Enunciado (cita literal)")["Correspondencia con el indicador del OP"].value_counts()
@@ -1112,8 +1112,8 @@ def hallazgos(C):
     camara = ppn[(ppn.cargo == "Cámara de Diputados") & (ppn.periodo == "2026/2031")].iloc[0]
     senado = ppn[(ppn.cargo == "Senado") & (ppn.periodo == "2026/2031")].iloc[0]
     add("D2-H1", "D2", "Correspondencia y alcanzabilidad de la situación futura deseada",
-        f"La situación futura deseada cubre las tres causas y los cuatro efectos del modelo, pero se mide con "
-        f"indicadores que no siempre son los de los OP: de {corr.sum()} enunciados, {corr.get('Misma', 0)} usan el mismo "
+        f"La situación futura deseada cubría las tres causas y los cuatro efectos del modelo, pero se medía con "
+        f"indicadores que no siempre eran los de los OP: de {corr.sum()} enunciados, {corr.get('Misma', 0)} usaban el mismo "
         f"indicador del OP, {corr.get('Aproximada', 0)} uno aproximado, {corr.get('Distinta', 0)} uno distinto y "
         f"{corr.get('Sin indicador', 0)} ninguno. Al ritmo observado, solo el embarazo adolescente alcanzaría su meta "
         f"al 2030 ({fmt_num(sfd.loc['SFD7', 'Último valor'], 1)} % en 2025 frente a 7,2 %); la tolerancia social "
@@ -1151,7 +1151,7 @@ def hallazgos(C):
         + ges(C, "Alcance de la PNIG frente a su horizonte y a sus recursos.", "ENTREV-OGPPM-026", "ENTREV-OGPPM-027",
               "ENTREV-DGIGND-036", "ENTREV-DGIGND-053"),
         "Sólido",
-        detalle=f"De {corr.sum()} enunciados de la situación futura, solo {corr.get('Misma', 0)} se miden con el mismo "
+        detalle=f"De {corr.sum()} enunciados de la situación futura, solo {corr.get('Misma', 0)} se medían con el mismo "
                 f"indicador del OP. Al ritmo observado, solo el embarazo adolescente alcanzaría su meta al 2030; la de "
                 f"congresistas se alcanzó en 2021, pero el Congreso elegido en 2026 tiene "
                 f"{fmt_num(sfd.loc['SFD4a', 'Valor 2030'], 1)} % de mujeres.",
@@ -1161,10 +1161,10 @@ def hallazgos(C):
 
     # D3
     add("D3-H1", "D3", "Lineamientos sin servicio y servicios sin causa",
-        f"La cadena causal está casi completa: {C['lin_total'] - len(C['lin_sin_serv'])} de {C['lin_total']} "
-        f"lineamientos tienen al menos un servicio (el lineamiento {lista_es(C['lin_sin_serv'])} no tiene ninguno) y "
-        f"{n - len(C['serv_sin_causa'])} de {n} servicios tienen una causa o un efecto del modelo consignado en la "
-        f"matriz de consistencia (faltan {lista_es(C['serv_sin_causa'])}). La DGIGND matiza la solidez de esa "
+        f"La cadena causal estuvo casi completa: {C['lin_total'] - len(C['lin_sin_serv'])} de {C['lin_total']} "
+        f"lineamientos tuvieron al menos un servicio (el lineamiento {lista_es(C['lin_sin_serv'])} no tuvo ninguno) y "
+        f"{n - len(C['serv_sin_causa'])} de {n} servicios tuvieron una causa o un efecto del modelo consignado en la "
+        f"matriz de consistencia (faltaron {lista_es(C['serv_sin_causa'])}). La DGIGND matiza la solidez de esa "
         f"cadena: la prisa de la formulación no dejó tiempo para analizarla, y la evaluación de diseño del CEPLAN "
         f"recomendó revisar la teoría de cambio de los servicios.",
         [_ev("Documental", "REV_ALI", "Lineamientos y servicios frente al Anexo 5 de la PNIG.",
@@ -1172,8 +1172,8 @@ def hallazgos(C):
          _ev("Documental", "REV_ALI", "Servicios del PEMIG por lineamiento.", C.origen["serv_sin_causa"], "PEMIG")]
         + ges(C, "Análisis de la cadena causal durante la formulación.", "ENTREV-DGIGND-050"),
         "Sólido", nota="La lectura de la DGIGND matiza el hallazgo, sin contradecir el conteo.",
-        detalle=f"{C['lin_total'] - len(C['lin_sin_serv'])} de {C['lin_total']} lineamientos tienen servicio (falta el "
-                f"{lista_es(C['lin_sin_serv'])}) y {n - len(C['serv_sin_causa'])} de {n} servicios tienen una causa o un "
+        detalle=f"{C['lin_total'] - len(C['lin_sin_serv'])} de {C['lin_total']} lineamientos tuvieron servicio (faltó el "
+                f"{lista_es(C['lin_sin_serv'])}) y {n - len(C['serv_sin_causa'])} de {n} servicios tuvieron una causa o un "
                 f"efecto del modelo asignado en la matriz de consistencia.")
     assert C["serv_sin_ind_vig"] == C["serv_sin_ind_omep"], "REV_ALI.1 y el consolidado difieren en servicios sin indicador"
     ind, cob, cal = C["pemig_ind"], C["pemig_cob"], C["pemig_cal"]
@@ -1181,14 +1181,14 @@ def hallazgos(C):
     # la cifra de la DGIGND («algo más del 60 %» solo de cobertura) queda entre la lectura estricta y la amplia
     assert 100 * cob / ind < 61 < 100 * amplio / ind
     add("D3-H2", "D3", "Servicios sin indicador",
-        f"Más de la mitad de los servicios no puede seguirse con indicadores aprobados: {C['serv_sin_ind_vig']} de "
-        f"{n} servicios no tienen protocolo aprobado ni, por tanto, indicador aprobado, aunque el PEMIG había "
+        f"Más de la mitad de los servicios no pudo seguirse con indicadores aprobados: {C['serv_sin_ind_vig']} de "
+        f"{n} servicios no tuvieron protocolo aprobado ni, por tanto, indicador aprobado, aunque el PEMIG había "
         f"asignado {ind} indicadores a sus {C['pemig_serv']} servicios; y {C['serv_falta_cob']} servicios con "
-        f"indicador carecen del de cobertura o del de calidad. Los indicadores del PEMIG miden sobre todo cobertura: "
-        f"{cob} de {ind} ({pct(100 * cob / ind, 0)}) miden la provisión del servicio, {amplio} "
-        f"({pct(100 * amplio / ind, 0)}) si se suman los que miden la participación de las mujeres entre los "
+        f"indicador carecían del de cobertura o del de calidad. Los indicadores del PEMIG medían sobre todo cobertura: "
+        f"{cob} de {ind} ({pct(100 * cob / ind, 0)}) medían la provisión del servicio, {amplio} "
+        f"({pct(100 * amplio / ind, 0)}) si se suman los que medían la participación de las mujeres entre los "
         f"beneficiarios, y solo {cal} ({pct(100 * cal / ind, 0)}) un atributo de calidad, en "
-        f"{C['pemig_serv_cal']} servicios; la DGIGND estimó que algo más del 60 % solo mide cobertura, cifra que "
+        f"{C['pemig_serv_cal']} servicios; la DGIGND estimó que algo más del 60 % solo medía cobertura, cifra que "
         f"queda dentro de ese rango. Según el nivel conductor, el PEMIG no tuvo seguimiento propio: la OGPPM lo "
         f"describe como «congelado» desde su aprobación, un informe de la OMEP concluyó que sus indicadores no eran "
         f"aptos para el seguimiento y, según la DGIGND, los dos indicadores que se crearon con el Plan nunca se "
@@ -1202,9 +1202,9 @@ def hallazgos(C):
         + ges(C, "Seguimiento e indicadores del PEMIG.", "ENTREV-OGPPM-010", "ENTREV-OGMEPGD-012", "ENTREV-OGMEPGD-013",
               "ENTREV-DGIGND-021", "ENTREV-DGIGND-023"),
         "Con respaldo parcial", estado=VALIDADO_0711,
-        detalle=f"{C['serv_sin_ind_vig']} de {n} servicios no tienen indicador aprobado, porque no tienen protocolo "
+        detalle=f"{C['serv_sin_ind_vig']} de {n} servicios no tuvieron indicador aprobado, porque no tuvieron protocolo "
                 f"aprobado. De los {ind} indicadores que el PEMIG asignó a los servicios, {cob} ({pct(100 * cob / ind, 0)}) "
-                f"miden cobertura y solo {cal} ({pct(100 * cal / ind, 0)}) un atributo de calidad.",
+                f"medían cobertura y solo {cal} ({pct(100 * cal / ind, 0)}) un atributo de calidad.",
         salvedad="El informe de la OMEP sobre los indicadores del PEMIG que menciona el nivel conductor se solicitó, "
                  "pero no se obtuvo.",
         nota="Los indicadores del PEMIG se clasificaron por tipo con las definiciones de la guía de indicadores del "
@@ -1212,7 +1212,7 @@ def hallazgos(C):
     add("D3-H3", "D3", "Solidez de la evidencia por tipo de servicio",
         f"La evidencia respalda la lógica causal de la mayoría de los servicios: de {C['rev_tipos']} tipos de "
         f"intervención, {C['rev_sólida']} tienen evidencia sólida, {C['rev_moderada']} moderada y "
-        f"{C['rev_limitada']} limitada ({lista_es([t[1].lower() for t in lim])}), que comprenden "
+        f"{C['rev_limitada']} limitada ({lista_es([t[1].lower() for t in lim])}), que comprendían "
         f"{C['rev_serv']['Limitada']} servicios. La dirección de los efectos es mixta en {C['rev_mixta']} tipos y la "
         f"evidencia mide un resultado solo en parte pertinente en {len(C['rev_parcial'])}. La DGIGND advierte que, "
         f"al decidir las alternativas de solución, se descartaron las más costosas y se adoptaron sustitutos mínimos.",
@@ -1229,9 +1229,9 @@ def hallazgos(C):
 
     # D4
     add("D4-H1", "D4", "Alineamiento vertical en el periodo",
-        f"Durante el periodo, los OP se alinean con los instrumentos de planeamiento nacional: de "
+        f"Durante el periodo, los OP se alinearon con los instrumentos de planeamiento nacional: de "
         f"{sum(vp)} relaciones valoradas, {vp[0]} son directas, {vp[1]} indirectas y {vp[2]} sin correspondencia. "
-        f"El alineamiento directo es mayor en {lista_es(C['vert_fuerte'])} y menor en {lista_es(C['vert_debil'])}.",
+        f"El alineamiento directo fue mayor en {lista_es(C['vert_fuerte'])} y menor en {lista_es(C['vert_debil'])}.",
         [_ev("Documental", "REV_ALI", "Relaciones por OP con Políticas de Estado, Plan Bicentenario, PEDN, PGG y "
              "PESEM.", C.origen["vert_periodo"], "Instrumentos de planeamiento nacional"),
          _ev("Documental", "REV_ALI", "Alineamiento declarado por la PNIG en 2019.",
@@ -1252,7 +1252,7 @@ def hallazgos(C):
     add("D4-H3", "D4", "Duplicidades y complementariedades con otras políticas",
         f"La articulación horizontal muestra duplicidades: en {C['hor_rel']} relaciones con {C['hor_pol']} políticas "
         f"nacionales afines hay {C['hor_dup']} duplicidades, {C['hor_comp']} complementariedades y {C['hor_vac']} "
-        f"vacíos de atención. El servicio de los Centros Emergencia Mujer (1.1.3) figura en {C['hor_cem']} políticas "
+        f"vacíos de atención. El servicio de los Centros Emergencia Mujer (1.1.3) figuraba en {C['hor_cem']} políticas "
         f"además de la PNIG.",
         [_ev("Documental", "REV_ALI", "Relaciones con políticas nacionales afines, con cita y página.",
              C.origen["hor_rel"], "Políticas nacionales afines"),
@@ -1272,10 +1272,10 @@ def hallazgos(C):
 
     # D5
     add("D5-H1", "D5", "Atributos de las fichas técnicas",
-        f"Las fichas técnicas no cumplen el estándar del SINAPLAN en atributos críticos: de {C['fichas_total']} "
-        f"fichas, {C['ficha_lb_nc']} no tienen línea de base con año y valor (y {C['ficha_lb_parc']} la tienen "
-        f"incompleta), en ninguna consta la desagregación por territorio y grupo ({C['ficha_desag_nc']}), "
-        f"{C['ficha_sentido_obs']} tienen observado el sentido esperado, y las {C['op_fichas_total']} fichas de OP "
+        f"Las fichas técnicas no cumplieron el estándar del SINAPLAN en atributos críticos: de {C['fichas_total']} "
+        f"fichas, {C['ficha_lb_nc']} no tenían línea de base con año y valor (y {C['ficha_lb_parc']} la tenían "
+        f"incompleta), en ninguna constaba la desagregación por territorio y grupo ({C['ficha_desag_nc']}), "
+        f"{C['ficha_sentido_obs']} tenían observado el sentido esperado, y las {C['op_fichas_total']} fichas de OP "
         f"quedan observadas.",
         [_ev("Documental", "REV_IND", "Matriz de atributos frente a la Guía de indicadores del CEPLAN.",
              C.origen["fichas_total"], "Fichas técnicas"),
@@ -1289,7 +1289,7 @@ def hallazgos(C):
                  "se aprobaron sin fichas técnicas.")
     add("D5-H2", "D5", "Modificaciones de fichas y trazabilidad del reporte",
         f"Las fichas se modificaron mediante actas de validación de 2022 y 2023, varias no ratificadas, y el reporte "
-        f"tiene discrepancias: el panel del formulario registra {C['panel_disc']} discrepancias con las demás "
+        f"tuvo discrepancias: el panel del formulario registró {C['panel_disc']} discrepancias con las demás "
         f"fuentes de seguimiento. Además, el aplicativo de seguimiento que el CEPLAN puso en marcha en 2026 solo "
         f"considera los indicadores aprobados por decreto supremo, los de la PNIG y del PEMIG, y no los aprobados en "
         f"los protocolos; según la OGPPM, el MIMP no logró que se incorporaran.",
@@ -1301,7 +1301,7 @@ def hallazgos(C):
         "Con respaldo parcial", nota="Cada fuente sustenta una parte del enunciado: las actas, las modificaciones, y "
         "el panel del formulario, las discrepancias.",
         detalle=f"Las fichas se modificaron con actas de validación de 2022 y 2023, varias no ratificadas, y el panel del "
-                f"formulario registra {C['panel_disc']} discrepancias con las demás fuentes de seguimiento.")
+                f"formulario registró {C['panel_disc']} discrepancias con las demás fuentes de seguimiento.")
     add("D5-H3", "D5", "Factores que explican las deficiencias",
         f"Las entidades explican las fallas de los indicadores sobre todo por la fuente o el método de cálculo "
         f"({C['fie_cod_total'].get('D5.FUENTE', 0)} segmentos), la meta mal estimada "
@@ -1348,9 +1348,9 @@ def hallazgos(C):
               f"{k} de los {nc} cambios entre años consecutivos de {s3.index.min()} a {s3.index.max()} "
               f"{'es significativo' if k == 1 else 'son significativos'} al 95 %")
     add("D5-H5", "D5", "Sensibilidad y precisión de los indicadores del OP3",
-        f"Los dos indicadores del OP3 no permiten seguir el avance anual. El índice de empoderamiento político "
-        f"(IOP.03.01) solo cambia con las elecciones: la serie oficial repite su valor en 2021 y 2022, y el valor "
-        f"recalculado es el mismo de 2023 a 2025. El porcentaje de funcionarias y directivas (IOP.03.02) se estima con "
+        f"Los dos indicadores del OP3 no permitían seguir el avance anual. El índice de empoderamiento político "
+        f"(IOP.03.01) solo cambiaba con las elecciones: la serie oficial repite su valor en 2021 y 2022, y el valor "
+        f"recalculado es el mismo de 2023 a 2025. El porcentaje de funcionarias y directivas (IOP.03.02) se estimaba con "
         f"{int(per.n.min())} a {int(per.n.max())} personas de la ENAHO por año entre 2019 y 2025: en 2025 su intervalo "
         f"de confianza al 95 % va de {fmt_num(s3.loc[2025, 'IC inferior'], 1)} % a "
         f"{fmt_num(s3.loc[2025, 'IC superior'], 1)} %, y {signif}. SERVIR, que lo publica, cambió además de método "
@@ -1360,8 +1360,8 @@ def hallazgos(C):
          _ev("Cuantitativa", "REV_IND", "Componentes del IOP.03.01 por año y serie oficial (REV_IND.4).",
              C.origen["op3_indice"], "Reportes de seguimiento (RS); INEI; JNE")],
         "Sólido",
-        detalle=f"El índice de empoderamiento político (IOP.03.01) solo cambia con las elecciones y el porcentaje de "
-                f"funcionarias y directivas (IOP.03.02) se estima con {int(per.n.min())} a {int(per.n.max())} personas "
+        detalle=f"El índice de empoderamiento político (IOP.03.01) solo cambiaba con las elecciones y el porcentaje de "
+                f"funcionarias y directivas (IOP.03.02) se estimaba con {int(per.n.min())} a {int(per.n.max())} personas "
                 f"de la ENAHO por año: {signif}.")
 
     # D6
@@ -1369,27 +1369,27 @@ def hallazgos(C):
     niv = C["enfoques"].nivel.value_counts()
     oper = ef[ef.nivel == "Operacionalizado"]
     add("D6-H1", "D6", "Nivel de incorporación de los siete enfoques",
-        f"De los siete enfoques transversales, {niv.get('Operacionalizado', 0)} se operacionalizan en el diseño, con "
+        f"De los siete enfoques transversales, {niv.get('Operacionalizado', 0)} se operacionalizaron en el diseño, con "
         f"alcance desigual: el de género de forma amplia (lineamientos, estándar de 38 de 52 servicios e indicador de "
         f"OP), el intercultural de forma parcial (estándar de pertinencia cultural en 24 servicios) y los de "
-        f"interseccionalidad y ciclo de vida de forma mínima. El de derechos humanos solo se menciona y los de "
-        f"{lista_es([e.lower() for e in ef[ef.nivel == 'Ausente'].index])} están ausentes.",
+        f"interseccionalidad y ciclo de vida de forma mínima. El de derechos humanos solo se mencionó y los de "
+        f"{lista_es([e.lower() for e in ef[ef.nivel == 'Ausente'].index])} estuvieron ausentes.",
         [_ev("Documental", "REV_DOC", "Lista de verificación con cita y ubicación verificadas.", C.origen["enfoques"],
              "Documento de la PNIG"),
          _ev("Documental", "REV_DOC", "Estándares e indicadores de los 52 servicios.", C.origen["enfoques_res"],
              "Documento de la PNIG (Anexo 5)"),
          _ev("Documental", "REV_DOC", "Fichas de indicadores de los OP y de servicio.", C.origen["enfoques_res"],
              "Fichas técnicas")],
-        "Sólido", salvedad="La gestión por resultados está ausente como enfoque declarado, aunque la Política sigue la "
+        "Sólido", salvedad="La gestión por resultados estuvo ausente como enfoque declarado, aunque la Política siguió la "
         "cadena de resultados que exige el CEPLAN.",
-        detalle=f"De los siete enfoques transversales, {niv.get('Operacionalizado', 0)} se operacionalizan (solo el de "
-                f"género con amplitud), el de derechos humanos solo se menciona y los de "
-                f"{lista_es([e.lower() for e in ef[ef.nivel == 'Ausente'].index])} están ausentes.")
+        detalle=f"De los siete enfoques transversales, {niv.get('Operacionalizado', 0)} se operacionalizaron (solo el de "
+                f"género con amplitud), el de derechos humanos solo se mencionó y los de "
+                f"{lista_es([e.lower() for e in ef[ef.nivel == 'Ausente'].index])} estuvieron ausentes.")
     add("D6-H2", "D6", "Enfoques en los protocolos y en los indicadores",
-        f"Los protocolos aprobados incorporan los enfoques más que el diseño: {ef.loc['Género', 'protocolos']} "
+        f"Los protocolos aprobados incorporaron los enfoques más que el diseño: {ef.loc['Género', 'protocolos']} "
         f"protocolos incluyen el de género, {ef.loc['Interseccionalidad', 'protocolos']} el de interseccionalidad y "
         f"{ef.loc['Interculturalidad', 'protocolos']} el intercultural. En cambio, ninguna de las "
-        f"{C['fichas_total']} fichas de indicador prevé desagregaciones que permitan seguir los enfoques.",
+        f"{C['fichas_total']} fichas de indicador preveía desagregaciones que permitan seguir los enfoques.",
         [_ev("Documental", "REV_DOC", "Menciones en los 28 protocolos aprobados.", C.origen["enfoques_res"],
              "Protocolos aprobados"),
          _ev("Documental", "REV_IND", "Atributo de desagregación de las fichas.", C.origen["ficha_desag_nc"],
@@ -1466,14 +1466,14 @@ def hallazgos(C):
     assert op2_prot == 0, "revisar I1-H1: el OP2 ya tiene protocolo aprobado"
     add("I1-H1", "I1", "Estado de implementación de los servicios",
         f"La implementación fue {'mayoritariamente parcial' if C['serv_parc'] > n / 2 else 'parcial en buena parte de los servicios'}: "
-        f"de {n} servicios, {C['serv_impl']} están implementados, "
+        f"de {n} servicios, {C['serv_impl']} estuvieron implementados, "
         f"{C['serv_parc']} implementados parcialmente y {C['serv_noimpl']} "
-        f"{pl(C['serv_noimpl'], 'no implementado', 'no implementados')} ({lista_es(C['serv_noimpl_cod'])}). Solo {C['serv_prot_si']} servicios tienen protocolo aprobado al 31 de "
-        f"diciembre de 2025 y {C['serv_falta_tres']} carecen a la vez de protocolo, de asignación identificable y de "
+        f"{pl(C['serv_noimpl'], 'no implementado', 'no implementados')} ({lista_es(C['serv_noimpl_cod'])}). Solo {C['serv_prot_si']} servicios tuvieron protocolo aprobado al 31 de "
+        f"diciembre de 2025 y {C['serv_falta_tres']} carecieron a la vez de protocolo, de asignación identificable y de "
         f"reporte de indicador. El nivel conductor da cifras concordantes: unos 25 de los 52 servicios con protocolo "
         f"(OGMEPGD) y 28 protocolos aprobados entre 2021 y 2025, según lo informado al CEPLAN en julio de 2026 "
         f"(DGIGND), que coinciden "
-        f"con los que registra la revisión documental. En el OP2, cuyos servicios están sobre todo a cargo del Minsa, "
+        f"con los que registra la revisión documental. En el OP2, cuyos servicios estuvieron sobre todo a cargo del Minsa, "
         f"no se aprobó ningún protocolo ({op2_prot} de {op2_n} servicios).",
         [_ev("Documental", "REV_DOC", "Protocolos aprobados y evidencia de ejecución por servicio.",
              C.origen["serv_total"], "Protocolos aprobados"),
@@ -1483,19 +1483,19 @@ def hallazgos(C):
              "Datos abiertos del MEF")]
         + ges(C, "Protocolos aprobados según el nivel conductor.", "ENTREV-OGMEPGD-014", "ENTREV-DGIGND-013", "ENTREV-DGIGND-046"),
         "Sólido",
-        detalle=f"De {n} servicios, {C['serv_impl']} están implementados, {C['serv_parc']} implementados parcialmente y "
+        detalle=f"De {n} servicios, {C['serv_impl']} estuvieron implementados, {C['serv_parc']} implementados parcialmente y "
                 f"{C['serv_noimpl']} {pl(C['serv_noimpl'], 'no implementado', 'no implementados')}; solo "
-                f"{C['serv_prot_si']} tienen protocolo aprobado al 31 de "
+                f"{C['serv_prot_si']} tuvieron protocolo aprobado al 31 de "
                 f"diciembre de 2025, y ninguno de los del OP2.")
     add("I1-H2", "I1", "Asignación presupuestal identificable",
-        f"La asignación presupuestal es identificable para {C['serv_asig_si']} de {n} servicios. De "
+        f"La asignación presupuestal fue identificable para {C['serv_asig_si']} de {n} servicios. De "
         f"{C['mef_total']} montos que las entidades reportaron, {C['mef_coinc']} coinciden con una meta, actividad o "
         f"producto del MEF, {C['mef_cerc']} son cercanos y {C['mef_sinc']} no coinciden. De estos últimos, "
         f"{C['mef_motivos']['sinexp']} no tienen explicación en el texto del reporte, {C['mef_motivos']['ao']} "
         f"corresponden a actividades operativas del POI, {C['mef_motivos']['pliego']} no son gasto del pliego "
         f"(créditos, subvenciones o cofinanciamientos), {C['mef_motivos']['norma']} son montos de una norma o "
         f"transferencia y {C['mef_motivos']['varias']} suman varias entidades o programas. Según el nivel "
-        f"conductor, las entidades no registran en el POI actividades propias de cada servicio sino actividades "
+        f"conductor, las entidades no registraban en el POI actividades propias de cada servicio sino actividades "
         f"operativas genéricas que, en lo interno, los alimentan (OGPPM), y no sabían cuánto gastaban en cada servicio "
         f"(DGIGND).",
         [_ev("Cuantitativa", "REV_IND", "Verificación de cifras reportadas.", C.origen["mef_coinc"],
@@ -1508,7 +1508,7 @@ def hallazgos(C):
                 f"{C['mef_total']} montos reportados por las entidades, {C['mef_coinc']} coinciden con una meta, "
                 f"actividad o producto de los datos abiertos del MEF y {C['mef_sinc']} no coinciden.")
     add("I1-H3", "I1", "Factores de la implementación parcial",
-        "Los factores de dificultad más frecuentes en lo que reportaron las entidades son "
+        "Los factores de dificultad más frecuentes en lo que reportaron las entidades fueron "
         + lista_es([f"{nombre.lower()} ({k}, {v} segmentos)" for k, nombre, v in dif[:5]]) +
         ". Los problemas de personal y de presupuesto aparecen en las tres fuentes: el formulario, los informes LIO y "
         "los informes de gobernanza de la CONAIG. El nivel conductor coincide y precisa por qué se demoraron los "
@@ -1523,7 +1523,7 @@ def hallazgos(C):
         + ges(C, "Factores en la aprobación de los protocolos.", "ENTREV-DGIGND-012", "ENTREV-DGIGND-014", "ENTREV-DGIGND-015",
               "ENTREV-DGIGND-016", "ENTREV-DGIGND-034", "ENTREV-DGIGND-035"),
         "Sólido",
-        detalle="Los factores de dificultad que más reportaron las entidades son "
+        detalle="Los factores de dificultad que más reportaron las entidades fueron "
                 + lista_es([f"{nombre.lower()} ({v} segmentos)" for _, nombre, v in dif[:3]]) +
                 "; el nivel conductor agrega la demora de los protocolos en la alta dirección de las entidades.",
         nota=f"Los {C['dc_n']} segmentos críticos se codificaron dos veces de forma independiente (kappa medio por "
@@ -1531,11 +1531,11 @@ def hallazgos(C):
 
     # I2
     add("I2-H1", "I2", "Avance anual de los indicadores de OP",
-        f"En el reporte oficial, el avance de los OP no puede valorarse en 2025 para más de la mitad de los "
-        f"indicadores: {C['op_sinvalor_2025']} de {C['op_ind']} no tienen valor. De los que tienen valor, "
-        f"{C['op_alto_2025']} están en nivel alto ({C['op_fnc_2025']} con fuente no comparable), {C['op_medio_2025']} "
+        f"En el reporte oficial, el avance de los OP no pudo valorarse en 2025 para más de la mitad de los "
+        f"indicadores: {C['op_sinvalor_2025']} de {C['op_ind']} no tuvieron valor. De los que tuvieron valor, "
+        f"{C['op_alto_2025']} quedaron en nivel alto ({C['op_fnc_2025']} con fuente no comparable), {C['op_medio_2025']} "
         f"en medio, {C['op_bajo_2025']} en bajo ({C['op_bajofalla_2025']} con posible falla de planeación) y "
-        f"{C['op_noint_2025']} no permite calcular el avance. El vacío es del reporte y no siempre de la información: para "
+        f"{C['op_noint_2025']} no permitió calcular el avance. El vacío es del reporte y no siempre de la información: para "
         f"{len(C['op_est25'])} de esos {C['op_sinvalor_2025']} indicadores la fuente existe y esta evaluación "
         f"estimó o recalculó el valor (I2-H3).",
         [_ev("Cuantitativa", "REV_IND", "Semaforización 2019–2025.", C.origen["resumen_semaforo"],
@@ -1543,15 +1543,15 @@ def hallazgos(C):
          _ev("Cuantitativa", "REV_IND", "Contraste con el consolidado de la OMEP.", _hoja(PSI, "Contraste de fuentes"),
              "Consolidado de indicadores de la OMEP")],
         "Indicio",
-        detalle=f"En el reporte oficial, {C['op_sinvalor_2025']} de {C['op_ind']} indicadores de OP no tienen valor 2025; "
-                f"de los que lo tienen, {C['op_alto_2025']} están en nivel alto, {C['op_medio_2025']} en medio, "
-                f"{C['op_bajo_2025']} en bajo y {C['op_noint_2025']} no permite calcular el avance.")
+        detalle=f"En el reporte oficial, {C['op_sinvalor_2025']} de {C['op_ind']} indicadores de OP no tuvieron valor 2025; "
+                f"de los que lo tuvieron, {C['op_alto_2025']} quedaron en nivel alto, {C['op_medio_2025']} en medio, "
+                f"{C['op_bajo_2025']} en bajo y {C['op_noint_2025']} no permitió calcular el avance.")
     add("I2-H2", "I2", "Tendencia frente a la línea de base",
-        f"Frente a su línea de base, {C['op_mejora']} de {C['op_ind']} indicadores de OP mejoran; "
-        f"{'no mejora' if len(C['op_nomejora']) == 1 else 'no mejoran'} {lista_es(C['op_nomejora'])}; "
-        f"{lista_es(C['op_sinlb'])} {'no tiene' if len(C['op_sinlb']) == 1 else 'no tienen'} línea de base "
-        f"numérica, y el último valor de {lista_es(C['op_noint_lb'])} no permite calcular el avance. El indicador de entidades "
-        f"públicas que incorporan el enfoque de género (IOP.05.01) es el de menor avance en 2025 "
+        f"Frente a su línea de base, {C['op_mejora']} de {C['op_ind']} indicadores de OP mejoraron; "
+        f"{'no mejoró' if len(C['op_nomejora']) == 1 else 'no mejoraron'} {lista_es(C['op_nomejora'])}; "
+        f"{lista_es(C['op_sinlb'])} {'no tuvo' if len(C['op_sinlb']) == 1 else 'no tuvieron'} línea de base "
+        f"numérica, y el último valor de {lista_es(C['op_noint_lb'])} no permitió calcular el avance. El indicador de entidades "
+        f"públicas que incorporan el enfoque de género (IOP.05.01) fue el de menor avance en 2025 "
         f"({pct(C['iop0501_avance'])} de su meta).",
         [_ev("Cuantitativa", "REV_IND", "Último valor frente a la línea de base.", C.origen["op_tabla"],
              "Reportes de seguimiento (RS)"),
@@ -1566,19 +1566,19 @@ def hallazgos(C):
     assert set(k for k, v in s25.items() if v) <= set(orden25), f"categorías 2025 sin texto: {s25}"
     cat25 = [(s25.get(k, 0), k) for k in orden25 if s25.get(k, 0)]
     assert sum(v for v, _ in cat25) == C["serv25_total"]
-    frase25 = lista_es([f"{v} {('están en nivel ' if i == 0 else '') + k.lower().replace(' (no disponible)', '')}"
+    frase25 = lista_es([f"{v} {('estuvieron en nivel ' if i == 0 else '') + k.lower().replace(' (no disponible)', '')}"
                         for i, (v, k) in enumerate(cat25)])
     add("I2-H4", "I2", "Indicadores de servicio",
         f"Los indicadores de servicio pasaron de no tener meta a tenerla: en 2025, de {C['serv25_total']} "
-        f"indicadores, {frase25}. En total, {C['serv25_con_valor']} tienen valor 2025, la misma cifra que informa "
+        f"indicadores, {frase25}. En total, {C['serv25_con_valor']} tuvieron valor 2025, la misma cifra que informa "
         f"el MIMP (2026b, p. 11).",
         [_ev("Cuantitativa", "REV_IND", "Semaforización de servicios 2019–2025.", C.origen["serv25"],
              "Reportes de seguimiento (RS)"),
          _ev("Entidades", "REP_ENT", "Panel del formulario de seguimiento 2023–2025.",
              _hoja(FIE, "Panel por indicador"), "Formulario de seguimiento")],
         "Indicio",
-        detalle=f"En 2025, de {C['serv25_total']} indicadores de servicio, {s25.get('Alto', 0)} están en nivel alto y "
-                f"{C['serv25_falla']} muestran una posible falla de planeación; {C['serv25_con_valor']} tienen valor 2025.")
+        detalle=f"En 2025, de {C['serv25_total']} indicadores de servicio, {s25.get('Alto', 0)} estuvieron en nivel alto y "
+                f"{C['serv25_falla']} mostraron una posible falla de planeación; {C['serv25_con_valor']} tuvieron valor 2025.")
 
     e = C["op_est25"]
     endes = e[e.Fuente == "ENDES 2025"]
@@ -1586,8 +1586,8 @@ def hallazgos(C):
     var_ic = [f"{NOMBRE_EST[r.Código]} (entre {lista_es([n.lower() for n in r['Niveles en el IC']])})"
               for _, r in e.iterrows() if len(r["Niveles en el IC"]) > 1]
     sin_op = C["op_sin_valor_op"]
-    cierra = f"el {sin_op[0]} cierra" if len(sin_op) == 1 else f"los {lista_es(sin_op)} cierran"
-    sigue = "El otro sigue" if len(resto) == 1 else f"Los otros {len(resto)} siguen"
+    cierra = f"el {sin_op[0]} cerró" if len(sin_op) == 1 else f"los {lista_es(sin_op)} cerraron"
+    sigue = "El otro siguió" if len(resto) == 1 else f"Los otros {len(resto)} siguieron"
     nota_ic = (f"El nivel se calcula con la estimación puntual; con el intervalo de confianza al 95 % podría variar "
                f"para {lista_es(var_ic)}. " if var_ic else "El nivel se calcula con la estimación puntual. ")
     s3 = C["op3_serie"].set_index("Año")
@@ -1656,7 +1656,7 @@ def hallazgos(C):
         f"La ejecución de la meta de la DGIGND fue alta en todo el periodo (entre "
         f"{pct(min(C['dgignd_ejec'].values()))} y {pct(max(C['dgignd_ejec'].values()))} del PIM). La actividad "
         f"5001072 «Promoción de la mujer», que agrupa la promoción de la mujer de la Administración Central y cuya "
-        f"denominación corresponde a la finalidad de la PNIG, pasó de un PIM de {monto(vd.loc[2019, 'pim'])} en 2019 "
+        f"denominación correspondía a la finalidad de la PNIG, pasó de un PIM de {monto(vd.loc[2019, 'pim'])} en 2019 "
         f"a {monto(vd.loc[2025, 'pim'])} en 2025, con ejecución entre {pct(vd['ejecucion_%'].min())} y "
         f"{pct(vd['ejecucion_%'].max())}.",
         [_ev("Cuantitativa", "REV_IND", "Ejecución por meta y por actividad.", C.origen["act5001072"],
@@ -1737,7 +1737,7 @@ def hallazgos(C):
         "Indicio", nota="No se contrastó en las entrevistas: las preguntas sobre los medios de la "
         "CONAIG para el cumplimiento de sus recomendaciones no se formularon.")
     add("I4-H4", "I4", "Articulación efectiva frente a la formal",
-        f"La articulación reportada es desigual: según el informe LIO 2025, 19 servicios (38,7 %) reportaron "
+        f"La articulación reportada fue desigual: según el informe LIO 2025, 19 servicios (38,7 %) reportaron "
         f"coordinación con entidades del nivel nacional y 15 (30,6 %) con gobiernos regionales y locales, sobre todo en "
         f"el OP4, y los servicios del OP2 no reportaron articulación nacional; el informe no precisa el total sobre el "
         f"que calcula esos porcentajes. A ello se suman {C['hor_dup']} duplicidades con otras políticas "
@@ -1751,7 +1751,7 @@ def hallazgos(C):
               "ENTREV-DGIGND-026", "ENTREV-OGPPM-011", "ENTREV-OGPPM-029", "ENTREV-OGPPM-030", "ENTREV-OGMEPGD-012"),
         "Sólido",
         detalle=f"Según el informe LIO 2025, 19 servicios (38,7 %) reportaron coordinación con el nivel nacional y 15 "
-                f"(30,6 %) con gobiernos regionales y locales; hay {C['hor_dup']} duplicidades con otras políticas, y el "
+                f"(30,6 %) con gobiernos regionales y locales; hubo {C['hor_dup']} duplicidades con otras políticas, y el "
                 f"nivel conductor considera la articulación efectiva limitada.")
     rec = C["rec"]
     est = rec["Estado al corte (p3.4)"].value_counts()
@@ -1783,7 +1783,7 @@ def hallazgos(C):
         f"({impl.get('Implementada', 0) + impl.get('Parcialmente implementada', 0)} de {impl.sum()} implementadas o "
         f"parcialmente implementadas), y no las de diseño ({dis.get('No implementada', 0)} de {dis.sum()} no "
         f"implementadas): después del informe del CEPLAN solo se aprobó el protocolo del servicio "
-        f"{lista_es(prot_post)}, los servicios {lista_es(sin_prot)} siguen sin protocolo aprobado (hay propuestas "
+        f"{lista_es(prot_post)}, los servicios {lista_es(sin_prot)} siguieron sin protocolo aprobado (había propuestas "
         f"para el 1.1.4 y el 1.2.4) y no se modificaron los "
         f"indicadores de los demás servicios del OP1, porque el MIMP optó por hacerlo mediante la actualización de la "
         f"Política. De las {len(r20)} recomendaciones de la evaluación 2020, {e20.get('Implementada', 0)} se "
@@ -1823,10 +1823,10 @@ def hallazgos(C):
     add("I4-H1", "I4", "Rectoría y conducción según el nivel conductor",
         "La lectura de la rectoría difiere entre los órganos del nivel conductor, según su función. La DGIGND destaca "
         "como fortaleza la asistencia técnica para elaborar los protocolos y aclara que la conducción operativa de la "
-        "Política corresponde a la Dirección General, mientras que la DPIGND tiene a su cargo la formulación, el diseño "
+        "Política correspondía a la Dirección General, mientras que la DPIGND tenía a su cargo la formulación, el diseño "
         "y la asistencia técnica. La OGMEPGD valora como fluida la coordinación con la dirección conductora, con la que "
-        "separó el reporte de la PNIG del de la LIO. La OGPPM la ve «bastante débil»: la dirección conductora se adecua "
-        "a lo que proponen los sectores en lugar de fijar el cambio que busca. La OGMEPGD y la OGPPM coinciden en que la "
+        "separó el reporte de la PNIG del de la LIO. La OGPPM la ve «bastante débil»: la dirección conductora se adecuaba "
+        "a lo que proponían los sectores en lugar de fijar el cambio que buscaba. La OGMEPGD y la OGPPM coinciden en que la "
         "oficina de planeamiento actuó sobre todo como puente con el CEPLAN.",
         ges(C, "Valoración de la rectoría y de la conducción.", "ENTREV-DGIGND-004", "ENTREV-DGIGND-029", "ENTREV-OGMEPGD-007",
             "ENTREV-OGMEPGD-008", "ENTREV-OGMEPGD-010", "ENTREV-OGPPM-007", "ENTREV-OGPPM-008", "ENTREV-OGPPM-020"),
@@ -1926,25 +1926,25 @@ def valoraciones(C):
     return {
         "D1": ("Parcial", "Las brechas del diagnóstico persisten al cierre (varias se redujeron y la del trabajo no "
                "remunerado se amplió, en una comparación indicativa), por lo que el diagnóstico conserva vigencia empírica; pero, "
-               "según la OGAJ, su modelo del problema y su finalidad son incompatibles con la Ley N.° 32535, y dos fuentes "
+               "según la OGAJ, su modelo del problema y su finalidad eran incompatibles con la Ley N.° 32535, y dos fuentes "
                "del diagnóstico cambiaron: el empleo informal de la ENAHO se reconstruyó y la ENARES ya no permite "
                "recalcular el índice del OP6.", VALIDADA),
-        "D2": ("Parcial", "La situación futura cubre las causas y los efectos del modelo, pero solo dos de sus siete "
-               "enunciados se miden con el indicador del OP; de los evaluables, solo la meta de embarazo adolescente "
-               "se alcanzaría al 2030, y las metas anuales presentan fallas de estimación.", VALIDADA),
-        "D3": ("Parcial", f"La cadena causal está casi completa y la evidencia respalda la mayoría de los tipos de "
-               f"servicio, pero más de la mitad de los servicios no tiene indicador aprobado y {C['rev_limitada']} tipos "
+        "D2": ("Parcial", "La situación futura cubría las causas y los efectos del modelo, pero solo dos de sus siete "
+               "enunciados se medían con el indicador del OP; de los evaluables, solo la meta de embarazo adolescente "
+               "se alcanzaría al 2030, y las metas anuales presentaron fallas de estimación.", VALIDADA),
+        "D3": ("Parcial", f"La cadena causal estuvo casi completa y la evidencia respalda la mayoría de los tipos de "
+               f"servicio, pero más de la mitad de los servicios no tuvo indicador aprobado y {C['rev_limitada']} tipos "
                f"tienen evidencia limitada.", VALIDADA),
         "D4": ("Parcial", "Alineamiento alto en el periodo y con los compromisos internacionales, que se debilita con "
                "los instrumentos de la transición; duplicidades con otras políticas. La correspondencia con la Ley N.° 32535 "
-               "es la del contenido de los objetivos y servicios; según la OGAJ, el objeto de la Política es "
+               "es la del contenido de los objetivos y servicios; según la OGAJ, el objeto de la Política era "
                "incompatible con la ley.", VALIDADA),
-        "D5": ("Insuficiente", f"Las fichas incumplen atributos críticos del estándar (línea de base y "
-               f"desagregación), {C['serv_sin_ind_vig']} servicios no tienen indicador aprobado y las "
+        "D5": ("Insuficiente", f"Las fichas incumplieron atributos críticos del estándar (línea de base y "
+               f"desagregación), {C['serv_sin_ind_vig']} servicios no tuvieron indicador aprobado y las "
                f"modificaciones no siguieron el procedimiento formal.", VALIDADA),
-        "D6": ("Parcial", "Cuatro de los siete enfoques se operacionalizan, solo el de género con amplitud; el de "
-               "derechos humanos se menciona y los de territorialidad y gestión por resultados están ausentes. Ningún "
-               "indicador prevé desagregaciones para seguirlos.", VALIDADA),
+        "D6": ("Parcial", "Cuatro de los siete enfoques se operacionalizaron, solo el de género con amplitud; el de "
+               "derechos humanos se mencionó y los de territorialidad y gestión por resultados estuvieron ausentes. Ningún "
+               "indicador preveía desagregaciones para seguirlos.", VALIDADA),
         "D7": ("Parcial", "El nuevo marco diverge del de la PNIG en el plano conceptual y, según la OGAJ, esa "
                "divergencia alcanza al objeto de la Política, que perdió vigencia el 25 de diciembre de 2025; la "
                "estructura y la mayoría de los servicios pueden continuar con sustento directo en la Ley N.° 32535, como "
@@ -1952,8 +1952,8 @@ def valoraciones(C):
                "depende de lineamientos aún en elaboración.", VALIDADA),
         "I1": ("Parcial", f"La mayoría de los servicios se implementó parcialmente, con menos de la mitad de "
                f"protocolos aprobados; {C['serv_noimpl']} {pl(C['serv_noimpl'], 'servicio no se implementó', 'servicios no se implementaron')}.", VALIDADA),
-        "I2": ("Parcial", f"Los indicadores con valor muestran avances mixtos. {C['op_sinvalor_2025']} de "
-               f"{C['op_ind']} no tienen valor oficial 2025; con las estimaciones y los recálculos de esta evaluación para "
+        "I2": ("Parcial", f"Los indicadores con valor mostraron avances mixtos. {C['op_sinvalor_2025']} de "
+               f"{C['op_ind']} no tuvieron valor oficial 2025; con las estimaciones y los recálculos de esta evaluación para "
                f"{len(C['op_est25'])} de ellos, {queda_sin_valor(C)}.",
                VALIDADA),
         "I3": ("Parcial", "La ejecución fue alta, pero según la DGIGND la conducción no contó con los recursos "

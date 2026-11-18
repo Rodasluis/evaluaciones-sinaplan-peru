@@ -210,13 +210,13 @@ reportes de las entidades, coherencia y alineamiento, indicadores y recursos, y 
 <div class="fila" style="grid-template-columns:1.35fr 1fr">
 <div class="tarjeta"><b style="color:{PETROL}">Implementación de los {n} servicios</b>{barra}{ley_serv}
 <p class="nota">Implementado: dos de tres componentes (protocolo aprobado, recursos en el MEF e indicadores con
-valor) y ejecución en 2024 o 2025. {sin_prot} de {n} servicios siguen sin protocolo aprobado.</p></div>
+valor) y ejecución en 2024 o 2025. {sin_prot} de {n} servicios siguieron sin protocolo aprobado.</p></div>
 <div class="tarjeta"><b style="color:{PETROL}">Las {C["brechas_n"]} brechas del diagnóstico persisten</b>{cuadros}{ley_br}
 <p class="nota">La ampliación (trabajo no remunerado) surge de una comparación indicativa, porque la encuesta cambió.</p></div>
 </div>
 <div class="fila" style="grid-template-columns:1.35fr 1fr;margin-top:3mm">
-<div class="tarjeta"><b style="color:{PETROL}">{C["op_mejora"]} de {C["op_ind"]} indicadores de objetivo prioritario mejoran frente a su línea de base</b>{puntos}
-<p class="nota">El reporte oficial no tiene valor 2025 para {C["op_sinvalor_2025"]} de los {C["op_ind"]}; al ritmo
+<div class="tarjeta"><b style="color:{PETROL}">{C["op_mejora"]} de {C["op_ind"]} indicadores de objetivo prioritario mejoraron frente a su línea de base</b>{puntos}
+<p class="nota">El reporte oficial no tuvo valor 2025 para {C["op_sinvalor_2025"]} de los {C["op_ind"]}; al ritmo
 observado, solo la meta de embarazo adolescente se alcanzaría al 2030.</p></div>
 <div class="tarjeta cifra" style="border-left-color:{VIOLET}"><div class="n" style="color:{VIOLET}">{ses}</div>
 <div class="t">{e(f"sesiones ordinarias de la CONAIG entre 2021 y 2025; su acuerdo más reiterado, culminar los protocolos pendientes, no se cumplió")}</div></div>
@@ -232,18 +232,18 @@ observado, solo la meta de embarazo adolescente se alcanzaría al 2030.</p></div
     # ----- cara 2 -----
     diseno = [
         f"Las {C['brechas_n']} brechas del diagnóstico persisten al cierre: el diagnóstico conserva vigencia empírica, "
-        "pero su modelo del problema es incompatible con la Ley N.° 32535, según la OGAJ.",
-        f"La cadena causal está casi completa: {C['lin_total'] - len(C['lin_sin_serv'])} de {C['lin_total']} "
-        f"lineamientos tienen servicio.",
-        f"Las fichas de los indicadores incumplen atributos críticos y {C['serv_sin_ind_vig']} servicios no tienen "
+        "pero su modelo del problema era incompatible con la Ley N.° 32535, según la OGAJ.",
+        f"La cadena causal estuvo casi completa: {C['lin_total'] - len(C['lin_sin_serv'])} de {C['lin_total']} "
+        f"lineamientos tuvieron servicio.",
+        f"Las fichas de los indicadores incumplieron atributos críticos y {C['serv_sin_ind_vig']} servicios no tuvieron "
         f"indicador aprobado.",
         f"El nuevo marco diverge en lo conceptual ({conc_div} de {conc_tot} conceptos), pero los servicios se "
         f"trasladan casi completos.",
     ]
     implementacion = [
-        f"{C['serv_impl']} de {n} servicios están implementados y {C['serv_parc']} lo están parcialmente; el OP2 no "
-        f"tiene servicios implementados.",
-        f"Los indicadores con valor muestran avances mixtos y {C['op_sinvalor_2025']} de {C['op_ind']} no tienen valor "
+        f"{C['serv_impl']} de {n} servicios estuvieron implementados y {C['serv_parc']} lo estuvieron parcialmente; el OP2 no "
+        f"tuvo servicios implementados.",
+        f"Los indicadores con valor mostraron avances mixtos y {C['op_sinvalor_2025']} de {C['op_ind']} no tuvieron valor "
         f"oficial 2025.",
         "La ejecución presupuestal fue alta, pero según la DGIGND la conducción no contó con los recursos necesarios.",
         "La CONAIG funcionó con regularidad formal, pero con baja asistencia de los titulares.",

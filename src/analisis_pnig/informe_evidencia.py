@@ -223,7 +223,7 @@ NOTA_COMPARABILIDAD = {
 
 
 def parrafos_tipo(t, tip, mt, me, nombre_serv, entidad_serv):
-    """Párrafos del numeral 3.4 para un tipo: qué es y qué servicios lo implementan, mecanismo, qué dice la
+    """Párrafos del numeral 3.4 para un tipo: qué es y qué servicios lo implementaron, mecanismo, qué dice la
     literatura, consistencia y aplicabilidad, y conclusión para los servicios."""
     x = tip.loc[t]
     m = mt.loc[t]
@@ -231,7 +231,7 @@ def parrafos_tipo(t, tip, mt, me, nombre_serv, entidad_serv):
     servicios = [s.strip() for s in str(x.servicios).split(";")]
     nodo = x.nodo_modelo.split(": ", 1)
     nodo_txt = (f"la causa «{nodo[1]}»" if nodo[0] == "Causa" else f"el efecto «{nodo[1]}»")
-    p1 = (f"La PNIG implementa este tipo con {'el servicio' if len(servicios) == 1 else 'los servicios'} "
+    p1 = (f"La PNIG implementó este tipo con {'el servicio' if len(servicios) == 1 else 'los servicios'} "
           + lista_es([f"{s} ({nombre_serv[s]})" for s in servicios]) +
           f". La intervención consiste en {_minuscula(x.intervencion)}, dirigida a {_minuscula(x.poblacion)}. Su "
           f"mecanismo esperado es que produzca {_minuscula(x.resultado_esperado)} y actúe así sobre {nodo_txt} del "

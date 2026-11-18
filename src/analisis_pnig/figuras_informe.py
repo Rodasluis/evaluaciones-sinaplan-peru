@@ -254,7 +254,7 @@ def mapa_servicios(D, ops):
     cuerpo = ("".join(bloques) + ley +
               '<div class="nota">Punto junto al código: estado de implementación asignado en la revisión documental. «Protocolo» resaltado: '
               'protocolo aprobado al 31-12-2025; «Indicador» resaltado: indicador vigente.'
-              + (' El lineamiento 3.2 no tiene servicio.' if 'OP3' in ops else '') + '</div>')
+              + (' El lineamiento 3.2 no tuvo servicio.' if 'OP3' in ops else '') + '</div>')
     css = f"""
 .ob{{margin-bottom:12px}}
 .oh{{color:#fff;font-size:13px;border-radius:6px;padding:6px 10px}}
@@ -935,7 +935,7 @@ def indicadores_2025(D):
     cuerpo = (f'<div class="fr hd"><div></div><div class="col-t">Indicador</div><div class="col-t">Nivel 2025</div>'
               f'</div>{filas}' + leyenda([(k, v[0]) for k, v in NIVEL_COL.items()]) +
               '<div class="nota">Nivel de avance frente a la meta 2025 con la escala del numeral 2.4, según el reporte '
-              'de seguimiento 2025. * Calculado en esta evaluación, porque el reporte no tiene valor 2025: con los '
+              'de seguimiento 2025. * Calculado en esta evaluación, porque el reporte no tuvo valor 2025: con los '
               'microdatos de la ENDES 2025 o la ENAHO 2025, o recalculado con el método de la ficha; no sustituye al '
               'reporte oficial.</div>')
     css = f"""
