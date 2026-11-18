@@ -12,7 +12,9 @@
 #     plano: Documental, Cuantitativa, Entidades, Nivel conductor o Literatura;
 #     instrumento: código de config.yaml; texto: qué muestra; fuente: documento citado en la nota al pie;
 #     base: documento o base de la que sale (dos evidencias con la misma base cuentan como una fuente);
-#     n_fuentes: mayor que 1 si la evidencia agrega varias fuentes primarias independientes.
+#     n_fuentes: mayor que 1 si la evidencia agrega varias fuentes primarias independientes;
+#     origen (opcional): productor primario del dato cuando la base lo reproduce de otro (dos documentos con el dato
+#     de un mismo productor cuentan como un origen, ADR-015).
 # recomendaciones: matriz de la Tabla 4 de la guía (p. 56): {aspecto, recomendacion, responsable, plazo, hallazgos}.
 #   aspecto: Implementación, Diseño o Seguimiento y evaluación (Tabla 5, p. 57); plazo: hasta 24 meses para
 #   políticas nacionales (p. 57).

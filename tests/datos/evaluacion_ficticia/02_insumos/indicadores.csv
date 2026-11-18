@@ -1,0 +1,6 @@
+codigo,nivel,op,servicio,nombre,sentido,linea_base,anio_base,responsable,vigente
+IOP1,Objetivo prioritario,OP1,,Porcentaje ficticio de acceso,Ascendente,8,2020,Entidad Ficticia A,Sí
+IOP2,Objetivo prioritario,OP2,,Tasa ficticia de quejas,Descendente,27,2020,Entidad Ficticia B,Sí
+IOP3,Objetivo prioritario,OP3,,Índice ficticio de gestión,,,,Entidad Ficticia C,Sí
+ISS111,Servicio,OP1,1.1.1,Porcentaje ficticio de atenciones oportunas,Ascendente,40,2020,Entidad Ficticia A,Sí
+ISS112,Servicio,OP1,1.1.2,Número ficticio de visitas itinerantes,Ascendente,10,2020,Entidad Ficticia A,Sí

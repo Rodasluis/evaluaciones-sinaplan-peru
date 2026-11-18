@@ -176,3 +176,33 @@ def test_contacto(monkeypatch):
                         else {})
     c = entorno.contacto()
     assert c["nombre"] == "Especialista de prueba" and c["correo"].startswith("[POR COMPLETAR")
+
+
+def test_observaciones_de_un_word_revisado(tmp_path):
+    """Matriz de comentarios (orden, número, sección, texto comentado) y JSON de respuestas para comparar_word.ps1."""
+    import json
+
+    import docx
+
+    from nucleo import observaciones as O
+    d = docx.Document()
+    d.add_heading("1. La política", level=1)
+    p1 = d.add_paragraph("El diagnóstico sigue vigente.")
+    d.add_heading("2. Metodología", level=1)
+    p2 = d.add_paragraph("Se usaron seis instrumentos.")
+    d.add_comment(p1.runs, text="Observación 3: precisar el año.", author="Revisora", initials="R")
+    raiz = d.add_comment(p2.runs, text="Agregar la fuente.", author="Revisora", initials="R")
+    assert raiz is not None
+    entrada = tmp_path / "revisado.docx"
+    d.save(entrada)
+    df = O.matriz(entrada, tmp_path / "matriz.xlsx")
+    assert list(df.orden) == [1, 2] and list(df.numero) == ["03", ""]
+    assert list(df.seccion) == ["1. La política", "2. Metodología"]
+    assert df.texto_comentado.iloc[1] == "Se usaron seis instrumentos."
+    assert "autor" not in df.columns
+    m = pd.read_excel(tmp_path / "matriz.xlsx", dtype=str).fillna("")
+    m.loc[0, "respuesta"] = "Se precisó el año."
+    m.to_excel(tmp_path / "matriz.xlsx", index=False)
+    r = O.respuestas_json(tmp_path / "matriz.xlsx", tmp_path / "r.json")
+    assert r == {"orden_001": "Se precisó el año.", "03": "Se precisó el año."}
+    assert json.loads((tmp_path / "r.json").read_text(encoding="utf-8")) == r

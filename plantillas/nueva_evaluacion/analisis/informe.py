@@ -7,7 +7,8 @@ config.yaml (sección informe):
     secciones de análisis: una subsección por pregunta, con sus hallazgos y una nota al pie de fuente por hallazgo;
     conclusiones: valoración y respuesta de cada pregunta;
     recomendaciones: matriz de la Tabla 4 de la guía (p. 56);
-    anexo: hallazgos, confianza y fuentes independientes.
+    anexos: hallazgos, confianza y fuentes independientes; y resultados de los instrumentos genéricos
+    (src/nucleo/instrumentos/), con una tabla resumen y su análisis por cada libro de 04_analisis/ que exista.
 Lo que el equipo no ha escrito queda como [POR COMPLETAR] resaltado. Al final corre la auditoría de estilo.
 
 Uso (desde la raíz del repositorio; primero sintesis.py):
@@ -18,11 +19,12 @@ import re
 import subprocess
 import sys
 
-from comun import ASPECTOS, CFG, INTERNOS, TIPOLOGIA, contar, leer_hallazgos, ruta, verificar
+from comun import ASPECTOS, CFG, INTERNOS, REPO, TIPOLOGIA, contar, leer_hallazgos, ruta, verificar
 from nucleo import auditoria
 from nucleo.config import RAIZ_REPO
 from nucleo.documento import Documento
-from nucleo.formato import lista_es
+from nucleo.formato import fmt_num, lista_es
+from nucleo.instrumentos import rev_ali, rev_doc, rev_evi, rev_ind
 from nucleo.portada import agregar_portada
 
 PENDIENTE = "[POR COMPLETAR]"
@@ -114,6 +116,94 @@ def anexo(d, H):
     d.leyenda("Hallazgos por pregunta, con su confianza y sus fuentes independientes")
     d.tabla(["Pregunta", "Hallazgo", "Confianza", "Fuentes independientes"], filas, [1100, 5126, 1600, 1200], size=16)
     d.fuente("Fuente: matriz de triangulación de la evaluación. Elaboración propia.")
+    pendientes = sum(h["confianza"] == "No determinado" for h in H)
+    d.p(f"La tabla reúne los {len(H)} hallazgos de la evaluación con la confianza que les corresponde según el número "
+        f"de fuentes de origen independiente que los respaldan; {pendientes} siguen pendientes de análisis y figuran "
+        f"como no determinados.")
+
+
+def _libro(modulo, hoja):
+    import pandas as pd
+    archivo = ruta("analisis", modulo.LIBRO)
+    return pd.read_excel(archivo, sheet_name=hoja, dtype=str, engine="openpyxl").fillna("") if archivo.exists() else None
+
+
+def _v(n, singular, plural):
+    """Verbo o frase en singular o plural según la cantidad («1 tiene», «2 tienen»)."""
+    return singular if int(n) == 1 else plural
+
+
+def _cifra(x):
+    """Cifra de un libro con coma decimal y sin ceros sobrantes («9.60» -> «9,6»); s. d. si está vacía."""
+    if x == "":
+        return "s. d."
+    return f"{float(x):.2f}".rstrip("0").rstrip(".").replace(".", ",")
+
+
+def resultados_instrumentos(d):
+    """Anexo con una tabla resumen por libro genérico, su fuente y un párrafo que describe sus cifras."""
+    tablas = 0
+    est = _libro(rev_doc, "Resumen por objetivo")
+    if est is not None:
+        tablas += 1
+        cols = list(rev_doc.ESTADOS)
+        total = est[est["Objetivo prioritario"] == "Total"].iloc[0]
+        d.leyenda("Estado de implementación de los servicios por objetivo prioritario")
+        d.tabla(["Objetivo prioritario", "Servicios"] + cols, est[["Objetivo prioritario", "Servicios"] + cols]
+                .values.tolist(), [1800, 1000, 1500, 1700, 1500, 1526], size=16)
+        d.fuente(f"Fuente: libro {rev_doc.PUBLICO}. Elaboración propia.")
+        n = [total[c] for c in cols]
+        d.p(f"De los {total['Servicios']} servicios de la política, {n[0]} {_v(n[0], 'se implementó', 'se implementaron')}, "
+            f"{n[1]} {_v(n[1], 'se implementó', 'se implementaron')} parcialmente, {n[2]} "
+            f"{_v(n[2], 'no se implementó', 'no se implementaron')} y {n[3]} {_v(n[3], 'no tiene', 'no tienen')} "
+            f"información suficiente para clasificarlo, según los componentes y la ejecución registrados en la "
+            f"revisión documental.")
+    ind = _libro(rev_ind, "Avance por año")
+    if ind is not None:
+        op = ind[(ind.Nivel == "Objetivo prioritario")]
+        con = op[op["Avance (%)"] != ""]
+        if not con.empty:
+            tablas += 1
+            ultimo = con.Año.max()
+            filas = [[r["Código"], r.Indicador, _cifra(r.Meta), _cifra(r.Valor), fmt_num(float(r["Avance (%)"]), 1),
+                      r["Nivel de avance"]]
+                     for _, r in op[op.Año == ultimo].iterrows() if r["Avance (%)"]]
+            d.leyenda(f"Avance de los indicadores de los objetivos prioritarios en {ultimo}")
+            d.tabla(["Código", "Indicador", "Meta", "Valor", "Avance (%)", "Nivel"], filas,
+                    [1100, 3426, 900, 900, 1000, 1700], size=16)
+            d.fuente(f"Fuente: libro {rev_ind.PUBLICO}. Elaboración propia.")
+            sin = op[(op.Año == ultimo) & (op["Avance (%)"] == "")]
+            d.p(f"En {ultimo}, {len(filas)} de los {op['Código'].nunique()} indicadores de los objetivos prioritarios "
+                f"{_v(len(filas), 'tiene', 'tienen')} avance calculable frente a su meta; {len(sin)} "
+                f"{_v(len(sin), 'no lo tiene', 'no lo tienen')} por falta de sentido, meta o valor, lo que se consigna "
+                f"como hallazgo y no se estima.")
+    evi = _libro(rev_evi, "Matriz por tipo")
+    if evi is not None:
+        tablas += 1
+        d.leyenda("Solidez de la evidencia por tipo de intervención")
+        d.tabla(["Tipo de intervención", "Servicios", "Solidez", "Plausibilidad"],
+                evi[["Tipo de intervención", "Servicios", "Solidez", "Plausibilidad"]].values.tolist(),
+                [3400, 1626, 1600, 2400], size=16)
+        d.fuente(f"Fuente: libro {rev_evi.PUBLICO}. Elaboración propia.")
+        n = evi.Solidez.value_counts()
+        d.p(f"De los {len(evi)} tipos de intervención en que se agrupan los servicios, "
+            + lista_es([f"{v} {_v(v, 'tiene', 'tienen')} evidencia {k.lower()}" if not k.startswith("Sin") else
+                        f"{v} {_v(v, 'no tiene', 'no tienen')} evidencia identificada" for k, v in n.items()])
+            + ", según los estudios incluidos en la revisión de evidencia y su comparabilidad con el contexto peruano.")
+    ali = _libro(rev_ali, "Coherencia por objetivo")
+    if ali is not None:
+        tablas += 1
+        cols = [c for c in ali.columns if c != "Objetivo prioritario"]
+        d.leyenda("Coherencia de la cadena de resultados por objetivo prioritario")
+        d.tabla(["Objetivo prioritario"] + cols, ali[["Objetivo prioritario"] + cols].values.tolist(),
+                [2200] + [6826 // len(cols)] * len(cols), size=16)
+        d.fuente(f"Fuente: libro {rev_ali.PUBLICO}. Elaboración propia.")
+        srv = _libro(rev_ali, "Coherencia por servicio")
+        completos = int((srv["Valoración"] == "Completa").sum())
+        d.p(f"De los {len(srv)} servicios, {completos} tienen la cadena de resultados completa: indicador vigente y "
+            f"vínculo con una causa o un efecto del modelo del problema público. Los demás presentan vacíos, que se "
+            f"detallan por servicio en el libro de coherencia y alineamiento.")
+    return tablas
 
 
 def construir(P, H, R, entradas=None):
@@ -122,7 +212,7 @@ def construir(P, H, R, entradas=None):
     d = Documento(pie=f"Informe de {TIPOLOGIA.lower()} · {CFG['politica']['sigla']} {t['inicio']}–{t['fin']}",
                   titulo_doc=CFG["titulo"], autor=elabora if elabora and not elabora.startswith("[") else
                   "OMEP–OGMEPGD, MIMP", informe=True)
-    agregar_portada(d.d, str(RAIZ_REPO / CFG["productos"]["portada"]))
+    agregar_portada(d.d, str(REPO / CFG["productos"]["portada"]))
     titulos, leyendas = entradas or ([], [])
     d.titulo_indice("Índice")
     d.indice(r'TOC \o "1-2" \h \z \u', [(x, "", n) for x, n in titulos])
@@ -149,6 +239,9 @@ def construir(P, H, R, entradas=None):
     d.h1("Referencias")
     d.p(f"{PENDIENTE} Referencias en formato APA, con las fuentes citadas en las notas al pie.")
     anexo(d, H)
+    if any(ruta("analisis", m.LIBRO).exists() for m in (rev_doc, rev_ind, rev_evi, rev_ali)):
+        d.h1("Anexo 2. Resultados de los instrumentos")
+        resultados_instrumentos(d)
     d.numerar_cuerpo_desde_1()
     return d
 
@@ -161,7 +254,7 @@ def main(argv):
     salida = ruta("informe", CFG["productos"]["informe"].split("/", 1)[-1])
     salida.parent.mkdir(parents=True, exist_ok=True)
     d.guardar(salida, comillas_inglesas=True)
-    rel = salida.relative_to(RAIZ_REPO).as_posix()
+    rel = salida.relative_to(REPO).as_posix()
     n, falta = auditoria.leyendas_sin_analisis(salida)
     est = auditoria.estilo(salida)
     internos = auditoria.terminos(salida, INTERNOS)
@@ -179,7 +272,7 @@ def main(argv):
         subprocess.run(["powershell", "-NoProfile", "-ExecutionPolicy", "Bypass", "-File",
                         str(RAIZ_REPO / "src/nucleo/actualizar_campos_word.ps1"), "-Docx", str(salida), "-Pdf", str(pdf)],
                        check=True)
-        print(f"Terminado con Word; PDF de revisión: {pdf.relative_to(RAIZ_REPO).as_posix()}")
+        print(f"Terminado con Word; PDF de revisión: {pdf.relative_to(REPO).as_posix()}")
     return 1 if falta or internos else 0
 
 

@@ -11,7 +11,7 @@ Poblaciones Vulnerables.
 
 | Capa | Ruta | Contenido |
 |---|---|---|
-| Núcleo | `src/nucleo/` | Informe en Word, portada, figuras, formato, escalas, hallazgos y confianza, evidencia, presupuesto, encuestas con diseño muestral, doble codificación, anexo técnico y auditorías (`docs/nucleo.md`) |
+| Núcleo | `src/nucleo/` | Instrumentos genéricos de evaluación (`instrumentos/`), informe en Word, portada, figuras, formato, escalas, hallazgos y confianza, evidencia y búsqueda académica, presupuesto, encuestas con diseño muestral, doble codificación, avance por etapas, anexo técnico y auditorías (`docs/nucleo.md`) |
 | Tipologías | `tipologias/` | Cierre (probada en el piloto), diseño, implementación y resultados: preguntas tipo, instrumentos, escalas, estructura del informe y requisitos del CEPLAN, con la página de la guía |
 | Capa de evaluación | `src/analisis_<id>/` | Análisis y relato de cada evaluación; la del piloto es `src/analisis_pnig/` |
 | Datos | `evaluaciones/<id>/` | Configuración, insumos del caso, análisis, instrumentos e informe |
@@ -42,15 +42,30 @@ El repositorio no trae logos ni encabezados de ninguna institución. Para usar l
   diapositivas usan colores sólidos).
 
 ## Crear una evaluación
+En Claude Code, con agentes (`docs/agentes.md`):
+1. `/nueva-evaluacion` crea la evaluación y hace cuatro preguntas sobre lo que queda a cargo del equipo:
+   - si habrá entrevistas o formulario a las entidades;
+   - si hay documentos internos adicionales;
+   - si el informe se valida con el órgano rector o solo se entrega;
+   - si se personalizan los instrumentos.
+2. `/evaluar <id>` recorre nueve etapas:
+   - diseño, fuentes y lectura de la política;
+   - instrumentos y recojo primario;
+   - hallazgos, informe, validación y entrega.
+
+   Sus agentes leen las fuentes, llenan las entradas estándar y corren los instrumentos genéricos del núcleo. El
+   comando se detiene en cada aprobación del usuario.
+
+Sin Claude Code, los mismos pasos por línea de comandos:
 ```
 uv run python src/nucleo/nueva_evaluacion.py pnx_2027 --tipologia cierre \
     --titulo "Evaluación de cierre de la Política Nacional de … (2020–2026)" \
-    --politica "Política Nacional de …" --sigla PNX --inicio 2020 --fin 2026
+    --politica "Política Nacional de …" --sigla PNX --inicio 2020 --fin 2026 [--sin-entrevistas]
+uv run python src/nucleo/instrumentos/correr.py pnx_2027      # instrumentos genéricos sobre 02_insumos/
 uv run python src/analisis_pnx_2027/sintesis.py
 uv run python src/analisis_pnx_2027/informe.py --word
 ```
-El flujo completo (encargo, fuentes, insumos, instrumentos, hallazgos, informe y entrega) está en
-`plantillas/nueva_evaluacion/LEEME.md`. En Claude Code, el comando `/nueva-evaluacion` hace lo mismo.
+El flujo completo y los esquemas de las entradas están en `plantillas/nueva_evaluacion/LEEME.md`.
 
 ## El caso del piloto
 `evaluaciones/pnig_2026/` contiene la configuración, los insumos, los libros de análisis, el banco de preguntas de las
@@ -63,9 +78,19 @@ validación) es el que indica el propio documento.
   `.claude/commands/regenerar-informe.md`.
 
 ## Claude Code
-- **Agentes** (`.claude/agents/`): `codificador-ciego` (segunda codificación sin ver la primera), `revisor-de-informe`
-  (requisitos del CEPLAN, estilo y cifras) y `auditor-de-publicacion` (datos personales y documentos no públicos).
-- **Comandos** (`.claude/commands/`): `/nueva-evaluacion`, `/regenerar-informe`, `/anexo-tecnico` y `/auditar`.
+- **Agentes por etapa** (`.claude/agents/`, `docs/agentes.md`):
+  - diseño: `disenador-de-evaluacion`;
+  - fuentes y política: `recolector-de-fuentes` y `lector-de-la-politica`;
+  - instrumentos: `analista-documental`, `analista-de-indicadores`, `analista-de-alineamiento` y
+    `analista-de-evidencia`;
+  - recojo y síntesis: `analista-de-entrevistas` y `redactor-de-hallazgos`;
+  - código propio: `programador-de-instrumentos`, para los instrumentos que se personalizan.
+- **Agentes de apoyo:**
+  - `codificador-ciego`: segunda codificación sin ver la primera;
+  - `revisor-de-informe`: requisitos del CEPLAN, estilo y cifras;
+  - `auditor-de-publicacion`: datos personales y documentos no públicos.
+- **Comandos** (`.claude/commands/`): `/nueva-evaluacion`, `/evaluar`, `/regenerar-informe`, `/anexo-tecnico` y
+  `/auditar`.
 - **Skill** `presentacion-evaluacion`: presentaciones en estilo institucional o del MIMP Lab, con componentes de
   evaluación.
 

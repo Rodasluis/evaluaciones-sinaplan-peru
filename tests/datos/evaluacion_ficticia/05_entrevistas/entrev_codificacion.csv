@@ -1,0 +1,5 @@
+id_segmento,codigos,sentido,hallazgo,contraste
+S1,ART,Obstáculo,I4-H1,Confirma
+S2,REC,Obstáculo,I5-H1,Confirma
+S3,ART,Neutro,,
+S4,REC,Obstáculo,,

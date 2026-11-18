@@ -1,0 +1,9 @@
+id,tipos,referencia,enlace,verificacion,diseno,ambito,anio,calidad,resultado_principal,direccion,incluido,comparable,motivo_exclusion
+E1,T01,Autora Ficticia (2020). Revisión ficticia de centros,https://ejemplo.invalid/e1,Prueba,Revisión sistemática,Ingreso medio,2020,Moderada,Más acceso,Favorable,Sí,Sí,
+E2,T01,Autor Ficticio (2019). Estudio descriptivo ficticio,https://ejemplo.invalid/e2,Prueba,Descriptivo,Perú,2019,No informada,Describe la atención,Favorable,Sí,Sí,
+E3,T02,Equipo Ficticio (2021). Experimento ficticio,https://ejemplo.invalid/e3,Prueba,Experimental,Perú,2021,No informada,Mejora la atención,Favorable,Sí,Sí,
+E4,T02,Equipo Ficticio (2022). Cuasi experimento ficticio,https://ejemplo.invalid/e4,Prueba,Cuasi experimental,Ingreso medio,2022,No informada,Efectos mixtos,Mixto,Sí,Sí,
+E5,T02,Equipo Ficticio (2018). Experimento en país de ingreso alto,https://ejemplo.invalid/e5,Prueba,Experimental,Ingreso alto,2018,No informada,Mejora la atención,Favorable,Sí,No,
+E6,T03,Autora Ficticia (2023). Descripción de la gestión,https://ejemplo.invalid/e6,Prueba,Descriptivo,Perú,2023,No informada,Describe la gestión,Sin estimación,Sí,Sí,
+E7,T03,Equipo Ficticio (2017). Experimento fuera del criterio,https://ejemplo.invalid/e7,Prueba,Experimental,Ingreso alto,2017,No informada,Mejora la gestión,Favorable,No,No,Evaluación primaria de un país de ingreso alto
+E8,T01; T03,Autor Ficticio (2024). Revisión narrativa ficticia,https://ejemplo.invalid/e8,Prueba,Revisión narrativa,Perú,2024,No informada,Resultados favorables,Favorable,Sí,Sí,

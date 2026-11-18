@@ -1,0 +1,4 @@
+codigo,nombre,definicion,incluye,excluye
+REC,Recursos insuficientes,La entidad atribuye la dificultad a la falta de presupuesto o de personal.,Presupuesto; personal,Normas
+ART,Articulación,La entidad menciona la coordinación con otras entidades.,Mesas; acuerdos,Recursos
+NOR,Normas pendientes,La entidad menciona protocolos o normas no aprobadas.,Protocolos,Recursos

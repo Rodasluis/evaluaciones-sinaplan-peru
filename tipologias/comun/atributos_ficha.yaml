@@ -1,0 +1,20 @@
+# Atributos de calidad de una ficha técnica de indicador, para la verificación de fichas del instrumento de
+# indicadores y recursos (src/nucleo/instrumentos/rev_ind.py, entrada rev_ind_fichas.csv).
+# Fuente: Guía para la elaboración de indicadores de políticas nacionales y planes estratégicos (CEPLAN, 2024), en
+# docs/fuentes/ceplan/. Páginas verificadas en el piloto PNIG (src/analisis_pnig/rev_ind_2_calidad_fichas.py).
+# Plano: lo que exige el CEPLAN. La valoración de cada ficha (cumple, parcial o no cumple, y su severidad) es del
+# equipo evaluador.
+guia: Guía para la elaboración de indicadores de políticas nacionales y planes estratégicos (CEPLAN, 2024)
+atributos:
+  - {clave: nombre, atributo: Denominación precisa y unívoca, sustento: "Paso 3, pp. 38–44 (parámetro + sujeto + característica; parámetros admitidos)"}
+  - {clave: formula, atributo: Fórmula de cálculo explícita, sustento: "Paso 7, método de cálculo, pp. 91–92; Anexo A-9, p. 134 (coherencia entre nombre y método)"}
+  - {clave: unidad, atributo: Unidad de medida definida, sustento: "Paso 3, pp. 38–43 (parámetro de medición)"}
+  - {clave: lb, atributo: Línea de base con año y valor, sustento: "Paso 7, p. 93 (periodo previo a la vigencia, el más cercano disponible) y p. 94 (sin valores vacíos)"}
+  - {clave: metas, atributo: Meta anual hasta el fin del horizonte, sustento: "Paso 7, p. 94 (logros anuales coherentes con el sentido, sin valores vacíos); Anexo A-5, p. 122"}
+  - {clave: fuente, atributo: Fuente de datos identificada y disponible, sustento: "Paso 7, p. 93 (fuente y base de datos); Paso 4, p. 46 (medible y confiable)"}
+  - {clave: periodicidad, atributo: Periodicidad de medición establecida, sustento: "Paso 4, p. 46 (temporal: frecuencia de medición coherente con los logros anuales)"}
+  - {clave: responsable, atributo: Responsable del reporte identificado, sustento: "Paso 7, p. 88 (dos niveles de responsabilidad)"}
+  - {clave: desagregacion, atributo: Desagregaciones previstas por territorio y grupo poblacional, sustento: "Paso 4, p. 46 (capacidad de desagregación territorial y sociodemográfica)"}
+  - {clave: sentido, atributo: Sentido esperado definido y coherente con lo que mide el indicador, sustento: "Paso 7, p. 93 (sentido esperado) y nota 35"}
+  - {clave: nivel, atributo: Nivel en la cadena de resultados, sustento: "Paso 5, pp. 50–52 y Recuadro 2, p. 61 (objetivo prioritario: resultado; servicio: producto); Anexo A-9, pp. 134–135"}
+  - {clave: tipo, atributo: Tipo de indicador de servicio, sustento: "Paso 5, Recuadro 2, pp. 61–62 (cobertura y calidad con su atributo); Anexo A-9, p. 135"}

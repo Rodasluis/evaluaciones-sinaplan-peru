@@ -1,0 +1,8 @@
+codigo,anio,meta,valor,fuente,pagina,comparable,nota
+IOP1,2021,10,"9,6",Reporte ficticio 2021,4,Sí,
+IOP1,2022,12,9,Reporte ficticio 2022,4,Sí,
+IOP1,2023,14,,Reporte ficticio 2023,5,Sí,Sin medición en 2023
+IOP2,2021,20,25,Reporte ficticio 2021,6,Sí,
+IOP2,2022,18,12,Reporte ficticio 2022,6,Sí,
+IOP2,2023,16,16,Reporte ficticio 2023,7,No,Cambio de fuente
+ISS111,2023,50,5,Reporte ficticio 2023,9,Sí,

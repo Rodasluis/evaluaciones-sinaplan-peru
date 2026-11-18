@@ -1,0 +1,4 @@
+id_segmento,codigos,sentido,critico
+R1,REC,Obstáculo,Sí
+R2,ART,Facilitador,No
+R3,NOR; REC,Obstáculo,No

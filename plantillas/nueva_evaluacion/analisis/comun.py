@@ -1,6 +1,6 @@
 """Piezas comunes de la capa de evaluación: configuración, hallazgos y rutas (plantilla de src/nucleo/nueva_evaluacion.py).
 
-La evaluación es la de la carpeta: src/analisis_<id>/ trabaja sobre evaluaciones/<id>/.
+La evaluación es la de la carpeta: src/analisis_<id>/ trabaja sobre evaluaciones/<id>/ de la misma raíz (REPO).
 """
 import os
 import re
@@ -8,13 +8,14 @@ import sys
 from pathlib import Path
 
 AQUI = Path(__file__).resolve().parent
+REPO = AQUI.parents[1]                  # raíz del repositorio de esta evaluación
 sys.path.insert(0, str(AQUI.parent))   # src/, para importar el núcleo
 from nucleo import hallazgos as NH  # noqa: E402
-from nucleo.config import RAIZ_REPO, cargar  # noqa: E402
+from nucleo.config import RAIZ_REPO, cargar_desde  # noqa: E402
 
 ID = AQUI.name.removeprefix("analisis_")
-os.chdir(RAIZ_REPO)                     # las rutas de la configuración son relativas a la raíz del repositorio
-CFG = cargar(ID)
+os.chdir(REPO)                          # las rutas de la configuración son relativas a la raíz del repositorio
+CFG = cargar_desde(REPO, ID)
 # términos internos que no van en el texto publicable: códigos de instrumento e identificadores de hallazgo (ADR-010)
 INTERNOS = re.compile(r"\b(?:" + "|".join(map(re.escape, CFG["instrumentos"])) + r")\b|\b[A-Z]\d+-H\d+\b")
 ASPECTOS = ("Implementación", "Diseño", "Seguimiento y evaluación")   # Tabla 5 de la guía (p. 57)
@@ -30,7 +31,7 @@ TIPOLOGIA = _tipologia()   # «Evaluación de cierre», «Evaluación de diseño
 
 
 def ruta(carpeta, *partes):
-    return RAIZ_REPO / CFG.ruta(carpeta, *partes)
+    return CFG.abs(carpeta, *partes)
 
 
 def leer_hallazgos():
@@ -45,7 +46,8 @@ def leer_hallazgos():
         h = {**{c: "" for c in campos}, **h}
         h = {k: ("" if v is None else v) for k, v in h.items()}
         h["evidencias"] = [NH.evidencia(e["plano"], e["instrumento"], e["texto"], e["fuente"], e["base"],
-                                        int(e.get("n_fuentes", 1))) for e in (h.get("evidencias") or [])]
+                                        int(e.get("n_fuentes", 1)), e.get("origen"))
+                           for e in (h.get("evidencias") or [])]
         H.append(h)
     P = {k: {"valoracion": (v or {}).get("valoracion") or "", "respuesta": (v or {}).get("respuesta") or ""}
          for k, v in (datos.get("preguntas") or {}).items()}

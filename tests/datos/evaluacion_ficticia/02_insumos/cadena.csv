@@ -1,0 +1,7 @@
+codigo,causa_efecto,tipo_vinculo,estandar,fuente
+1.1.1,Efecto: acceso limitado a la atención ficticia,Efecto,Oportunidad,Política ficticia p. 2
+1.1.2,Causa 1: oferta ficticia insuficiente,Causa,Accesibilidad,Política ficticia p. 2
+1.2.1,,,Fiabilidad,Política ficticia p. 2
+2.1.1,Causa 2: operadores ficticios sin capacitación,Causa,Pertinencia,Política ficticia p. 3
+2.1.2,Efecto: baja calidad ficticia,Efecto,Continuidad,Política ficticia p. 3
+3.1.1,Causa 3: gestión ficticia desarticulada,Causa,Oportunidad,Política ficticia p. 3

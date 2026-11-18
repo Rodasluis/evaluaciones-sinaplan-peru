@@ -1,0 +1,4 @@
+tipo,nombre,servicios,causa_efecto,resultado_esperado,pertinencia
+T01,Atención ficticia directa,1.1.1; 1.1.2,Efecto: acceso limitado,Más acceso,Directa
+T02,Información y capacitación ficticias,1.2.1; 2.1.1,Causa 2: operadores sin capacitación,Mejor atención,Parcial
+T03,Gestión ficticia,2.1.2; 3.1.1,Causa 3: gestión desarticulada,Gestión articulada,Directa

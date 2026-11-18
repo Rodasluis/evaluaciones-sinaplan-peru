@@ -34,7 +34,11 @@ Una evaluación nueva se crea con `src/nucleo/nueva_evaluacion.py` desde una tip
 | `fuentes` | `sha256`, `slug`, `a_pdf` | Hash de los documentos, nombres de archivo y conversión a PDF con LibreOffice |
 | `anexo` | `Registro`, `libro_publicado`, `publico`, `tabla_xlsx` | Armado del anexo técnico con la lista de archivos y su SHA-256 |
 | `auditoria` | `leyendas_sin_analisis`, `estilo`, `terminos`, `archivos_sensibles`, `datos_personales` | Revisión del informe y de los archivos antes de un commit o una entrega |
-| `nueva_evaluacion` | `crear()` | Evaluación nueva desde la plantilla y una tipología |
+| `nueva_evaluacion` | `crear()`, `preparar()`, `entradas()` | Evaluación nueva desde la plantilla y una tipología, con la sección `modalidad` (preguntas iniciales) y las cabeceras de las entradas |
+| `instrumentos` | `rev_doc`, `rev_ind`, `rev_ali`, `rev_evi`, `rep_ent`, `entrev`, `correr`, `activos()` | Instrumentos genéricos sobre entradas estándar en CSV, con validación y libro de análisis con hoja de criterios (ADR-017; esquemas en `plantillas/nueva_evaluacion/evaluacion/02_insumos/LEEME.md`) |
+| `busqueda_academica` | `buscar()`, `componentes()` | Búsqueda replicable en PubMed, ERIC, EconBiz, Crossref (Campbell y 3ie), LA Referencia, Banco Mundial y OpenAlex con estrategias en YAML |
+| `avance` | `leer()`, `marcar()`, `siguiente()`, `requisitos()` | Etapas de una evaluación y su aprobación por el usuario (`avance.yaml`; comando `/evaluar`, `docs/agentes.md`) |
+| `observaciones` | `comentarios()`, `matriz()`, `respuestas_json()` | Matriz de observaciones de un Word revisado y JSON de respuestas para `comparar_word.ps1` |
 
 `actualizar_campos_word.ps1` termina un informe con Word por COM: actualiza índices y numeración con su paginación,
 incrusta las fuentes y exporta el PDF de revisión.
@@ -46,7 +50,11 @@ las inserciones y eliminaciones y acepta los cambios de formato; su salida se pa
 ## Línea de comandos
 
 ```
-uv run python src/nucleo/nueva_evaluacion.py <id> --tipologia cierre --titulo "…" --politica "…" --sigla X --inicio 2020 --fin 2025
+uv run python src/nucleo/nueva_evaluacion.py <id> --tipologia cierre --titulo "…" --politica "…" --sigla X --inicio 2020 --fin 2025 [--sin-entrevistas] [--formulario-entidades] [--documentos-internos] [--validacion informe_final] [--personalizar REV_IND]
+uv run python src/nucleo/instrumentos/correr.py <id> [REV_DOC …] [--validar | --guias | --formulario | --consolidar]
+uv run python src/nucleo/busqueda_academica.py <id>
+uv run python src/nucleo/avance.py <id> [marcar <etapa> <estado> ["nota"]]
+uv run python src/nucleo/observaciones.py matriz <docx revisado> <matriz.xlsx>
 uv run python src/nucleo/auditoria.py informe <ruta.docx>
 uv run python src/nucleo/auditoria.py commit             # lo usa .githooks/pre-commit
 uv run python src/nucleo/auditoria.py entrega <carpeta>
@@ -58,6 +66,9 @@ uv run python src/nucleo/auditoria.py entrega <carpeta>
   en `config.yaml` o en `02_insumos/`.
 - **Compatibilidad del piloto:** los módulos que el piloto importaba con su nombre anterior quedan como reexportación
   (`src/analisis_pnig/docx_mimp.py` y `svy.py`), para que sus scripts no cambien.
+- **Instrumentos genéricos:** reproducen las clasificaciones del piloto (`tests/test_equivalencia_pnig.py`) y se
+  prueban de punta a punta con un caso ficticio (`tests/test_instrumentos.py`, datos en `tests/datos/`). Si una regla
+  cambia, la prueba de equivalencia dice en qué se aparta del piloto.
 - **Pruebas:** cada función nueva lleva su prueba en `tests/test_nucleo.py`; cada cambio se verifica con
   `uv run pytest`, que incluye la referencia del piloto (`tests/referencia_pnig/`): libros, CSV, figuras y texto del
   informe tienen que seguir iguales. Si una diferencia es intencional, se revisa y se vuelve a capturar con

@@ -3,6 +3,7 @@
 Repositorio para evaluar políticas nacionales y planes del Perú según la metodología del CEPLAN (Sinaplan), complementada con literatura de evaluación.
 
 - **Piloto:** «Evaluación de cierre de la Política Nacional de Igualdad de Género (2019–2025)» (PNIG), en `evaluaciones/pnig_2026/`.
+- **Evaluación nueva:** `/nueva-evaluacion` (con las preguntas iniciales sobre entrevistas, formulario, documentos internos, validación y personalización) y `/evaluar <id>`, que recorre las etapas con los agentes y se detiene en cada aprobación (`docs/agentes.md`, ADR-017).
 
 ## Reglas de trabajo
 1. **Fuentes:** no inventar fuentes, cifras ni citas. Lo que no esté verificado en un documento propio o en un portal oficial se marca `[POR VERIFICAR]`. Las citas textuales se copian del documento, con página.
@@ -32,7 +33,7 @@ Repositorio para evaluar políticas nacionales y planes del Perú según la meto
 ## Estructura
 | Ruta | Contenido |
 |---|---|
-| `src/nucleo/` | Núcleo reutilizable sin datos de ninguna evaluación (`docs/nucleo.md`) |
+| `src/nucleo/` | Núcleo reutilizable sin datos de ninguna evaluación, con los instrumentos genéricos (`instrumentos/`), la búsqueda académica, el avance por etapas y las observaciones de la validación (`docs/nucleo.md`) |
 | `tipologias/` | Estructura de cada tipo de evaluación: cierre (probada en el piloto), diseño, implementación y resultados |
 | `plantillas/` | Plantilla de Word del informe y plantilla de evaluación nueva (`nueva_evaluacion/`, con su LEEME) |
 | `evaluaciones/<id>/` | Configuración (`config.yaml`), insumos del caso (`02_insumos/`), datos (`03_datos/`, no se versiona), análisis, entrevistas, informe y anexo técnico |
@@ -41,7 +42,7 @@ Repositorio para evaluar políticas nacionales y planes del Perú según la meto
 | `docs/fuentes/` | Inventario público de las fuentes con enlace oficial y SHA-256 (`LEEME.md`) |
 | `docs/marco/` y `docs/decisiones/` | Matriz de requisitos del CEPLAN y notas de decisión (ADR) |
 | `tests/` | Pruebas (`uv run pytest`) y referencia del piloto (`tests/referencia_pnig/`) |
-| `.claude/` | Agentes, comandos y skill de presentaciones |
+| `.claude/` | Agentes por etapa y de apoyo, comandos (`/nueva-evaluacion`, `/evaluar` y otros) y skill de presentaciones (`docs/agentes.md`) |
 
 - **Códigos de los instrumentos (ADR-009):** REV_DOC (revisión documental), ENTREV (entrevistas), REP_ENT (reportes de las entidades), REV_ALI (coherencia y alineamiento), REV_IND (indicadores y recursos) y REV_EVI (revisión de evidencia). El informe y la presentación de resultados usan los nombres, no las siglas; el rastro técnico queda en el anexo técnico (ADR-010).
 - **Informe (ADR-010):** autocontenido; cada hallazgo lleva su respaldo en una nota al pie y los pies dicen «Fuente: … Elaboración propia.».

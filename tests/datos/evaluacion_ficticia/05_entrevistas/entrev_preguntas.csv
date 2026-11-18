@@ -1,0 +1,4 @@
+id,rol,bloque,pregunta_evaluacion,texto,repreguntas,contrasta
+P01,Dirección conductora,Bloque 1. Rectoría,I4,¿Cómo se coordinó la implementación con las entidades?,¿Qué espacios funcionaron?; ¿Qué faltó?,Mesa ficticia sin acuerdos cumplidos
+P02,Dirección conductora,Bloque 2. Sostenibilidad,I5,¿Qué capacidades quedan para la nueva política?,,
+P03,Oficina de planeamiento,Bloque 1. Rectoría,I4,¿Cómo se reportó el avance de la política?,,Reportes ficticios sin valor 2023

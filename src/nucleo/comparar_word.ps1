@@ -9,7 +9,8 @@
 #   2. compara ese texto con la versión final (CompareDocuments: palabra por palabra, sin formato ni campos, con notas al
 #      pie y comentarios); las revisiones llevan el autor indicado;
 #   3. agrega a cada comentario la respuesta del JSON ({"01": "texto", "02": ...}), por el número de la observación
-#      («Observación NN») o por la clave «sin_numero» para los comentarios sin número.
+#      («Observación NN»), por su orden entre los comentarios raíz («orden_NNN», el JSON de src/nucleo/observaciones.py)
+#      o por la clave «sin_numero» para los comentarios sin número.
 #
 # Uso:
 #   powershell -NoProfile -ExecutionPolicy Bypass -File src/nucleo/comparar_word.ps1 -Revisado <docx con comentarios> `
@@ -85,6 +86,9 @@ try {
     $sin = 0
     $respondidos = 0
     $n = $res.Comments.Count
+    # orden de los comentarios raíz en el documento, para las claves «orden_NNN» de src/nucleo/observaciones.py
+    $raices = New-Object System.Collections.Generic.List[int]
+    for ($j = 1; $j -le $n; $j++) { if ($null -eq $res.Comments.Item($j).Ancestor) { $raices.Add($j) } }
     # de atrás hacia adelante: cada respuesta se inserta detrás de su comentario y corre los índices siguientes
     for ($i = $n; $i -ge 1; $i--) {
         $c = $res.Comments.Item($i)
@@ -92,6 +96,8 @@ try {
         $texto = $c.Range.Text
         $m = [regex]::Match($texto, "Observaci.n (\d+)")
         $clave = if ($m.Success) { $m.Groups[1].Value.PadLeft(2, "0") } else { "sin_numero" }
+        $porOrden = "orden_{0:D3}" -f ($raices.IndexOf($i) + 1)
+        if ($resp.ContainsKey($porOrden)) { $clave = $porOrden }
         if ($resp.ContainsKey($clave)) {
             [void]$c.Replies.Add($c.Scope, [string]$resp[$clave])
             $respondidos++

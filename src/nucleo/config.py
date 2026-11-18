@@ -35,11 +35,16 @@ class Config:
     id: str
     raiz: str
     datos: dict = field(default_factory=dict, hash=False, compare=False)
+    repo: Path = field(default=RAIZ_REPO, compare=False)   # raíz del repositorio (otra en las pruebas)
 
     def ruta(self, carpeta, *partes):
         """Ruta de una subcarpeta de la evaluación (clave de CARPETAS o nombre literal) y, opcionalmente, un archivo."""
         base = f"{self.raiz}/{CARPETAS.get(carpeta, carpeta)}"
         return "/".join([base, *partes]) if partes else base
+
+    def abs(self, carpeta, *partes):
+        """Ruta absoluta de ruta()."""
+        return self.repo / self.ruta(carpeta, *partes)
 
     def __getitem__(self, clave):
         return self.datos[clave]
@@ -62,9 +67,14 @@ def insumo(nombre, evaluacion=None):
 
 @lru_cache(maxsize=None)
 def cargar(evaluacion=None):
-    ev = evaluacion or os.environ.get("EVALUACION") or POR_DEFECTO
+    return cargar_desde(RAIZ_REPO, evaluacion or os.environ.get("EVALUACION") or POR_DEFECTO)
+
+
+def cargar_desde(repo, ev):
+    """Configuración de evaluaciones/<ev>/ bajo otra raíz (sin caché; la usan las pruebas y el generador)."""
+    repo = Path(repo)
     raiz = f"evaluaciones/{ev}"
-    archivo = RAIZ_REPO / raiz / "config.yaml"
+    archivo = repo / raiz / "config.yaml"
     if not archivo.exists():
         raise FileNotFoundError(f"No existe {archivo}: cree la evaluación con src/nucleo/nueva_evaluacion.py")
     import yaml
@@ -72,4 +82,4 @@ def cargar(evaluacion=None):
         datos = yaml.safe_load(f) or {}
     if datos.get("id", ev) != ev:
         raise ValueError(f"{archivo}: el id ({datos.get('id')}) no coincide con la carpeta ({ev})")
-    return Config(id=ev, raiz=raiz, datos=datos)
+    return Config(id=ev, raiz=raiz, datos=datos, repo=repo)

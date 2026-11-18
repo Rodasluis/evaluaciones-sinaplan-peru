@@ -77,4 +77,7 @@
   Referencia («LAREF:ES_» y 32 caracteres hexadecimales), que confunde con claves de hCaptcha; se revisó que no hay
   claves reales (la de OpenAlex se lee de una variable de entorno). Por decisión del usuario, `.github/secret_scanning.yml`
   (superposición `publico/`) excluye solo los cinco archivos de la búsqueda académica que los contienen.
-- **Registro:** el hash del commit inicial se anota en el repositorio de trabajo.
+- **Registro:** publicada el 2026-11-17 en `evaluaciones-sinaplan-peru` (público), con dos commits: `3d3c850`
+  (configuración del escaneo de secretos, que GitHub lee de la rama por defecto y por eso va primero) y `71d0ed5`
+  (versión pública inicial, 363 archivos, armada desde `d58b4d4`). La prueba automática de GitHub (`pruebas.yml`)
+  pasó en el primer push.

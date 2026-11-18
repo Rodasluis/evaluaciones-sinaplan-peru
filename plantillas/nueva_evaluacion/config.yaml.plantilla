@@ -22,6 +22,12 @@ entidad:
   seguimiento: ""               # órgano de seguimiento y evaluación
   planeamiento: ""              # oficina de planeamiento
   elabora: "[POR COMPLETAR] órgano que elabora el informe"
+# respuestas a las preguntas iniciales (/nueva-evaluacion; ADR-017). entrevistas: si se entrevista a los órganos que
+# conducen la política; formulario_entidades: si se pide información a las entidades por oficio; documentos_internos:
+# si el equipo tiene documentos sin publicación oficial (se piden en la etapa de fuentes); validacion: organo_rector o
+# informe_final; personalizacion: instrumentos que llevan código propio en src/analisis_${id}/ además del genérico.
+modalidad:
+${modalidad}
 # instrumentos sugeridos por la tipología (ADR-009): quite los que no use y agregue los propios con el mismo formato
 instrumentos:
 ${instrumentos}

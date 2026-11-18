@@ -1,0 +1,5 @@
+id_segmento,rol,pregunta_id,texto
+S1,Dirección conductora,P01,La mesa se reunió pero las entidades no enviaron sus reportes.
+S2,Dirección conductora,P02,Se perdió personal especializado en 2024.
+S3,Oficina de planeamiento,P03,Los reportes se hicieron con la información que llegó a tiempo.
+S4,Oficina de planeamiento,P03,Faltó presupuesto para las encuestas.
